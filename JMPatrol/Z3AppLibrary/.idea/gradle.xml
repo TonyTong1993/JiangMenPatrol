@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/../.." />
+            <option value="$PROJECT_DIR$/../../app" />
+            <option value="$PROJECT_DIR$/.." />
+            <option value="$PROJECT_DIR$/../AFileChooser" />
+            <option value="$PROJECT_DIR$/../BDLBSLibrary" />
+            <option value="$PROJECT_DIR$/../Baselibrary" />
+            <option value="$PROJECT_DIR$/../ContactManChooser" />
+            <option value="$PROJECT_DIR$/../DBGreenDao" />
+            <option value="$PROJECT_DIR$/../Dahua" />
+            <option value="$PROJECT_DIR$/../DownloadLibrary" />
+            <option value="$PROJECT_DIR$/../ECityCacheLayer" />
+            <option value="$PROJECT_DIR$/../EcityChartLibrary" />
+            <option value="$PROJECT_DIR$/../EventCore" />
+            <option value="$PROJECT_DIR$/../Form" />
+            <option value="$PROJECT_DIR$/../GlobalModel" />
+            <option value="$PROJECT_DIR$/../HttpForAndroid" />
+            <option value="$PROJECT_DIR$/../IndexableStickyListView" />
+            <option value="$PROJECT_DIR$/../LazyViewPagerIndicator" />
+            <option value="$PROJECT_DIR$/../LogLib" />
+            <option value="$PROJECT_DIR$/../Media" />
+            <option value="$PROJECT_DIR$/../PipeNetLib" />
+            <option value="$PROJECT_DIR$/../PlanTask" />
+            <option value="$PROJECT_DIR$/../PullRefresh" />
+            <option value="$PROJECT_DIR$/../UIResourceLibrary" />
+            <option value="$PROJECT_DIR$/../ViewPagerIndicator" />
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/../androids" />
+            <option value="$PROJECT_DIR$/../attendance" />
+            <option value="$PROJECT_DIR$/../equipmentmanager" />
+            <option value="$PROJECT_DIR$/../event" />
+            <option value="$PROJECT_DIR$/../graffiti" />
+            <option value="$PROJECT_DIR$/../httpexecutor" />
+            <option value="$PROJECT_DIR$/../leakage" />
+            <option value="$PROJECT_DIR$/../map" />
+            <option value="$PROJECT_DIR$/../maploader" />
+            <option value="$PROJECT_DIR$/../notification" />
+            <option value="$PROJECT_DIR$/../pad" />
+            <option value="$PROJECT_DIR$/../position" />
+            <option value="$PROJECT_DIR$/../socket" />
+            <option value="$PROJECT_DIR$/../stoppoint" />
+            <option value="$PROJECT_DIR$/../workorder" />
+            <option value="$PROJECT_DIR$/../zxingproj" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

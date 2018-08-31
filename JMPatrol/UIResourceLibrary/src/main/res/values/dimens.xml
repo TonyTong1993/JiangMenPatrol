@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <dimen name="min_navigation_bar_height">72dip</dimen><!--  导航条最小高度 -->
+    
+    <dimen name="navigation_bar_horizontal_padding">10dip</dimen>
+    <dimen name="navigation_bar_margin">10dip</dimen>
+    
+    <dimen name="min_tab_item_height">36dip</dimen><!-- 每个选项卡最小高度 -->
+    <dimen name="tab_item_horizontal_padding">24dip</dimen>
+    <dimen name="tab_item_vertical_padding">5dip</dimen>
+    
+    <dimen name="margin_0">0.0dip</dimen>
+    <dimen name="margin_2">2.0dip</dimen>
+    <dimen name="margin_4">4.0dip</dimen>
+    <dimen name="margin_6">6.0dip</dimen>
+    <dimen name="margin_8">8.0dip</dimen>
+    <dimen name="margin_10">10.0dip</dimen>
+    <dimen name="margin_12">12.0dip</dimen>
+    <dimen name="margin_14">14.0dip</dimen>
+    <dimen name="margin_16">16.0dip</dimen>
+    <dimen name="margin_18">18.0dip</dimen>
+    <dimen name="margin_20">20.0dip</dimen>
+    <dimen name="margin_22">22.0dip</dimen>
+    <dimen name="margin_24">24.0dip</dimen>
+    <dimen name="margin_26">26.0dip</dimen>
+    <dimen name="margin_28">28.0dip</dimen>
+    <dimen name="margin_30">30.0dip</dimen>
+    <dimen name="margin_32">32.0dip</dimen>
+    <dimen name="margin_34">34.0dip</dimen>
+    <dimen name="margin_36">36.0dip</dimen>
+    <dimen name="margin_38">38.0dip</dimen>
+    <dimen name="margin_40">40.0dip</dimen>
+    <dimen name="margin_42">42.0dip</dimen>
+    <dimen name="margin_44">44.0dip</dimen>
+    <dimen name="margin_45">45.0dip</dimen>
+    <dimen name="margin_46">46.0dip</dimen>
+    <dimen name="margin_48">48.0dip</dimen>
+    <dimen name="margin_50">50.0dip</dimen>
+    <dimen name="margin_52">52.0dip</dimen>
+    <dimen name="margin_54">54.0dip</dimen>
+    <dimen name="margin_56">56.0dip</dimen>
+    <dimen name="margin_58">58.0dip</dimen>
+    <dimen name="margin_60">60.0dip</dimen>
+    <dimen name="margin_62">62.0dip</dimen>
+    <dimen name="margin_64">64.0dip</dimen>
+    <dimen name="margin_66">66.0dip</dimen>
+    <dimen name="margin_68">68.0dip</dimen>
+    <dimen name="margin_70">70.0dip</dimen>
+    <dimen name="margin_72">72.0dip</dimen>
+    <dimen name="margin_74">74.0dip</dimen>
+    <dimen name="margin_76">76.0dip</dimen>
+    <dimen name="margin_78">78.0dip</dimen>
+    <dimen name="margin_80">80.0dip</dimen>
+    <dimen name="margin_82">82.0dip</dimen>
+    <dimen name="margin_84">84.0dip</dimen>
+    <dimen name="margin_86">86.0dip</dimen>
+    <dimen name="margin_88">88.0dip</dimen>
+    <dimen name="margin_90">90.0dip</dimen>
+    <dimen name="margin_92">92.0dip</dimen>
+    <dimen name="margin_94">94.0dip</dimen>
+    <dimen name="margin_96">96.0dip</dimen>
+    <dimen name="margin_98">98.0dip</dimen>
+    <dimen name="margin_100">100.0dip</dimen>
+    <dimen name="margin_105">105.0dip</dimen>
+    <dimen name="margin_110">110.0dip</dimen>
+    <dimen name="margin_150">150.0dip</dimen>
+    <dimen name="margin_200">200.0dip</dimen>
+    <dimen name="margin_210">210.0dip</dimen>
+    <dimen name="margin_220">220.0dip</dimen>
+    <dimen name="margin_230">230.0dip</dimen>
+    <dimen name="margin_240">240.0dip</dimen>
+    <dimen name="margin_250">250.0dip</dimen>
+    <dimen name="margin_300">300.0dip</dimen>
+    <dimen name="margin_350">350.0dip</dimen>
+    <dimen name="margin_400">400.0dip</dimen>
+    
+    <dimen name="font_10">10.0sp</dimen>
+    <dimen name="font_12">12.0sp</dimen>
+    <dimen name="font_14">14.0sp</dimen>
+    <dimen name="font_16">16.0sp</dimen>
+    <dimen name="font_17">17.0sp</dimen>
+    <dimen name="font_18">18.0sp</dimen>
+    <dimen name="font_20">20.0sp</dimen>
+    <dimen name="font_22">22.0sp</dimen>
+    <dimen name="font_24">24.0sp</dimen>
+    <dimen name="font_26">26.0sp</dimen>
+    <dimen name="font_28">28.0sp</dimen>
+    <dimen name="font_30">30.0sp</dimen>
+    <dimen name="font_32">32.0sp</dimen>
+    <dimen name="font_34">34.0sp</dimen>
+    <dimen name="font_36">36.0sp</dimen>
+    <dimen name="font_38">38.0sp</dimen>
+    <dimen name="font_40">40.0sp</dimen>
+    <dimen name="font_42">42.0sp</dimen>
+    <dimen name="font_44">44.0sp</dimen>
+    <dimen name="font_46">46.0sp</dimen>
+    <dimen name="font_48">48.0sp</dimen>
+    <dimen name="font_60">60.0sp</dimen>
+    
+    <dimen name="edtxt_stroke">1.0dip</dimen>
+    <dimen name="edtxt_radius">7.0dip</dimen>
+    <dimen name="head_size">42.0dip</dimen>
+    
+    <dimen name="slidingmenu_offset">80.0dip</dimen>
+    <dimen name="shadow_width">3.0dip</dimen>
+    <dimen name="linerout_button_height">52.0dip</dimen>
+    <dimen name="linerout_button_height2">50.0dip</dimen>
+    
+    <dimen name="base_padding">16dp</dimen>
+    
+</resources>

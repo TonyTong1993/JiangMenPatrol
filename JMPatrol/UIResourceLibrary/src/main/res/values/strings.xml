@@ -1,0 +1,60 @@
+<resources>
+    <string name="str_app_exit">退出系统</string>
+    <string name="str_app_exit_msg">确定要退出系统吗?</string>
+    
+    <string name="str_map_measurelength">距离测量</string>
+    <string name="str_map_measurearea">面积量算</string>
+    <string name="str_map_length">长度</string>
+    <string name="str_map_area">面积</string>
+    <string name="str_map_searching">正常查询,请稍候\u2026</string>
+
+    <string name="str_search_network">网络</string>
+    <string name="str_search_local">本地</string>
+    <string name="str_search_city">城市</string>
+    <string name="str_search_sel_city">选择城市</string>
+    <string name="str_search_placename">地名</string>
+    <string name="str_search_pipe">管线</string>
+    <string name="str_error_networkerror">网络连接错误</string>
+    <string name="str_error_loadmapfailed">解析地图配置文件失败,无法加载地图</string>
+    <string name="str_error_nodata">无数据</string>
+    <string name="str_error_nodata_pipe">没有查到管线数据</string>
+    <string name="str_error_nodata_poi">没有查到地名商户信息</string>
+    <string name="str_error_nocityinfo">暂未定位到城市</string>
+    <string name="str_searchword_empty">请先输入查询内容</string>
+    
+    <string name="str_title">标题</string>
+    <string name="str_attachment_detail">查看附件详情</string>
+    <string name="str_attachment_empty">没有关联附件</string>
+    <string name="str_attachment_image">图像资料</string>
+    <string name="str_attachment_document">文档资料</string>
+    
+    <string name="app_name">MenuLibrary</string>
+    <string name="str_cancel">取  消</string>
+    <string name="str_cancel_nosp">取消</string>
+    <string name="str_ok_nosp">确定</string>
+    <string name="str_close">关闭</string>
+    <string name="str_clear">清除</string>
+    <string name="str_down">完成</string>
+    <string name="str_yes">是</string>
+    <string name="str_no">否</string>
+    <string name="str_back">返回</string>
+    
+    <string name="str_ambulance">相册</string>
+    <string name="str_takephoto">拍照</string>
+	<string name="str_selamfrombulance">从相册中选取</string>
+	<string name="str_selambulance">选择照片</string>
+	<string name="str_selambulance_limit">最多选择9张图片</string>
+
+	<!-- 应用程序更新 -->
+	<string name="str_soft_update_no">已经是最新版本</string>
+    <string name="str_soft_update_title">软件更新</string>
+    <string name="str_soft_update_info">确定立即更新?</string>
+    <string name="str_soft_update_updatebtn">更新</string>
+    <string name="str_soft_update_later">稍后更新</string>
+    <string name="str_soft_updating">正在更新系统,请稍候</string>
+    <string name="str_soft_update_cancel">取消</string>
+    <string name="str_soft_installapp">安装应用程序</string>
+    <string name="str_soft_installapp_install">安装应用程序</string>
+    <string name="str_soft_installapp_redownload">应用程序安装包已经存在,是否重新下载,"取消"则直接安装,如果出现"解析包名时错误"等类似错误，请重新下载！</string>
+    
+</resources>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">JMPatrol</string>
+    <!-- LoginActivity begin -->
+    <string name="be_loginning_in">正在登录中……</string>
+    <string name="getting_menus">正在查询菜单</string>
+    <string name="getting_menus_fail">查询菜单失败，请尝试重新登录</string>
+    <string name="login_getting_init_paramters">正在获取初始化信息</string>
+    <string name="login_get_server_time_error">获取服务器时间失败</string>
+    <string name="btn_login">登&#160;录</string>
+    <string name="login_pwd_input">请输入登录密码</string>
+    <string name="login_user_name_input">请输入您的用户名</string>
+    <!-- LoginActivity end -->
+</resources>

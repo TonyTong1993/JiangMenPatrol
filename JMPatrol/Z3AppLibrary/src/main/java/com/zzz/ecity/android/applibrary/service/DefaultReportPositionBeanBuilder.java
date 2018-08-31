@@ -1,0 +1,81 @@
+package com.zzz.ecity.android.applibrary.service;
+
+import android.location.Location;
+
+import com.z3app.android.util.DateUtil;
+import com.z3app.android.util.StringUtil;
+import com.zzz.ecity.android.applibrary.MyApplication;
+import com.zzz.ecity.android.applibrary.model.GPSPositionBean;
+import com.zzz.ecity.android.applibrary.model.PositionConfig;
+import com.zzz.ecity.android.applibrary.utils.DateUtilExt;
+import com.zzz.ecity.android.applibrary.utils.MercatorUtil;
+
+public class DefaultReportPositionBeanBuilder extends
+		AReportPositionBeanBuilder {
+
+	@Override
+	public GPSPositionBean buildCustomGPSPositionBean(Location location) {
+
+		if(!isVialidLocation(location)){
+			return null;
+		}
+		
+		GPSPositionBean bean = new GPSPositionBean();
+		try {
+			bean.setUserid(Integer.parseInt(PositionConfig.getReportUserId()));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		double[] mercatorxy = null;
+		try {
+			mercatorxy = MercatorUtil.lonLat2Mercator(location.getLongitude(), location.getLatitude());
+
+			if (null != mercatorxy && 2 == mercatorxy.length) {
+				bean.setx(mercatorxy[0]);
+				bean.sety(mercatorxy[1]);
+			} else {
+				bean.setx(0.0);
+				bean.sety(0.0);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		bean.setlat(location.getLatitude());
+		bean.setlon(location.getLongitude());
+		bean.setacu(location.getAccuracy());
+		bean.setbattery(MyApplication.getApplication().getBatteryLevelPercent());
+		bean.setSpeed(location.getSpeed() * 3.6);
+
+		String time = DateUtil.changeLongToString(location.getTime());
+		if (StringUtil.isEmpty(time) || time.contains("1970")) {
+			time = DateUtilExt.getOffsetToServiceTime();
+		}
+
+		if (StringUtil.isEmpty(time)) {
+			time = DateUtil.getDateEN();
+		}
+
+		if (time.contains(".")) {
+			String strs[] = time.split("\\.");
+			time = strs[0];
+		}
+		bean.setTime(time);
+		bean.setRepay(0);
+		bean.setStatus(0);
+		int planTaskId = -1;
+		boolean inDetourArea = false;
+		boolean isOverspeed = false;
+		boolean isNightTask = false;
+		
+		bean.setPlanTaskId(String.valueOf(planTaskId));
+		bean.setInDetourArea(inDetourArea ? 1 : 0);
+		bean.setOverspeed(isOverspeed ? 1 : 0);
+		bean.setNightWatch(isNightTask ? 1 : 0);
+		bean.setTag("0");
+		
+		return bean;
+	}
+
+}

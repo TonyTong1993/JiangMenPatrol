@@ -1,0 +1,196 @@
+package com.zzz.ecity.android.applibrary.view;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import android.content.Context;
+import android.graphics.drawable.BitmapDrawable;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.ViewGroup.LayoutParams;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ListView;
+import android.widget.PopupWindow;
+import android.widget.PopupWindow.OnDismissListener;
+
+import com.zzz.ecity.android.applibrary.R;
+import com.zzz.ecity.android.applibrary.adapter.MenuAdapter;
+import com.zzz.ecity.android.applibrary.model.BaseAppMenu;
+
+public class PopupMenu {
+	private PopupWindow popupWindow = null;
+	public boolean isshowing = false;
+	
+	private LayoutInflater mInflater;
+	private OnMenuClickListener appMenuClickListener;
+	private OnPopupMenuDismissListener mOnPopupMenuDismissListener;
+
+	private List<BaseAppMenu> actionItems;
+	private Context context;
+	private ListView ltv_menu;
+	private MenuAdapter adapter;
+	
+	
+	/**
+	 * Constructor allowing orientation override
+	 *
+	 * @param context
+	 *            Context
+	 */
+	public PopupMenu(Context context) {
+		this(context,null);
+	}
+	/***
+	 * onstructor allowing orientation override
+	 * @param context Context
+	 * @param actionItems List AppMenu 
+	 */
+	public PopupMenu(Context context,List<BaseAppMenu> actionItems) {
+		this.context = context;
+		if(null == actionItems)
+		{
+			actionItems = new ArrayList<BaseAppMenu>();
+		}
+		this.actionItems = actionItems;
+		mInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+	}
+	
+	public void dismiss() {
+		if (null == popupWindow) {
+			return;
+		}
+		popupWindow.dismiss();
+	}
+	
+	public void show(View anchor,int width, int height)
+	{
+		if(width<1) {
+            width = LayoutParams.MATCH_PARENT;
+        }
+		
+		if(height<1) {
+            height = LayoutParams.WRAP_CONTENT;
+        }
+		
+		try {
+			if (isshowing) {
+				popupWindow.dismiss();
+			} else {
+				showWindow(anchor,width,height);
+			}
+		} catch (Exception e) {
+		}
+	}
+	@SuppressWarnings("deprecation")
+	private void showWindow(View anchor,int width, int height) {
+		
+		ViewGroup rootView = (ViewGroup) mInflater.inflate(R.layout.panel_popmenu, null);
+		if (null == popupWindow) {
+			popupWindow = new PopupWindow(rootView,width,height);
+		}
+
+		ltv_menu = (ListView) rootView.findViewById(R.id.ltv_menu);
+
+		adapter = new MenuAdapter(context, actionItems);
+		ltv_menu.setAdapter(adapter);
+		ltv_menu.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+					long arg3) {
+				if(null != actionItems)
+				{
+					if (appMenuClickListener != null) {
+						appMenuClickListener.onMenuItemClick(PopupMenu.this, getActionItem(arg2),arg2);
+					}
+				}
+				
+				dismiss();
+			}
+		});
+		
+		popupWindow.setOutsideTouchable(true);
+		popupWindow.setBackgroundDrawable(new BitmapDrawable());
+		popupWindow.setFocusable(true);
+		popupWindow.setOnDismissListener(popupOnDismissListener);
+		popupWindow.showAsDropDown(anchor);
+		popupWindow.update();
+		isshowing = true;
+
+	}
+	
+	OnDismissListener popupOnDismissListener = new OnDismissListener() {
+		@Override
+		public void onDismiss() {
+			isshowing = false;
+			if (mOnPopupMenuDismissListener != null) {
+				mOnPopupMenuDismissListener.onDismiss();
+			}
+		}
+	};
+	
+	/**
+	 * Get action item at an index
+	 *
+	 * @param index
+	 *            Index of item (position from callback)
+	 * @return Action Item at the position
+	 */
+	public BaseAppMenu getActionItem(int index) {
+		if(null == actionItems) {
+            return null;
+        }
+		if(actionItems.size()<index) {
+            return null;
+        }
+		return actionItems.get(index);
+	}
+	
+	
+	/**
+	 * Set listener for action item clicked.
+	 *
+	 * @param listener
+	 *            Listener
+	 */
+	public void setOnActionItemClickListener(OnMenuClickListener listener) {
+		appMenuClickListener = listener;
+	}
+	
+	/**
+	 * Add action item
+	 *
+	 * @param action
+	 *            {@link ActionItem}
+	 */
+	public void addActionItem(BaseAppMenu action) {
+		actionItems.add(action);
+		adapter.notifyDataSetChanged();
+	}
+
+	/**
+	 * Set listener for window dismissed. This listener will only be fired if
+	 * the quicakction dialog is dismissed by clicking outside the dialog or
+	 * clicking on sticky item.
+	 */
+	public void setOnPopupMenuDismissListener(OnPopupMenuDismissListener listener) {
+		mOnPopupMenuDismissListener = listener;
+	}
+
+	/**
+	 * Listener for item click
+	 */
+	public interface OnMenuClickListener {
+		public abstract void onMenuItemClick(PopupMenu source, BaseAppMenu menu,int pos);
+	}
+
+	/**
+	 * Listener for window dismiss
+	 */
+	public interface OnPopupMenuDismissListener {
+		public abstract void onDismiss();
+	}
+}

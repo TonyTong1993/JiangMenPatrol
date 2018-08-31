@@ -1,0 +1,10 @@
+<resources>
+    <!-- 通用列表风格 -->
+    <style name="common_list">
+        <item name="android:background">@color/list_background</item>
+        <item name="android:cacheColorHint">@color/transparent</item>
+        <item name="android:choiceMode">singleChoice</item>
+        <item name="android:fastScrollEnabled">false</item>
+        <item name="android:listSelector">@drawable/task_item_bg_selector</item>
+    </style>
+</resources>

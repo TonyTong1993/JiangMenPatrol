@@ -1,0 +1,19 @@
+package com.ecity.android.httpforandroid.http;
+
+import java.io.IOException;
+
+import org.apache.http.HttpException;
+import org.apache.http.HttpRequestInterceptor;
+import org.apache.http.protocol.HttpContext;
+
+public class HttpRequestInterceptorAddHeader implements HttpRequestInterceptor
+{
+	@Override
+	public void process(org.apache.http.HttpRequest request, HttpContext context)
+			throws HttpException, IOException {
+	    if (!request.containsHeader("Accept-Encoding")) {
+            request.addHeader("Accept-Encoding", "gzip");
+        }
+		
+	}
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="detail_info_title_font">18sp</dimen>
+    <dimen name="detail_info_normal_font">17sp</dimen>
+    <dimen name="menu_grid_spacing">20dp</dimen>
+    <!-- Font size end -->
+
+    <!-- HomeFrgment begin -->
+    <dimen name="layout_vertical_margin_10dp">10dp</dimen>
+    <dimen name="ConvenientBanner_height">160dp</dimen>
+    <!-- HomeFrgment end -->
+
+    <dimen name="gps_text_divide_height">6dp</dimen>
+</resources>

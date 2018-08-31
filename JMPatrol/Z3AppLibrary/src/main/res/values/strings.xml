@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="tag_key" type="id"/>
+    <item name="tag_count" type="id"/>
+    <item name="tag_view" type="id"/>
+    <item name="tag_state" type="id"/>
+    <item name="tag_value" type="id"/>
+</resources>
