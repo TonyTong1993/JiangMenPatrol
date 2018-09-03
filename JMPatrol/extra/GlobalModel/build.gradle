@@ -1,0 +1,38 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+    }
+
+    buildTypes {
+
+        debug {
+            buildConfigField("String","SERVICE_URL_ROOT", "\"http://service-user-test-zhyytest.ipaas.enncloud.cn:32377/\"")
+            buildConfigField("String","VIRTUAL_PATH", "\"api/v1/sop\"")
+            minifyEnabled false
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            buildConfigField("String","SERVICE_URL_ROOT", "\"http://service-zhyypro.oennso.enn.cn:80/\"")
+            buildConfigField("String","VIRTUAL_PATH", "\"api/v1/sop\"")
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile project(':extra:Z3AppLibrary')
+
+}

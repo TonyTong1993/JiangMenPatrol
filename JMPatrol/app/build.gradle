@@ -20,5 +20,6 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile project(':Z3AppLibrary')
+    compile project(':extra:Z3AppLibrary')
+    compile project(path: ':extra:httpexecutor')
 }
