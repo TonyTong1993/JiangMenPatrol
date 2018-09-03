@@ -1,17 +1,109 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="fab_margin">16dp</dimen>
 
     <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_title_height">46dp</dimen>
+    <dimen name="divider">1dp</dimen>
+    <dimen name="button_corner">4dp</dimen>
+
+    <!-- Font size begin -->
+    <dimen name="title_font_size_1">22sp</dimen>
+    <dimen name="title_font_size_1.5">20sp</dimen>
+    <dimen name="title_font_size_2">18sp</dimen>
+    <dimen name="title_font_size_3">16sp</dimen>
+     <dimen name="title_font_size_6">17sp</dimen>
+    <dimen name="title_font_size_4">14sp</dimen>
+    <dimen name="title_font_size_5">12sp</dimen>
+    <dimen name="lv_item_font_size_level_1">16sp</dimen>
+    <dimen name="lv_item_font_size_level_2">14sp</dimen>
+    <dimen name="lv_item_font_size_level_3">12sp</dimen>
+    <dimen name="content_font_size_level_1">16sp</dimen>
+    <dimen name="content_font_size_level_2">15sp</dimen>
+    <dimen name="content_font_size_level_3">14sp</dimen>
+    <dimen name="content_font_size_level_4">12sp</dimen>
+    <dimen name="content_font_size_level_5">10sp</dimen>
+
     <dimen name="detail_info_title_font">18sp</dimen>
     <dimen name="detail_info_normal_font">17sp</dimen>
-    <dimen name="menu_grid_spacing">20dp</dimen>
     <!-- Font size end -->
 
-    <!-- HomeFrgment begin -->
-    <dimen name="layout_vertical_margin_10dp">10dp</dimen>
-    <dimen name="ConvenientBanner_height">160dp</dimen>
-    <!-- HomeFrgment end -->
 
-    <dimen name="gps_text_divide_height">6dp</dimen>
+    <!-- Margin Spacing begin -->
+    <dimen name="margin_1">1dp</dimen>
+    <dimen name="margin_3">3dp</dimen>
+    <dimen name="margin_5">5dp</dimen>
+    <dimen name="margin_15">15dp</dimen>
+    <dimen name="margin_23">23dp</dimen>
+    <dimen name="margin_spacing_level_1">70dp</dimen>
+    <dimen name="margin_spacing_level_7">45dp</dimen>
+    <dimen name="margin_spacing_level_8">91dp</dimen>
+    <dimen name="margin_spacing_level_0_1">90dp</dimen>
+    <dimen name="margin_spacing_level_0_2">160dp</dimen>
+    <dimen name="margin_spacing_level_9">161dp</dimen>
+    <dimen name="margin_spacing_level_2">30dp</dimen>
+    <dimen name="margin_spacing_level_3">25dp</dimen>
+    <dimen name="margin_spacing_level_4">20dp</dimen>
+    <dimen name="margin_spacing_level_5">15dp</dimen>
+    <dimen name="margin_spacing_level_6">10dp</dimen>
+    <dimen name="margin_spacing_level_10">5dp</dimen>
+    <dimen name="margin_spacing_level_11">1dp</dimen>
+    <dimen name="workorder_label_content_interval">15dp</dimen>
+    <dimen name="workorder_label_content_interval_1">13dp</dimen>
+    <!-- Margin Spacing end -->
+
+    <dimen name="width_tf_username_pwd">50dp</dimen>
+    
+    
+    <!-- Padding Spacing begin -->
+    <dimen name="padding_spacing_level_1">30dp</dimen>
+    <dimen name="padding_spacing_level_2">25dp</dimen>
+    <dimen name="padding_spacing_level_3">20dp</dimen>
+    <dimen name="padding_spacing_level_4">15dp</dimen>
+    <dimen name="padding_spacing_level_5">10dp</dimen>
+    <dimen name="padding_spacing_level_6">6dp</dimen>
+    <dimen name="padding_spacing_level_7">2dp</dimen>
+    <dimen name="padding_spacing_level_8">1dp</dimen>
+    <dimen name="padding_spacing_level_9">8dp</dimen>
+    <dimen name="lv_item_padding_up_down_level_1">5dp</dimen>
+    <dimen name="lv_item_padding_up_down_level_2">3dp</dimen>
+    <dimen name="lv_item_padding_up_down_level_3">8dp</dimen>
+    <dimen name="lv_item_padding_up_down_level_4">2dp</dimen>
+    <!-- Padding Spacing end -->
+
+
+    <!-- Custom View begin -->
+    <dimen name="map_popmenu_h">150.0dip</dimen>
+    <dimen name="workorder_popmenu_w">200.0dip</dimen>
+    <dimen name="workorder_popmenu_w_s">60.0dip</dimen>
+    <dimen name="workorder_morebtn_popmenu_w">100.0dip</dimen>
+    <dimen name="workorder_morebtn_popmenu_item_w">90.0dip</dimen>
+    <dimen name="workorder_morebtn_popmenu_item_h">40.0dip</dimen>
+    <dimen name="status_bar">30.0dip</dimen>
+    <dimen name="popmenu_item_w">150.0dip</dimen>
+    <dimen name="popmenu_item_h">0.0dip</dimen>
+    <dimen name="pop_searchresult_h">120dip</dimen>
+    <dimen name="pop_searchresult_h2">60dip</dimen>
+    
+    <dimen name="margin_form_title_width">200dip</dimen>
+    <dimen name="content_form_phone_width">150dip</dimen>
+    <dimen name="form_item_margin_left">10dip</dimen>
+    <dimen name="form_item_margin_right">10dip</dimen>
+    <dimen name="form_item_margin_start">10dip</dimen>
+    <!--  -->
+    <!-- planning task -->
+    <dimen name="planningtask_btn_h">30dip</dimen>
+    
+     <!-- workorder detail -->
+    <dimen name="offset_top_bottom">12dip</dimen>
+    <dimen name="offset_left_right">10dip</dimen>
+    <dimen name="tag_height">25dp</dimen>
+    <dimen name="tag_height_20">20dip</dimen>
+    <dimen name="tag_height_22">22dip</dimen>
+    <dimen name="tag_height_18">18dip</dimen>
+    <dimen name="callout_h">50px</dimen>
+    <dimen name="callout_w">400px</dimen>
+
+    <dimen name="activity_title_pop_height">42dp</dimen>
+
 </resources>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <com.ecity.cswatersupply.ui.widght.CustomTitleView
+        android:id="@+id/customTitleView1"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/activity_title_height" >
+    </com.ecity.cswatersupply.ui.widght.CustomTitleView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dip" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/css_login_setting_button"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btn_normal"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dip"
+                    android:layout_weight="1"
+                    android:background="@color/blue_normal"
+                    android:gravity="center"
+                    android:onClick="onNormalClicked"
+                    android:text="@string/setting_normal"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_custom"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dip"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:gravity="center"
+                    android:onClick="onCustomClicked"
+                    android:text="@string/setting_custom"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_container"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dip"
+                android:background="@color/transparent"
+                android:clickable="true"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="8dp"
+                    android:text="@string/setting_server_ip"
+                    android:textColor="@color/font_level_1"
+                    android:textSize="@dimen/font_18" />
+
+                <LinearLayout
+                    android:id="@+id/ll_spinner_environment"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginStart="100dp"
+                    android:background="@color/transparent"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_environment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent"
+                        android:gravity="center"
+                        android:textColor="@color/font_level_2"
+                        android:textSize="@dimen/font_18" />
+                </LinearLayout>
+            </RelativeLayout>
+            <include layout="@layout/layout_ipportinput"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"></include>
+
+            <FrameLayout
+                android:id="@+id/fl_splitline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip" >
+
+                <include layout="@layout/item_splitline_h" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_20"
+                android:paddingLeft="1dip"
+                android:paddingRight="1dip" >
+
+                <Button
+                    android:id="@+id/btn_test_connection"
+                    android:layout_width="match_parent"
+                    android:layout_height="45.0dip"
+                    android:layout_marginTop="10.0dip"
+                    android:background="@drawable/css_btn_default"
+                    android:onClick="onTestConnectionBtnClicked"
+                    android:text="@string/setting_test_connection"
+                    android:textColor="@color/white_theme_1"
+                    android:textSize="20.0dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_10"
+                android:paddingLeft="1dip"
+                android:paddingRight="1dip" >
+
+                <Button
+                    android:id="@+id/btn_vpn_test"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="45.0dip"
+                    android:layout_marginTop="10.0dip"
+                    android:background="@drawable/css_btn_default"
+                    android:onClick="onTestConnectionBtnClicked"
+                    android:text="vpn认证"
+                    android:textColor="@color/white_theme_1"
+                    android:textSize="20.0dip" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

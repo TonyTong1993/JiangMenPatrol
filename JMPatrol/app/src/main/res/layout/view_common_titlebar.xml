@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:autofit="http://schemas.android.com/apk/res-auto">
+
+    <ImageButton
+        android:paddingLeft="10dp"
+        android:id="@+id/ibtn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/selector_button_title_back"
+        android:contentDescription="@null"
+        android:onClick="onBackButtonClicked" />
+
+    <TextView
+        android:id="@+id/tv_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:clickable="true"
+        android:onClick="onActionButtonClicked"
+        android:textColor="@color/css_titleview_action"
+        android:textSize="@dimen/title_font_size_2" />
+
+
+    <com.zzz.ecity.android.applibrary.view.CircleImageView
+        android:id="@+id/btn_more"
+        android:layout_width="@dimen/margin_32"
+        android:layout_height="@dimen/margin_32"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:onClick="onMoreButtonClicked"
+        android:src="@drawable/icon_more"
+        android:visibility="gone"
+        app:border_color="@color/transparent"
+        app:border_width="0dp" />
+
+    <LinearLayout
+        android:id="@+id/ll_more"
+        android:layout_width="@dimen/margin_46"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/margin_10"
+        android:background=""
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/ibtn_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/icon_title_horizontal_more"
+            android:contentDescription="@null"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_search"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/margin_10"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/ibtn_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_6"
+            android:background="@mipmap/icon_title_search"
+            android:contentDescription="@null"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/ll_search_more"
+            android:layout_width="@dimen/margin_46"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@drawable/img_more_pressed"
+            android:orientation="horizontal">
+            <ImageButton
+                android:id="@+id/ibtn_search_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/icon_title_horizontal_more"
+                android:contentDescription="@null"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+
+        <com.enn.sop.wight.AutofitTextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:paddingBottom="3dp"
+            android:paddingEnd="3dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="3dp"
+            android:paddingStart="10dp"
+            android:paddingTop="3dp"
+            android:singleLine="true"
+            android:textColor="@color/white_theme_1"
+            android:textSize="@dimen/title_font_size_1" />
+
+        <com.zzz.ecity.android.applibrary.view.NotificationImageView
+            android:id="@+id/iv_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/null_drawable"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</merge>

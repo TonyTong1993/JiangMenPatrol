@@ -1,21 +1,665 @@
 <resources>
-    <string name="app_name">JMPatrol</string>
+    <string name="app_name_main">排水外勤</string>
+
+    <string name="app_is_running">正在运行</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <!-- menu category begin -->
+    <string name="menu_main">主界面</string>
+    <string name="menu_workorder">工单</string>
+    <!-- menu category end -->
+    <!-- Common begin -->
+    <string name="lv_todo_item_tag">lv_todo_item_tag</string>
+    <string name="exit_logout">确定退出系统吗？</string>
+    <string name="admin_sign_out_confirm">确定签退吗？</string>
+    <string name="dialog_title_prompt">提示</string>
+    <string name="dialog_title_feedback">审核原因描述</string>
+    <string name="app_crashed">程序出现了错误。请重新启动。</string>
+    <string name="over_input_length">输入字数超出限制</string>
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+    <string name="later">稍后</string>
+    <string name="close">关闭</string>
+    <string name="new_">新建</string>
+    <string name="clear">清除</string>
+    <string name="str_yes">是</string>
+    <string name="str_no">否</string>
     <string name="network_not_available">网络连接不可用，请检查网络连接。</string>
+    <string name="current_location_not_available">未获取到当前坐标，请稍后再试</string>
+    <string name="prompt_report_position_fail">坐标上报失败，请检查网络连接是否可用。</string>
+    <string name="save">保存</string>
     <string name="network_access_error">访问服务器出现错误。可能是因为当前网络不可用，或网络限制导致无法访问服务器。</string>
     <string name="network_default_error_msg">请求失败</string>
     <string name="network_request_timeout">请求超时</string>
-    <!-- LoginActivity begin -->
-    <string name="be_loginning_in">正在登录中……</string>
-    <string name="getting_menus">正在查询菜单</string>
-    <string name="getting_menus_fail">查询菜单失败，请尝试重新登录</string>
-    <string name="login_getting_init_paramters">正在获取初始化信息</string>
-    <string name="login_get_server_time_error">获取服务器时间失败</string>
+    <string name="please_select">请选择</string>
+    <string name="star_required_mark">*</string>
+    <string name="info_report">信息上报</string>
+    <string name="take_photo">拍照</string>
+    <string name="submit_at_least_three_photos">至少上传三张照片</string>
+    <string name="select_photo_from_album">从相册中选取</string>
+    <string name="take_video">拍摄视频</string>
+    <string name="select_video_from_album">选择视频</string>
+    <string name="take_record_audio">录音</string>
+    <string name="select_audio_from_album">从文件中选择</string>
+    <string name="action_menu_title">请选择</string>
+    <string name="uploading_now">正在上传</string>
+    <string name="upload_success">上传成功</string>
+    <string name="upload_fail">上传失败</string>
+    <string name="server_response_invalid">服务器返回结果异常</string>
+    <string name="compress_file_now">正在压缩文件</string>
+    <string name="upload_file_fail">上传附件失败，请再次提交上传失败的文件</string>
+    <string name="uploading_file">"正在上传%1$s项附件"</string>
+    <string name="link_num">电话</string>
+    <string name="phone_num_can_not_null">电话号码不能为空</string>
+    <string name="error_phone_format">号码格式有误</string>
+    <string name="photos">现场照片：</string>
+    <string name="current_photos">现场照片</string>
+    <string name="is_null_prompt">请检查是否填写完整</string>
+    <string name="nothing_to_submit">没有内容需要提交</string>
+    <string name="date_prompt">日期</string>
+    <string name="time_prompt">时间</string>
+    <string name="date_year_prompt">年份</string>
+    <string name="date_year_str">年</string>
+    <string name="middle_tag">-</string>
+    <string name="date_year_str_start_tail">-01-01</string>
+    <string name="date_year_str_end_tail">-12-31</string>
+    <string name="date_month_str">月</string>
+    <string name="date_month_start_str">-01</string>
+    <string name="date_month_end_str">-31</string>
+    <string name="date_month_prompt">月份</string>
+    <string name="date_picker">选择日期</string>
+    <string name="time_picker">选择时间</string>
+    <string name="date_year_picker">选择年份</string>
+    <string name="date_month_picker">选择月份</string>
+    <string name="hold_on_please">请稍候</string>
+    <string name="please_input_key_words">请输入关键字</string>
+    <string name="space">   </string>
+    <string name="delimeter1">、</string>
+    <string name="click_time_pick_hits">点击选择时间</string>
+    <!-- Common end -->
+    <!-- LogIn Activity begin -->
     <string name="btn_login">登&#160;录</string>
     <string name="login_pwd_input">请输入登录密码</string>
     <string name="login_user_name_input">请输入您的用户名</string>
-    <!-- LoginActivity end -->
+    <string name="str_remember_password">记住密码</string>
+    <string name="str_auto_login">自动登录</string>
+    <string name="str_forgetpassword">找回密码</string>
+    <string name="str_clickinput">点击输入</string>
+    <string name="str_click_download">点击下载</string>
+    <string name="str_setting">设置</string>
+    <string name="str_signin">登    录</string>
+    <string name="str_logining">正在登录</string>
+    <string name="str_searching">正在查询</string>
+    <string name="str_submiting">正在提交数据</string>
+    <string name="str_submit_success">提交成功</string>
+    <string name="str_datasyncing">正在更新数据</string>
+    <string name="str_aboutus">关于</string>
+    <string name="str_exit">退出登录</string>
+    <string name="str_notice_datamodify">数据已经修改</string>
+    <string name="str_isSaveEdit">确定保存修改内容？</string>
+    <string name="str_copyright">武汉易思迪信息科技有限公司 版权所有</string>
+    <string name="str_copyright_en">Copyright©2014 ECity Co., Ltd. All Rights Reserved</string>
+    <string name="str_agreement">使用条款和隐私政策</string>
+    <string name="str_company">武汉易思迪信息科技有限公司</string>
+    <string name="str_agreement_detail">    此版本适用于Android2.3.4及以上固件的主流手机，但不支持Pad系列的Android手持设备，在其它设备或型号上使用本软件，对于出现的任何问题，武汉易思迪信息科技有限公司不承担任何责任。本软件在使用过程中产生的数据流量费用，由运营商收取。本软件的安装使用受到《武汉易思迪信息科技有限公司软件许可和服务协议》协议约束。</string>
+    <string name="str_soft_update_fail">更新失败</string>
+    <string name="login_username_empty">用户名不能为空</string>
+    <string name="login_password_empty">密码不能为空</string>
+    <string name="login_logging_in">正在登录</string>
+    <string name="login_fail_try_later">登录失败，请稍候重试</string>
+    <string name="login_getting_init_paramters">正在获取初始化信息</string>
+    <string name="login_get_server_time_error">获取服务器时间失败</string>
+    <string name="login_get_init_paramters">获取初始化信息失败</string>
+    <string name="login_new_version_found">更新到新版本</string>
+    <string name="downloading_new_version">正在下载新版本</string>
+    <string name="no_update_latest">已是最新版本</string>
+    <string name="documents_download_fail1">下载失败，可能是因为网络不稳定，或文件地址无效</string>
+    <string name="documents_download_fail2">下载失败。可能是因为文件数据无效</string>
+    <string name="documents_download_success">文件下载成功</string>
+    <string name="get_mapconfig_error">获取配置文件失败</string>
+    <string name="checking_new_version">正在检测新版本&#8230;</string>
+    <string name="check_new_version_fail">检测新版本失败!</string>
+    <!-- LogIn Activity end -->
+    <!-- Login Setting Activity begin -->
+    <string name="setting_save">保存设置</string>
+    <string name="setting_test_connection">测试连接</string>
+    <string name="setting_testing_connetion">正在连接中</string>
+    <string name="setting_test_connection_success">连接成功，请保存配置并登录</string>
+    <string name="setting_test_connection_failed">连接失败</string>
+    <string name="setting_login_setting">登录设置</string>
+    <string name="setting_virtual_path">虚拟目录</string>
+    <string name="setting_protocol">协议</string>
+    <string name="setting_ip_address">IP地址</string>
+    <string name="setting_server_ip">环境切换</string>
+    <string name="setting_server_port">端口号</string>
+    <string name="setting_server_info_empty">暂无%s</string>
+    <string name="setting_dialog_msg_server_info_changed">设置信息有改变，确定保存吗？</string>
+    <string name="setting_target_server_pro">联通端口</string>
+    <string name="setting_target_server_uat">电信端口</string>
+    <string name="setting_target_server_dev">开发环境</string>
+    <string name="setting_normal">常 规</string>
+    <string name="setting_custom">自定义</string>
+    <!-- Login Setting Activity end -->
+    <!-- MainActivity begin -->
+    <string name="city_name">江门</string>
+    <string name="temp_des">-4~11°C</string>
+    <string name="wind_des">北风3–4级</string>
+    <string name="no_weather_des">暂未获取到天气</string>
+    <string name="notification_register_fail">通知功能注册失败，可能不能及时收到通知</string>
+    <string name="str_one_more_click_exit">再次点击 退出应用</string>
+    <string name="main_tab_message">消息</string>
+    <string name="main_tab_application">外勤应用</string>
+    <string name="main_tab_right_application">江门应用</string>
+    <string name="main_tab_map">地图</string>
+    <string name="main_tab_contacts">通讯录</string>
+    <string name="main_tab_my">我</string>
+    <string name="main_tab_web">网页</string>
+    <string name="inbox_tab_to_do_list">我的消息</string>
+    <string name="inbox_tab_notices">通知公告</string>
+    <string name="inbox_tab_contacts">通讯录</string>
+    <string name="inbox_tab_contact_root">联系人组织结构</string>
+    <string name="contact_search_title">联系人查询</string>
+    <!-- MainActivity end -->
+    <!-- WorkOrderDetailFragment begin -->
 
+    <string name="detail_tab_basic_info">基本信息</string>
+    <string name="detail_tab_explore_info">勘察信息</string>
+    <string name="detail_tab_flow_info">审批信息</string>
+    <string name="detail_tab_repair_info">维修信息</string>
+    <string name="tv_blank_msg_detail_flow_info">暂无审批信息</string>
+    <string name="title_flow_info_detail">审批信息详情</string>
+    <string name="event_flow_info_get_params">正在获取审批信息详情</string>
+    <string name="title_activity_workorder_detail">基本信息</string>
+    <string name="title_workorder_detail_flow_addman">申请人员:</string>
+    <string name="title_workorder_detail_flow_state">状态:</string>
+    <string name="title_workorder_detail_flow_addtime">申请时间:</string>
+    <!-- WorkOrderDetailFragment end -->
+    <!-- WorkOrderOperationLogActivity begin -->
+    <string name="next_processing_people">待处理人：</string>
+    <!-- WorkOrderOperationLogActivity end -->
+    <!-- WorkOrder PopMenu Begin -->
+    <string name="menu_workorder_default">全部</string>
+    <string name="workorder_empty">暂无工单</string>
+    <string name="menu_workorder_blank_content">该分类无内容，请切换至其他工单分类</string>
+    <string name="menu_workorder_no_more">没有更多数据加载</string>
+
+    <string name="menu_workorder_todo_all">全部</string>
+    <string name="menu_workorder_todo_my_wait_scheduling">待调度</string>
+    <string name="menu_workorder_todo_my_wait_dispatch">待分派</string>
+    <string name="menu_workorder_todo_my_wait_recieve">待接单</string>
+    <string name="menu_workorder_todo_my_wait_check">待审核</string>
+
+    <string name="menu_workorder_finish_all">全部</string>
+    <string name="menu_workorder_finish_wait_destroy_workorder">待销单</string>
+    <string name="menu_workorder_finish_finish_destroy_workorder">已销单</string>
+    <string name="menu_workorder_finish_return_workorder_to_system">退回工单平台</string>
+
+    <string name="menu_workorder_process_all">全部</string>
+    <string name="menu_workorder_process_wait_explore">待勘察</string>
+    <string name="menu_workorder_process_wait_repaire">待上门维修</string>
+    <string name="menu_workorder_process_wait_finish_work">待完工</string>
+    <string name="menu_workorder_process_finish_work_audit">完工审核</string>
+    <string name="menu_workorder_process_admin_has_audit">库管已审核</string>
+    <string name="menu_workorder_process_delay_approve">延期通过</string>
+    <string name="menu_workorder_process_delay_reject">延期驳回</string>
+    <string name="menu_workorder_process_assist_approve">协助通过</string>
+    <string name="menu_workorder_process_assist_reject">协助驳回</string>
+    <string name="menu_workorder_process_finish_work_reject">完工驳回</string>
+
+    <string name="menu_workorder_process_finish_work_approve">完工通过</string>
+    <string name="menu_workorder_process_delay_apply">延期申请</string>
+    <string name="menu_workorder_process_assist_apply">协助申请</string>
+    <string name="menu_workorder_process_transfer_appyly">转办申请</string>
+    <string name="menu_workorder_process_return_apply">退回申请</string>
+    <string name="menu_workorder_process_process_report">进度上报</string>
+    <string name="menu_workorder_process_transfer_accept">转办接收</string>
+    <string name="menu_workorder_process_transfer_reject">转办拒绝</string>
+    <string name="menu_workorder_process_return_approve">退回通过</string>
+    <string name="menu_workorder_process_return_reject">退回驳回</string>
+
+    <string name="menu_workorder_process_delay_cancel">取消延期</string>
+    <string name="menu_workorder_process_assist_cancel">取消协助</string>
+    <string name="menu_workorder_process_transfer_cancel">取消转办</string>
+    <string name="menu_workorder_process_return_cancel">取消退回</string>
+    <string name="menu_workorder_process_workoder_rebuild">重生成工单</string>
+    <string name="menu_workorder_process_return_to_hotline">退回热线</string>
+    <string name="menu_workorder_process_return_to_transfer_apply">退回转办申请</string>
+    <string name="menu_workorder_process_return_transfer_approve">退回转办通过</string>
+    <string name="menu_workorder_process_return_transfer_reject">退回转办驳回</string>
+    <string name="menu_workorder_process_return_transfer_cancel">退回转办取消</string>
+    <string name="menu_workorder_process_admin_not_agree">库管有异议</string>
+    <string name="menu_workorder_process_admin_agree">库管无异议</string>
+    <!-- WorkOrder PopMenu end -->
+
+    <!-- menu_summary Begin -->
+    <string name="menu_summary_static">汇总统计</string>
+    <string name="menu_summary_details">明细统计</string>
+    <string name="menu_summary_details_category">汇总详情</string>
+    <string name="summary_fix_people">维修人员</string>
+    <string name="summary_total_workorder">总单数</string>
+    <string name="summary_to_deal">待接单</string>
+    <string name="summary_dealing">处理中</string>
+    <string name="summary_finished">已完成</string>
+    <string name="summary_postpone">延期</string>
+    <string name="summary_over_schedule">超期</string>
+    <string name="summary_over_transfer_order">转单</string>
+    <string name="summary_over_back_order">退单</string>
+    <string name="summary_over_total_worktime">工时</string>
+    <string name="summary_over_total">汇总</string>
+    <string name="summary_over_work_leader_title">班长汇总</string>
+    <string name="summary_member_default">管网管理部</string>
+    <string name="summary_data_blank_title">请查询其他分类</string>
+    <string name="summary_data_blank_msg">该汇总分类下无数据</string>
+    <string name="summary_date_invalid_title">请重新选择时间</string>
+    <string name="summary_date_invalid_msg">所选的汇总时间不可大于当前时间</string>
+    <string name="summary_no_department_msg">未选择部门</string>
+    <!-- menu_summary end -->
+
+
+    <!-- MainActivity Todo Tab Begin -->
+    <string name="title_activity_todo">我的消息</string>
+    <string name="message_content_blank">暂无内容</string>
+    <string name="todo_batch_delete">批量删除</string>
+    <string name="todo_select_all">全部</string>
+    <string name="todo_delete">删除</string>
+    <!-- MainActivity Todo Tab End -->
+    <!-- MainActivity InBox Tab Begin -->
+    <string name="message_getting_messages">正在获取消息记录</string>
+    <string name="message_no_more_record">没有更多记录了</string>
+    <string name="message_confirm_delete_messages">确定删除选中的消息？</string>
+    <string name="message_deleting_messages">正在删除消息</string>
+    <string name="message_delete_success">删除成功</string>
+    <!-- MainActivity InBox Tab End -->
+    <!-- MainActivity My Profile Tab Begin -->
+    <string name="my_profile_gps_state">GPS状态查看</string>
+    <string name="my_profile_gps_no_location">没有GPS信息</string>
+    <string name="my_profile_device_usage">手机使用情况</string>
+    <string name="my_profile_system_settings">系统设置</string>
+    <string name="my_profile_about_us">关于</string>
+    <string name="my_profile_sign_in">值班长签到</string>
+    <string name="my_profile_sign_out">值班长签退</string>
+    <string name="my_profile_sign_in_not_avaliale">当前已经是签到状态，是否覆盖签到？</string>
+    <string name="submit_sign_in">签到</string>
+    <string name="success_submit_sign_in"> 签到成功</string>
+    <string name="success_submit_sign_out"> 签退成功</string>
+    <string name="failed_choose_date_select"> 选择时间必须大于当前时间</string>
+    <string name="user_name">用户名：</string>
+    <string name="old_password">原密码：</string>
+    <string name="new_password">新密码：</string>
+    <string name="new_password_again">确认密码：</string>
+    <string name="change_password">修改密码</string>
+    <string name="change_password_error">密码输入错误</string>
+    <string name="change_password_success">修改密码成功</string>
+    <string name="change_password_make_sure">确认修改密码？</string>
+    <string name="login_password_unlike">两次密码输入不一致</string>
+    <!-- MainActivity My Profile Tab end -->
+    <!-- User Center begin -->
+    <string name="user_center_title">个人信息</string>
+    <string name="user_center_user_portrait">头像</string>
+    <string name="user_center_user_id">用户id</string>
+    <string name="user_center_user_login_name">登录名</string>
+    <string name="user_center_user_true_name">真实姓名</string>
+    <string name="user_center_department_name">公司名称</string>
+    <string name="user_center_user_level">用户级别</string>
+    <string name="user_center_group_id">部门编号</string>
+    <string name="user_center_group_name">部门名称</string>
+    <string name="user_center_status">用户状态</string>
+    <string name="no_patrol_man_infos">未获取到人员信息</string>
+    <string name="no_patrol_layer">未获取到图层信息</string>
+    <string name="user_online">在线</string>
+    <string name="user_offline">离线</string>
+    <!-- User Center end -->
+    <!-- Sign In And Out Begin -->
+    <string name="user_sign_in_start_time">签到开始</string>
+    <string name="user_sign_out_end_time">签退截止</string>
+    <string name="user_sign_out_end_time_choose">请选择签退时间</string>
+    <string name="user_sign_out_invalid_end_time">签退时间必须大于签到时间</string>
+    <string name="user_sign_in_invalid">签到时间不小于当前时间</string>
+
+    <!-- Sign In And Out End -->
+    <!-- System Settings Activity Begin -->
+    <string name="system_settings_out_of_area_notice">出圈提示</string>
+    <string name="system_settings_clear_memory">缓存清理</string>
+    <string name="system_settings_clear_memory_medias">多媒体清理</string>
+    <string name="system_settings_clear_memory_images">图片</string>
+    <string name="system_settings_clear_memory_audios">语音</string>
+    <string name="system_settings_clear_memory_videos">视频</string>
+    <string name="system_settings_clear_memory_maps">地图清理</string>
+    <string name="system_settings_clearing">正在清除数据，请稍候</string>
+    <string name="system_settings_check_update">版本号</string>
+    <string name="system_settings_check_update_and_dowload">检查更新并下载？</string>
+    <string name="system_settings_clear_memory_check">清除缓存将会清除当前系统使用中所产生的所有照片、图片、声音等文件，是否确定清除？</string>
+    <!-- System Settings Activity End -->
+    <!-- Map Activity begin -->
+    <string name="map_title">地图浏览</string>
+    <string name="map_not_loaded">地图尚未加载,无法操作</string>
+    <string name="map_descrip_zoomin">放大</string>
+    <string name="map_goto_place">到这里去</string>
+    <string name="map_descrip_zoomout">缩小</string>
+    <string name="map_descrip_zoomfull">复位</string>
+    <string name="map_descrip_gps">GPS定位</string>
+    <string name="map_measure">测距</string>
+    <string name="map_query">查询</string>
+    <string name="map_clear">清屏</string>
+    <string name="map_more">更多</string>
+    <string name="map_tool">工具</string>
+    <string name="map_tips_rect">正在进行拉框查询…</string>
+    <string name="map_tips_rect_fail">查询失败</string>
+    <string name="map_tips_no_rect_layer">查询图层为空</string>
+    <string name="map_select_device">选取设备</string>
+    <string name="map_select_device_title">设备选取</string>
+    <string name="map_select_device_not_selected">未选取</string>
+    <string name="map_select_device_done">已选取</string>
+    <string name="map_select_valve_alias"> 阀门定位</string>
+    <string name="map_select_valve_title"> 阀门选取</string>
+    <string name="map_select_valve"> 选取阀门</string>
+    <string name="map_device_hidden_attr_prefix">hidden_</string>
+    <string name="map_query_no_device">没有查询到设备</string>
+    <string name="map_query_address">正在进行查找</string>
+    <string name="map_navigtion_title">提示</string>
+    <string name="map_navigtion_message">手机已安装百度地图和高德地图，请选择导航地图？</string>
+    <string name="map_navigtion_baidu">百度地图</string>
+    <string name="map_navigtion_gaode">高德地图</string>
+    <string name="map_change_location_fail">坐标转换失败</string>
+    <string name="map_address_search">地址查询</string>
+    <string name="map_address">地址</string>
+    <string name="map_plan_address">规划地址</string>
+    <string name="map_pipe_address">管网地址</string>
+    <string name="map_road_address">地名地址</string>
+    <string name="map_pipe_address_name">用户地址</string>
+    <string name="map_pipe_address_road">所在道路</string>
+    <string name="map_no_match_address">未搜索到匹配项</string>
+    <!-- Map Activity end -->
+    <!-- MapOffline Activity begin -->
+    <string name="map_offline_title">离线地图</string>
+    <string name="map_offline_download_space_limited">内存空间不足，无法下载离线地图资源</string>
+    <string name="map_offline_network_error">请检查网络</string>
+    <string name="map_offline_download_loading">正在获取离线资源，请勿操作</string>
+    <string name="map_offline_download_resource_not_found">当前没有离线地图资源可供下载</string>
+    <string name="map_offline_download_success">离线地图全部下载成功</string>
+    <string name="map_offline_download_single_success">离线地图下载成功</string>
+    <string name="map_offline_download_network">请切换至Wi-Fi环境下载</string>
+    <string name="map_offline_download_failed">离线地图下载失败，请重试</string>
+    <!-- MapOffline Activity end -->
+    <!-- CustomView Titlebar -->
+    <!-- MessageCenterActivity begin -->
+    <string name="message_center_title">消息中心</string>
+    <!-- tab begin -->
+    <string name="message_new">未处理</string>
+    <string name="message_handled">已处理</string>
+    <!-- tab end -->
+    <!-- MessageCenterActivity end -->
+    <!-- WorkOrderActivity begin -->
+    <item name="tag_key" type="id"/>
+    <item name="tag_count" type="id"/>
+    <item name="tag_view" type="id"/>
+    <item name="tag_state" type="id"/>
+    <item name="tag_value" type="id"/>
+
+    <string name="data_type_error">数据类型错误</string>
+    <string name="WorkOrder_title">管网维修</string>
+    <string name="rightBtn_single">查询</string>
+    <string name="workorder_filter">筛选</string>
+    <string name="workorder_downloading">正在获取工单数据</string>
+    <!-- tab begin -->
+    <string name="workorder_received">待接工单</string>
+    <string name="workorder_accepted">已接工单</string>
+    <string name="workorder_delayApply">延期工单</string>
+    <string name="workorder_reject">驳回工单</string>
+    <string name="workorder_complete">完结工单</string>
+    <string name="workorder_over_schedule">超期</string>
+    <string name="workorder_finished">已完成</string>
+    <string name="workorder_dealing">未完成</string>
+    <string name="workorder_postpone">延期</string>
+    <string name="workorder_amount">工单总数</string>
+    <string name="workorder_postpone_schedule">延期</string>
+    <string name="no_summary_detail_infos">未获取到工单汇总详情信息</string>
+    <string name="str_get_summary_detail_infos">正在获取工单汇总详情信息</string>
+    <string name="workorder_no_location">没有位置信息，无法定位</string>
+    <!-- tab end -->
+    <string name="key_workorder_type_rx">10001000</string>
+    <string name="key_workorder_type_zb">10002000</string>
+    <string name="key_workorder_type_xj">10003000</string>
+    <string name="key_workorder_type_jl">10004000</string>
+    <string name="key_workorder_type_rx_12345">10005000</string>
+    <string name="key_workorder_type_rx_110">10006000</string>
+    <string name="key_workorder_type_rx_yueqi">10007000</string>
+    <string name="value_workorder_type_rx">热线</string>
+    <string name="value_workorder_type_zb">自报</string>
+    <string name="value_workorder_type_xj">巡检</string>
+    <string name="value_workorder_type_jl">检漏</string>
+    <string name="value_workorder_type_rx_12345">热线(12345)</string>
+    <string name="value_workorder_type_rx_110">热线(110)</string>
+    <string name="value_workorder_type_rx_yueqi">热线(约期)</string>
+    <!-- ItemView begin -->
+    <string name="label_workorder_code">工单编码</string>
+    <string name="label_repair_what">反映内容:</string>
+    <string name="item_empty">无</string>
+    <string name="label_work_order_beyond_deadline">已超期</string>
+    <string name="label_work_order_going_to_beyond_deadline">即将超期</string>
+    <string name="label_work_order_be_urged">催</string>
+    <string name="label_work_order_be_urged_reply">回</string>
+    <string name="label_work_order_grab">抢</string>
+    <string name="label_work_order_need_grab">抢单</string>
+    <!-- &#160;&#160;&#160;&#160;是一个汉字宽度的空格 -->
+    <string name="label_repair_address">发生地址:</string>
+    <string name="label_contact_number">联系电话:</string>
+    <string name="label_remark">备注信息:</string>
+    <string name="label_fanying_region">反映块号:</string>
+    <string name="label_time_dispatching">派单时间:</string>
+    <string name="label_time_deadline">截止时间:</string>
+    <string name="label_time_complete">完结时间:</string>
+    <string name="label_time_finish">维修工时:</string>
+    <string name="label_man_dispatched_this">派单人:</string>
+    <string name="label_workorder_state">工单状态:</string>
+    <string name="label_time_accepttime">接单时间:</string>
+    <string name="label_fixtime">约期:</string>
+    <string name="label_pipe_size">管径大小:</string>
+    <string name="label_emergency_state">紧急程度:</string>
+    <string name="workorder_emergency_state_normal">正常</string>
+    <string name="workorder_emergency_state_primary">一般紧急</string>
+    <string name="workorder_emergency_state_intermediate">紧急</string>
+    <string name="workorder_emergency_state_senior">非常紧急</string>
+    <string name="label_man_apply_back">退单申请人</string>
+    <string name="label_back_reason">退单原因</string>
+    <string name="audit_back_has_cancle">该工单已取消退单，继续操作请刷新界面</string>
+    <string name="label_check_opinion">审核意见:</string>
+    <string name="label_time_destroy">销单时间:</string>
+
+    <!-- ItemView end -->
+    <!-- WorkOrderBtn begin -->
+    <string name="btn_back">退回</string>
+    <string name="btn_accept">接收</string>
+    <string name="btn_delay_apply">延期</string>
+    <string name="btn_feedback">反馈</string>
+    <string name="btn_askfinish">完结</string>
+    <string name="btn_askforhelp">协助</string>
+    <string name="btn_transfer">转办</string>
+
+    <!-- Months -->
+    <string name="january">一月</string>
+    <string name="february">二月</string>
+    <string name="march">三月</string>
+    <string name="april">四月</string>
+    <string name="may">五月</string>
+    <string name="june">六月</string>
+    <string name="july">七月</string>
+    <string name="agust">八月</string>
+    <string name="september">九月</string>
+    <string name="october">十月</string>
+    <string name="november">十一月</string>
+    <string name="december">十二月</string>
+    <!-- WorkOrderBtn end -->
+    <string name="dialog_return">退回工单</string>
+    <string name="hint_return_reason">请输入退回理由</string>
+    <string name="remark_not_null">输入内容不能为空</string>
+    <string name="accept_workorder">接单中…</string>
+    <string name="item_not_empty">%1$s不能为空</string>
+    <string name="title_askfinish">完工上报</string>
+    <string name="page_loading">页面加载中…</string>
+    <string name="cache_loading">缓存加载中…</string>
+    <string name="please_wait">请稍候…</string>
+    <string name="read_cache_error">读取缓存失败，请检查网络或服务</string>
+    <string name="save_context">是否保存草稿？</string>
+    <string name="workorder_repairman">维修人员</string>
+    <string name="workorder_today">今日工单</string>
+    <string name="workorder_wait_process">待处理</string>
+    <string name="material_use_explain">使用材料备注</string>
+    <string name="workorder_wait_process_address">待处理工单地址</string>
+
+    <!-- new WorkOrderActivity begin -->
+    <string name="dispatch_workorder_status">已派单</string>
+    <string name="return_workorder_status">已退单</string>
+    <string name="accept_workorder_status">已接单</string>
+    <string name="delay_workorder_status">延期申请成功</string>
+    <string name="pocess_workorder_status">已上报进度</string>
+    <string name="askfinish_workorder_status">已申请结单</string>
+    <string name="explore_workorder_status">已勘察</string>
+    <string name="signin_workorder_status">已维修签到</string>
+    <string name="ask4help_workorder_status">协助申请成功</string>
+    <string name="transfer_workorder_status">转办申请成功</string>
+    <!-- <string name="return_workorder_status">退单申请成功</string> -->
+    <string name="audit_delay_workorder_status">延期审核成功</string>
+    <string name="audit_ask4help_workorder_status">协助审核成功</string>
+    <string name="audit_transfer_workorder_status">转办处理成功</string>
+    <string name="audit_return_workorder_status">退单审核成功</string>
+    <string name="workorder_group_no_handle">待处理工单</string>
+    <string name="workorder_group_handlling">处理中工单</string>
+    <string name="workorder_group_complete">近30天工单</string>
+    <string name="cancel_delay_workorder_status">延期申请已取消</string>
+    <string name="cancel_assist_workorder_status">协助申请已取消</string>
+    <string name="cancel_transfer_workorder_status">转办申请已取消</string>
+    <string name="cancel_return_workorder_status">退单申请已取消</string>
+    <string name="title_back_transfer">退单转办</string>
+    <string name="audit_back_transfer_workorder_status">退单转办审核成功</string>
+    <string name="cancel_back_transfer_workorder_status">退单转办申请已取消</string>
+    <string name="workorder_tips_count">%1$s条工单</string>
+    <string name="workorder_new">您有%1$s条新工单</string>
+    <string name="workorder_repair_process_report_time">上报时间:</string>
+    <string name="workorder_repair_process_report_remark">描述:</string>
+    <!-- new WorkOrderActivity end -->
+    <!-- WorkOrderBackAuditActivity begin -->
+    <string name="workorder_backaudit_title">工单退回审核</string>
+    <string name="label_handle_back_apply">退单处理</string>
+    <string name="label_after_back">退单后续处理</string>
+    <string name="label_audit_result">是否同意退回</string>
+    <string name="workorder_backaudit_agree">同意</string>
+    <string name="workorder_backaudit_notagree">不同意</string>
+    <string name="radio_transfer2other">转单</string>
+    <string name="radio_dispatch">分派</string>
+    <string name="radio_back2system">退回系统</string>
+    <string name="choose_man">选择联系人</string>
+    <string name="choose_main_man">主办人</string>
+    <string name="hint_choose_main_man">请选择主办人</string>
+    <string name="str_choose_main_man_tips">请先选择主办人</string>
+    <string name="hint_choose">请选择</string>
+    <string name="choose_assist_man">协助人</string>
+    <string name="hint_choose_assist_man">请选择协助人</string>
+    <!-- WorkOrderBackAuditActivity end -->
+    <!-- ChooseContactManActivity begin -->
+    <string name="workorder_contact_man_title">选择人员</string>
+    <string name="click_me_later">当前网络连接不可用，点击重试</string>
+    <string name="no_contact_men">暂无联系人</string>
+    <!-- ChooseContactManActivity end -->
+    <!-- WorkOrderDispatchActivity begin -->
+    <string name="please_choose_one_main_man">请选择一名主办人</string>
+    <!-- WorkOrderDispatchActivity end -->
+    <!-- Notification begin -->
+    <string name="notification_title">通知</string>
+    <string name="key_not_exist">推送类型不存在，请联系系统管理员</string>
+    <!-- Notification end -->
+    <!-- WorkOrderCommandXtd begin -->
+    <string name="title_workorder_choosemen">选择联系人</string>
+    <string name="title_workorder_handle_transfer">转单处理</string>
+    <string name="title_workorder_dispatch">工单分派</string>
+    <string name="title_workorder_transfer">转办申请</string>
+    <string name="title_workorder_transfer_selectpeople">转办接收人</string>
+    <string name="title_workorder_dispatch_mainworker">主办人</string>
+    <string name="title_workorder_dispatch_assistances">协助人</string>
+    <string name="title_workorder_select_workers">处理人员</string>
+    <string name="title_workorder_aduit">审核人员</string>
+    <string name="title_workorder_event_to_task">事件转任务人员</string>
+    <string name="title_workorder_askforhelp">协助申请</string>
+    <string name="title_workorder_delayapply">延期申请</string>
+    <string name="title_workorder_pocess">进度上报</string>
+    <string name="title_workorder_return">退回申请</string>
+    <string name="title_workorder_explore">现场勘察</string>
+    <string name="title_workorder_signin">维修签到</string>
+    <string name="workorder_report_images">附件提交中…</string>
+    <string name="not_in_right_position">尚未到达维修点</string>
+    <string name="title_workorder_audit_delay">延期审核</string>
+    <string name="title_workorder_audit_ask4help">协助审核</string>
+    <string name="title_workorder_audit_return">退单审核</string>
+    <string name="bottom_negative_btn_txt">驳回</string>
+    <string name="bottom_positive_btn_txt">同意</string>
+    <string name="bottom_single_btn_dispatch">分派</string>
+    <!-- WorkOrderCommandXtd end -->
+    <!-- WorkOrderDetailActivity begin -->
+    <string name="workorder_getting_detail">正在获取工单详情</string>
+    <string name="workorder_detail_title">工单详情</string>
+    <string name="log_date_back">日志回溯</string>
+
+    <string name="workorder_detail_tab_basic">基本信息</string>
+    <string name="workorder_detail_tab_explor">勘察信息</string>
+    <string name="workorder_detail_tab_material">材料信息</string>
+    <string name="workorder_detail_tab_repair">维修信息</string>
+    <string name="workorder_detail_tab_audit">审批信息</string>
+    <string name="workorder_detail_tab_log">日志回溯</string>
+    <string name="workorder_detail_tab_time">工时信息</string>
+    <string name="workorder_detail_tab_urge">催办信息</string>
+    <string name="workorder_loading_urge_msg">正在获取催办信息</string>
+
+    <string name="workorder_detail_param_basic">工单基本信息</string>
+    <string name="workorder_detail_param_explor">工单勘察信息</string>
+    <string name="workorder_detail_param_material">工单材料信息</string>
+    <string name="workorder_detail_param_repair">维修签到信息</string>
+    <string name="workorder_detail_param_finish_report">完工上报信息</string>
+    <string name="workorder_detail_param_process_report">进度上报信息</string>
+    <string name="workorder_detail_param_process_report_detail">进度上报信息详情</string>
+    <string name="log_date_back_parameter_getting">正在获取日志参数</string>
+    <string name="title_locate">定位</string>
+    <string name="reason_askFinishNo">完工驳回原因</string>
+    <string name="reason_delayNo">延期驳回原因</string>
+    <string name="reason_delayOk">延期备注</string>
+    <string name="reason_refuseNo">退回驳回原因</string>
+    <string name="init_data">工单数据获取中…</string>
+    <string name="getExtra_error">获取更多信息出错</string>
+    <string name="getAttachment_error">获取附件信息出错</string>
+    <string name="geom_empty">没有坐标数据，无法定位</string>
+    <string name="form_data_reporta">提交</string>
+    <string name="form_error_dictionary_miss">检查项的字典未配置</string>
+    <string name="str_reply_hit">回复:</string>
+    <string name="str_send">发送</string>
+    <string name="str_send_content_can_not_be_null_tips">发送的内容不能为空！</string>
+    <!-- WorkOrderDetailActivity end -->
+    <!-- WorkOrderSearchActivity begin -->
+    <string name="workorder_search_title">工单查询</string>
+    <string name="title_search">搜索</string>
+    <string name="title_search_cancel">取消</string>
+    <string name="title_search_reminder">请输入关键字</string>
+    <string name="workorder_search_group_code">工单编号</string>
+    <string name="workorder_search_group_source">工单来源</string>
+    <string name="workorder_search_group_content">反映内容</string>
+    <string name="workorder_search_group_address">地址</string>
+    <string name="workorder_search_group_place">发生地址</string>
+    <string name="workorder_search_group_main_assignee">主办人</string>
+    <string name="workorder_search_result_blank_tips">查询结果为空</string>
+    <!-- WorkOrderSearchActivity end -->
+    <!-- WorkOrderFinishActivity begin -->
+    <string name="workorder_finish_title">完工上报</string>
+    <string name="workorder_finish_submit">提交</string>
+    <string name="workorder_finish_material_title">新增物料</string>
+    <string name="workorder_finish_no_data_prompt">未获取数据</string>
+    <string name="workorder_category_not_found">没有查到工单分类</string>
+
+    <string name="workorder_form_tab_basic">基本资料</string>
+    <string name="workorder_form_tab_material">物料信息</string>
+    <string name="workorder_form_tab_repairman">人员信息</string>
+    <string name="workorder_form_add_repairman">添加人员</string>
+    <string name="workorder_form_add_repairman_work_time_unit">小时</string>
+    <!-- WorkOrderFinishActivity end -->
     <!-- GpsStateActivity begin -->
+
     <string name="gps_state_title">GPS状态</string>
     <string name="gps_state_null">null</string>
     <string name="gps_state_num">序号:</string>
@@ -43,4 +687,650 @@
     <string name="gps_state_not_upload_record">未上传记录</string>
     <string name="gps_state_not_upload_record_hint">点击查看未上传GPS记录信息</string>
     <!-- GpsStateActivity end -->
+    <!-- GpsHistoryActivity begin -->
+    <string name="gps_history_title_all">所有历史记录</string>
+    <string name="gps_history_title_not_uploaded">未上传记录</string>
+    <!-- GpsHistoryActivity end -->
+    <!-- Report event begin -->
+    <string name="event_report_title">事件上报</string>
+    <string name="event_report_backup">反馈</string>
+    <string name="event_report_des">上报坐标</string>
+    <string name="event_report_get_params">正在获取事件参数</string>
+    <string name="event_report_submit">上报</string>
+    <string name="event_report_screen_items">筛选</string>
+    <string name="event_report_no_inspectitem">没有检查项数据</string>
+    <string name="event_report_sync">同步</string>
+    <string name="event_report_select_map_coord">地图选点</string>
+    <string name="event_report_select_current_location">当前位置</string>
+    <string name="event_report_related_photo">关联照片</string>
+    <string name="event_report_hint_xy">x,y</string>
+    <string name="event_report_hint_address">街道名称</string>
+    <string name="event_report_hint_address_loading">正在获取地址详情</string>
+    <string name="event_report_hint_address_gain_forbid">请勿重复获取地址</string>
+    <string name="event_report_hint_address_loading_fail">获取地址详情失败</string>
+    <string name="event_reprot_hint_address_no_current_location">获取当前坐标失败，请检查GPS设置或稍后再试</string>
+    <string name="event_report_audio_play_error">播放失败</string>
+    <string name="event_report_on_format_conversion">格式转换中</string>
+    <string name="event_report_error_format_conversion">格式转换出错</string>
+    <string name="event_report_delete_item_tips">是否删除这条记录？</string>
+    <string name="event_report_add_material">新增%s</string>
+    <string name="event_report_other">其它</string>
+    <string name="event_report_type_repair">维修</string>
+    <string name="event_report_type_construct">施工</string>
+    <string name="event_report_type_leak">漏点</string>
+    <string name="event_report_type_punish">罚单</string>
+    <string name="event_report_type_repair_tilte">维修事件上报</string>
+    <string name="event_report_type_construct_tilte">施工场地上报</string>
+    <string name="event_report_type_leak_tilte">漏点上报</string>
+    <string name="event_report_type_punish_tilte">上报罚单</string>
+    <string name="event_report_type_eventtype_repair">maintainevent</string>
+    <string name="event_report_type_eventtype_construct">constructareaevent</string>
+    <string name="event_report_type_eventtype_leak">dripevent</string>
+    <string name="event_report_type_eventtype_punish">punishevent</string>
+    <string name="event_report_type_list_item_image">事件类型列表图标</string>
+    <string name="event_report_type_list_item_arrow">事件类型列表向右箭头图标</string>
+    <string name="event_report_construct_area_undone">未设置施工区域</string>
+    <string name="event_report_select_area_title">施工区域选取</string>
+    <string name="event_report_construct_area_done">施工区域已设置</string>
+    <string name="event_management_tilte">事件管理</string>
+    <string name="event_management_type_repair_tilte">维修事件管理</string>
+    <string name="event_management_type_valve_tilte">阀门开关管理</string>
+    <string name="event_management_type_leak_tilte">查漏事件管理</string>
+    <string name="event_management_type_punishment_tilte">罚单事件管理</string>
+    <string name="event_management_type_construction_tilte">施工事件管理</string>
+    <string name="event_management_type_roadfix_tilte">路面修补事件管理</string>
+    <string name="event_management_type_pump_tilte">泵房事件管理</string>
+    <string name="event_management_type_pump_address">所在道路</string>
+    <string name="event_layer_pump">泵房</string>
+    <string name="event_management_type_pump_select_title">选择泵房</string>
+    <string name="event_device_number">编号</string>
+    <string name="event_pump_name">泵房名称</string>
+    <string name="event_pump_address">泵房地址</string>
+    <string name="event_pump_number">泵房编号</string>
+    <string name="event_pump_x">横坐标</string>
+    <string name="event_pump_y">纵坐标</string>
+    <string name="event_management_type_measure_tilte">测量事件管理</string>
+    <string name="event_management_to_work_order">转为工单</string>
+    <string name="event_management_to_task">转为任务</string>
+    <string name="event_management_to_work_order_title">事件转为工单</string>
+    <string name="event_management_to_task_title">事件转为任务</string>
+    <string name="event_management_to_work_order_button_title">转单</string>
+    <string name="event_management_to_task_button_title">转任务</string>
+    <string name="event_has_to_work_order">已转工单</string>
+    <string name="event_management_to_work_order_success">当前事件已成功转为工单</string>
+    <string name="event_management_to_task_success">当前事件已成功转为任务</string>
+    <string name="event_management_close_success">当前事件已成功关闭</string>
+    <string name="event_management_close">关闭</string>
+    <string name="event_management_view_work_order">查看工单</string>
+    <string name="event_management_has_closed">当前事件已成功关闭</string>
+    <string name="event_repair_details_title">维修事件详情</string>
+    <string name="event_leak_details_title">漏点事件详情</string>
+    <string name="event_construct_details_title">施工事件详情</string>
+    <string name="event_pump_details_title">泵房事件详情</string>
+    <string name="event_roadfix_details_title">路面修补事件详情</string>
+    <string name="event_measure_details_title">测量事件详情</string>
+    <string name="event_save_context">是否关闭该事件</string>
+    <string name="event_map_location">事件定位</string>
+    <string name="event_audio_download">正在下载文件</string>
+    <string name="valve_switch_menu_tilte">阀门开关</string>
+    <string name="valve_number">阀门编号</string>
+    <string name="valve_switch_state">开关状态</string>
+    <string name="event_report_photo_select_false">资源路径不可用，请重新选择图片</string>
+    <string name="cache_data_event_form_error">缓存事件表单失败</string>
+    <string name="without_cache_data">未缓存数据</string>
+    <string name="upload_success_without_internet">离线上传成功</string>
+    <string name="event_with_no_code">事件无编号</string>
+    <!-- Report event end -->
+    <!-- planningtask event begin -->
+    <string name="event_planningtask_title_all">全部任务</string>
+    <string name="event_planningtask_title_day">夜晚任务</string>
+    <string name="event_planningtask_title_night">白天任务</string>
+    <string name="event_planningtask_rightBtn_showmap">地图模式</string>
+    <string name="get_planningtask_error">获取计划任务失败</string>
+    <string name="get_no_planningtask">暂无任务</string>
+    <string name="get_no_patrol_planningtask">暂无巡检</string>
+    <string name="get_no_ff_planningtask">暂无养护任务</string>
+    <string name="get_null_pump_planningtask">暂无泵房养护任务</string>
+    <string name="get_null_asset_planningtask">暂无资产巡检任务</string>
+    <string name="get_null_supervise_planningtask">暂无督查任务</string>
+    <string name="get_content_error">获取检查项失败</string>
+    <string name="get_point_attrs_error">获取获取任务点属性失败</string>
+    <string name="get_point_error">获取点信息失败</string>
+    <string name="getting_planningtasks">正在获取计划任务列表</string>
+    <string name="getting_Geometry_attrs">正在获取属性信息</string>
+    <string name="planningtask_details_info_title">计划任务详情</string>
+    <string name="planningtask_excute_detail">任务执行详情</string>
+    <string name="planningtask_name">计划名称：</string>
+    <string name="planningtask_task_in_position">到位情况：</string>
+    <string name="plantask_task_in_position">到位：</string>
+    <string name="plantask_task_feedback">反馈：</string>
+    <string name="plantask_task_cover">覆盖：</string>
+    <string name="planningtask_task_name">任务名称：</string>
+    <string name="planningtask_task_start">任务开始时间：</string>
+    <string name="inspect_item_start_time">开始时间</string>
+    <string name="planningtask_task_end">任务结束时间：</string>
+    <string name="planningtask_task_linelen">任务巡查长度：</string>
+    <string name="planningtask_task_pointcount">任务巡查点数：</string>
+    <string name="planningtask_task_checkinfo">检查项</string>
+    <string name="planningtask_startwork_time">开始工作时间：</string>
+    <string name="planningtask_endwork_time">结束工作时间：</string>
+    <string name="planningtask_current_user">当前用户：</string>
+    <string name="planningtask_speed">巡查速度：</string>
+    <string name="planningtask_published_time">发布时间：</string>
+    <string name="planningtask_time">时间：</string>
+    <string name="planningtask_type">任务类型：</string>
+    <string name="planningtask_click_show_details">点击查看详情</string>
+    <string name="planningtask_point_part">检查点</string>
+    <string name="planningtask_report_check_items">上报检查项</string>
+    <string name="planningtask_all">全部</string>
+    <string name="planningtask_arrived">已到位</string>
+    <string name="planningtask_not_arrived">未到位</string>
+    <string name="planningtask_has_feedback">已反馈</string>
+    <string name="planningtask_no_feedback">未反馈</string>
+    <string name="planningtask_point_attr">详情</string>
+    <string name="planningtask_feedback">反馈</string>
+    <string name="planningtask_none_device_point">非设备点</string>
+    <string name="planningtask_no_point_has_no_check_item">当前检查点没有检查项</string>
+    <string name="planningtask_notification_message">您已到位</string>
+    <string name="planningtask_pumpingstation">泵房</string>
+    <string name="planningtask_asset">资产设备</string>
+    <string name="planningtask_asset_short">资产</string>
+    <string name="planningtask_firehydrant">消火栓</string>
+    <string name="planningtask_notification_not_arrived_message">该巡查点尚未到位，请到位后反馈</string>
+    <string name="planningtask_point">点：</string>
+    <string name="planningtask_line">线：</string>
+    <string name="planningtask_line_common">线：0/</string>
+    <string name="planningtask_line_rate">线覆盖率：</string>
+    <string name="planningtask_line_rate_common">线覆盖率：0</string>
+    <string name="planningtask_none_device_line">非设备线</string>
+    <string name="planningtask_pettern">0</string>
+    <string name="planningtask_no_currentlocation">当前坐标没有获取到</string>
+    <string name="planningtask_pointpart_attr">设备信息</string>
+    <string name="planningtask_load_map_data">正在初始化数据...</string>
+    <string name="planningtask_not_load_mapview">地图任未加载完成</string>
+    <string name="planningtask_flex_title">养护任务</string>
+    <string name="inspect_screen_title">检查项筛选</string>
+    <string name="planningtask_pa_title">巡检任务</string>
+    <string name="planningtask_type_f">养护</string>
+    <string name="planningtask_type_p">巡检</string>
+    <string name="planningtask_type_supervise">督查</string>
+    <string name="planningtask_type_asset">资产管理</string>
+    <string name="planningtask_type_pump">泵房养护</string>
+    <string name="planningtask_type_supervise_title">督查任务</string>
+    <string name="planningtask_type_asset_patrol_title">资产巡检任务</string>
+    <string name="planningtask_type_pump_fleflow_title">泵房养护任务</string>
+    <string name="plantask_construction_eventnumber">上报事件个数：</string>
+    <string name="plan_line">计划路线</string>
+    <string name="walked_line">行走路线</string>
+    <string name="trajectory_line">覆盖路线</string>
+    <string name="planningtask_esrifieldtype_name">泵房名称</string>
+    <string name="planningtask_esrifieldtype_id">消火栓编号</string>
+    <string name="planningtask_person">巡检人员</string>
+    <string name="planningtask_fanyingqingkuang_normal">正常</string>
+    <string name="planningtask_fanyingqingkuang">反映情况</string>
+    <string name="planningtask_wentimiaoshu">问题描述</string>
+    <string name="important_note_title">提醒消息</string>
+    <string name="planningtask_not_in_task_area">请注意，当前位置不在任务区域内。</string>
+    <string name="planningtask_requesting_work_time">正在获取工作时间</string>
+    <string name="planningtask_signing_in">正在签到</string>
+    <string name="planningtask_not_signing_in">不在签到范围内</string>
+    <string name="planningtask_sign_in_success">签到成功</string>
+    <string name="planningtask_signing_out">正在签退</string>
+    <string name="planningtask_sign_out_success">签退成功</string>
+    <string name="planningtask_has_sign_out">已签退</string>
+    <string name="planningtask_sign_out_failed">签退失败。记录已保存，程序会自动上传。</string>
+    <string name="cache_data_plantasks_error">缓存计划任务失败</string>
+    <string name="cache_data_pumpinfo_error">缓存泵房信息失败</string>
+    <string name="planningtask_cache_data_report_arrive">上报到位</string>
+    <string name="planningtask_back_message">是否保留数据</string>
+    <string name="planningtask_pump_feedback_report">泵房反馈上报</string>
+    <string name="planningtask_pump_feedback_count">已填写%1$s项</string>
+    <!-- planningtask event end -->
+    <!-- sign in out  begin -->
+    <string name="sign_in_out_type_in">签到</string>
+    <string name="sign_in_out_type_out">签退</string>
+    <string name="str_duty">值班</string>
+    <string name="str_duty_record">值班记录</string>
+    <string name="sign_in_out_no_man_duty">暂无人员</string>
+    <string name="sign_in_out_current_time">当前时间:</string>
+    <string name="sign_in_out_duty_time">值班时间:</string>
+    <string name="sign_in_out_duty_record">值班记录</string>
+    <string name="str_today">今天</string>
+    <string name="str_yesterday">昨天</string>
+    <string name="sign_in_out_title_rightaction">提交</string>
+    <string name="sign_in_out_error">提交失败，请联系管理员</string>
+    <!-- sign in out event end -->
+    <!-- punishment report begin -->
+    <string name="punishment_report_title">罚单信息</string>
+    <string name="punishment_details_title">罚单详情</string>
+    <string name="punishment_report_title_rightaction">新增</string>
+    <string name="punishment_item_location_image">罚单列表项地点图标</string>
+    <string name="punishment_item_arrow_right">罚单项向右箭头</string>
+    <string name="get_punishmentlist_error">获取任务列表失败</string>
+    <string name="punishment_button_reporting">预算单打印</string>
+    <string name="punishment_button_printing">收款完结</string>
+    <string name="punishment_state_reporting">提交中</string>
+    <string name="punishment_state_printing">已打印</string>
+    <string name="punishment_state_ended">已完结</string>
+    <string name="dialog_hint">如果不处罚请填写0</string>
+    <string name="dialog_title_reporting">确定预算单已打印？</string>
+    <string name="dialog_title_printing">罚单金额</string>
+    <string name="dialog_amount_blank">请填写罚单金额</string>
+    <!-- punishment report end -->
+    <!-- mapview location begin -->
+    <string name="poisearch_autocompletetextview_hint">输入想要查找的事物</string>
+    <string name="poisearch_start_search">开始查找</string>
+    <string name="poisearch_next_page">下一页</string>
+    <string name="place_query">地名查询</string>
+    <string name="city_center">苏州</string>
+    <string name="poisearch_address_text">地址:</string>
+    <string name="map_query_bigger_spare">查询范围太大，请减小查询范围</string>
+    <string name="map_query_details">设备详情</string>
+    <string name="map_query_error">设备信息未获取</string>
+    <string name="map_query_attr_error">设备信息解析错误</string>
+    <string name="map_query_text">无数据</string>
+    <string name="map_to_baidu">正在跳转。。。</string>
+    <string name="map_to_baidu_error">跳转百度地图失败</string>
+    <string name="no_spatial_layer">没有取到图层！</string>
+    <string name="no_map_tpk">没有找到TPK文件，请放入TPK文件或者检查TPK路径</string>
+    <string name="no_location">未获取到GPS坐标</string>
+    <string name="no_GPS_location">正在获取GPS坐标</string>
+    <string name="chooce_taget_location_point">请选择目的点</string>
+    <string name="no_points">没有可现实的数据</string>
+    <!-- mapview location begin -->
+    <!-- mainactivity begin -->
+    <string name="mainactivity_initdata_brgin">初始化数据</string>
+    <string name="mainactivity_getdata_inspect_begin">初始化检查项数据</string>
+    <string name="mainactivity_getdata_inspect_error">检查项初始化错误</string>
+    <string name="mainactivity_getdata_inspect_end">检查项初始化完成</string>
+    <string name="mainactivity_getdata_plantask_begin">初始化任务数据</string>
+    <string name="mainactivity_getdata_plantask_error">任务初始化错误</string>
+    <string name="mainactivity_getdata_plantask_end">任务初始化完成</string>
+    <!-- mainactivity end -->
+    <!-- fragment begin -->
+    <string name="fragment_message_title">消息中心</string>
+    <string name="fragment_patrol_title">外勤中心</string>
+    <string name="fragment_map_title">地图中心</string>
+    <string name="fragment_Profile_title">个人中心</string>
+    <string name="str_pipename">设备名称</string>
+    <string name="str_navigation">位置导航</string>
+    <string name="fragment_map_error_location">获取信息失败</string>
+    <string name="measurelength">测量距离</string>
+    <string name="measurearea">测量面积</string>
+    <string name="rectquery">拉框查询</string>
+    <string name="pickup">坐标拾取</string>
+    <string name="map_location">坐标定位</string>
+    <string name="map_pano">全景地图</string>
+    <string name="clear_search_history">清空历史记录</string>
+    <string name="location_x">X</string>
+    <string name="location_y">Y</string>
+    <string name="empty_location">还有坐标未输入！</string>
+    <string name="fragment_map_point_query">点击查询</string>
+    <!-- fragment end -->
+    <!-- 地图点属性 -->
+    <string name="planningtask_not_have_attrs_data">该点没有属性信息可展示</string>
+    <string name="planningtask_not_have_line_attrs_data">该线没有属性信息可展示</string>
+    <string name="not_set_geometry_area">未设置区域</string>
+    <string name="already_set_geometry_area">已设置区域</string>
+    <string name="init_search_error">查询模块初始化失败！</string>
+    <!-- mainactivity begin -->
+    <string name="content_loading">正在获取检查项数据</string>
+    <string name="plantask_loading">正在获取任务信息</string>
+    <string name="pie_data_loading">正在获取图表信息</string>
+    <string name="pie_data_format_month">本月</string>
+    <string name="pie_data_format_amount">工单数量：</string>
+    <string name="pie_data_format_year">本年</string>
+    <string name="pie_data_format2">条; </string>
+    <string name="pie_data_format3">率：</string>
+    <string name="pie_view_title">汇总统计饼状图</string>
+    <string name="bar_view_title">汇总统计条形图</string>
+    <string name="table_view_title">汇总统计表</string>
+    <string name="pie_data_title">汇总统计</string>
+    <string name="pie_data_department">部门</string>
+    <string name="workorder_pie_data_title">工单汇总统计</string>
+    <string name="pie_data_source_static_type">周期类型</string>
+    <string name="pie_data_source_time_interval">时间周期</string>
+    <string name="pie_data_source_month_type">按月份</string>
+    <string name="pie_data_source_year_type">按年份</string>
+    <string name="pie_data_source_day_type">按天</string>
+    <string name="loading_error">初始化数据失败</string>
+    <string name="loading_end">初始化数据完成</string>
+    <string name="address_commit">确认</string>
+    <string name="map_select_title">地图选点</string>
+    <!-- mainactivity end -->
+    <!-- EarthQuakeQuickReportActivity begin -->
+    <string name="quick_report_title">灾情速报</string>
+    <string name="emergency_destruction_report_title">现场破坏上报</string>
+    <string name="emergency_investigation_title">地震现场应急调查</string>
+    <string name="emergency_quick_report_title">速报列表</string>
+    <string name="report_address">调查点：</string>
+    <string name="earthquake_name">地震名称：</string>
+    <string name="earthquake_id">地震编号：</string>
+    <string name="surveyt_time">调查时间：</string>
+    <string name="survey_person">调查人：</string>
+    <string name="earthquake_base_info">基础信息</string>
+    <!-- EarthQuakeQuickReportActivity end -->
+
+
+    <!-- mainmenu subname begin -->
+    <string name="main_meun_subname_workorder">工单操作</string>
+    <string name="main_meun_subname_patrolPlanTask">巡检任务</string>
+    <string name="main_meun_subname_flexflowPlanTask">养护任务</string>
+    <string name="main_meun_subname_personmonitor">人员管理</string>
+    <string name="main_meun_subname_assetInfo">资产信息</string>
+    <string name="main_meun_subname_asset_flexflowPlanTask">资产养护</string>
+    <string name="main_meun_subname_pump_flexflowPlanTask">泵房养护</string>
+    <string name="main_meun_subname_plan_management">计划管理</string>
+    <string name="main_meun_subname_daily_plan_management">日计划管理</string>
+    <!-- mainactivity end -->
+
+
+    <!-- emergency begin -->
+    <string name="eq_earthquake">地震</string>
+    <string name="eq_station">台站</string>
+    <string name="quick_bulletin_overview_title">速报总览</string>
+    <string name="earth_quake_information_title">地震信息</string>
+    <string name="earth_quake_information_title_quick">地震列表</string>
+    <string name="earth_quake_infor_search_title">地震查询</string>
+    <string name="quick_report_search_title">速报查询</string>
+    <string name="info_search">查询</string>
+    <string name="earth_quake_start_time">发震时刻：</string>
+    <string name="earth_quake_region">发震区域：</string>
+    <string name="earth_quake_no_info">无数据</string>
+    <string name="earth_quake_select_info">请选择地震信息</string>
+    <string name="earth_location">位置：</string>
+    <string name="earth_quake_longitude">经度</string>
+    <string name="earth_quake_latitude">纬度</string>
+    <string name="earth_quake_length_from_you">震中距您：</string>
+    <string name="earth_quake_length_unit">公里</string>
+    <string name="earth_quake_ML">震级：</string>
+    <string name="earth_quake_deepth">深度：</string>
+    <string name="earth_quake_pdead">死亡人数</string>
+    <string name="earth_quake_pss">受伤人数</string>
+    <string name="earth_quake_ptotal">受灾人数</string>
+    <string name="earth_quake_liedu">地震烈度</string>
+    <string name="earth_quake_bnum">房屋破坏</string>
+    <string name="earth_quake_money">财产损失</string>
+    <string name="unit_wan">万</string>
+    <string name="unit_yi">亿</string>
+    <string name="yuan">元</string>
+    <string name="jian">间</string>
+    <string name="no_data">无数据</string>
+    <string name="eq_station_name">台站名称：</string>
+    <string name="eq_station_location">台站地址：</string>
+    <string name="eq_station_start_time">启用时间：</string>
+    <string name="eq_station_type">台站类型：</string>
+    <string name="eq_station_manager">负责人：</string>
+    <string name="out_of_china">经纬度超出中国范围</string>
+    <string name="getting_earth_quake_infos">正在获取地震信息</string>
+    <string name="no_earth_quake_infos">未获取到地震信息</string>
+    <string name="no_quick_report_infos">未获取到速报信息</string>
+    <string name="no_investigation_infos">未获取到现场调查信息</string>
+    <string name="emergency_knowledge">知识库</string>
+    <string name="news_announcement">消息公告</string>
+    <string name="send_message">发消息</string>
+    <string name="emergency_knowledge_plan">应急预案</string>
+    <string name="earthquake">震情</string>
+    <string name="announcement">公告</string>
+    <string name="expert_opinion">专家意见</string>
+    <string name="emergency_knowledge_suggest">应急建议</string>
+    <string name="emergency_earthquake_knowledge">地震常识</string>
+    <string name="str_emergency_filenotexist">本地文件不存在，请先下载文件</string>
+    <string name="str_emergency_updatetime">更新时间：</string>
+    <string name="str_emergency_updater">更新人：</string>
+    <string name="str_emergency_describe">未添加任何描述信息</string>
+    <string name="str_emergency_downloaded">打开</string>
+    <string name="str_emergency_downloading">正在下载</string>
+    <string name="str_emergency_redownload">重新下载</string>
+    <string name="str_emergency_waiting">等待中</string>
+    <string name="str_emergency_puased">已暂停</string>
+    <string name="str_emergency_download">下载</string>
+    <string name="str_emergency_getlistfail">获取预案信息失败!</string>
+    <string name="str_emergency_xuhao">序号</string>
+    <string name="str_emergency_address">地址</string>
+    <string name="str_emergency_pohuaichengdu">破坏程度</string>
+    <string name="str_emergency_pohuai_remark">房屋破坏描述</string>
+    <string name="str_emergency_finish">完成</string>
+    <string name="str_emergency_zip_errer">数据打包出错</string>
+    <string name="str_emergency_ziping">数据正在打包</string>
+    <string name="str_emergency_unusual_report">异常速报</string>
+    <string name="str_emergency_getinspect_error">获取本地数据错误</string>
+    <string name="str_emergency_get_quickreportinfos">正在获取速报信息</string>
+    <string name="str_emergency_get_investigationinfos">正在获取现场调查信息</string>
+    <string name="str_emergency_get_inspect_error">获取表单数据失败</string>
+    <string name="str_emergency_download_file_ready">准备下载文件</string>
+    <string name="str_emergency_download_file_connection">正在连接下载地址</string>
+    <string name="str_emergency_download_file_connection_error">连接下载地址失败</string>
+    <string name="str_emergency_download_file_downloading">正在下载文件</string>
+    <string name="str_emergency_download_file_download_error">下载文件失败</string>
+    <string name="str_emergency_download_file_download_finish">下载文件完成</string>
+    <string name="str_emergency_download_file_un_zip_error">文件解压失败</string>
+    <string name="data_loading">正在获取数据</string>
+    <!-- emergency end -->
+
+
+    <!-- 江门工程 begin -->
+    <string name="second_project_all_info">项目总览</string>
+    <string name="second_project_type">项目类型</string>
+    <string name="project_notstart">施工前</string>
+    <string name="project_ongoing">施工中</string>
+    <string name="project_finished">已完工</string>
+    <string name="project_delay">超期工程</string>
+    <string name="project_workload">工作量</string>
+    <string name="project_progress">进度信息</string>
+    <string name="project_change">变更信息</string>
+    <string name="project_startwork">开工申请</string>
+    <string name="project_pay">资金支付</string>
+    <string name="project_prossure_test">试压试验</string>
+    <string name="project_water_receive">接水</string>
+    <string name="project_complete">竣工验收</string>
+    <string name="project_type1">全部汇总</string>
+    <string name="project_type2">自建工程</string>
+    <string name="project_type3">重点工程</string>
+    <string name="project_type4">其他基建工程</string>
+    <string name="project_type5">管理外单位工程</string>
+    <string name="project_title_summary_by_year">%d年汇总详情</string>
+    <string name="project_title_summary_by_month" formatted="false">%d年%d月汇总详情</string>
+    <string name="documents_downloading">正在下载</string>
+    <string name="documents_download">下载</string>
+    <string name="documents_download_open">打开</string>
+    <string name="project_list_title">项目列表</string>
+    <string name="project_workload_title">工作量项目列表</string>
+    <string name="project_prospective_design">勘察设计</string>
+    <string name="project_prospective_not_handle">未处理</string>
+    <string name="project_prospective_handle">已处理</string>
+    <string name="project_log_back">日志回溯</string>
+    <string name="project_no_detail_info">暂无信息</string>
+    <string name="project_more_info">更多</string>
+    <string name="project_workload_records_title">工作量记录</string>
+    <string name="project_finish_apply_for_pc">请在pc端完成申请操作</string>
+    <string name="project_title_start_work_detail">开工申请详情</string>
+    <string name="project_title_prossure_detail">试压试验详情</string>
+    <string name="project_title_water_receive_detail">接水详情</string>
+    <string name="project_title_workload_detail">工作量详情</string>
+    <string name="project_title_pay_detail">资金支付详情</string>
+    <string name="project_title_complete_detail">竣工验收详情</string>
+    <!-- 江门工程  end -->
+
+
+    <!-- 选择组织、人员 -->
+    <string name="select_organisation_title">请选择</string>
+    <string name="select_organisation_query_info">正在查询</string>
+    <string name="select_organisation_confirm_exit">确定放弃选择结果？</string>
+
+    <!-- gis错误上报 -->
+    <string name="gis_error_location">错误位置</string>
+    <string name="gis_error_type">错误类型</string>
+    <string name="gis_error_statement">错误描述</string>
+    <string name="gis_error_title">GIS错误上报</string>
+    <string name="gis_error_geometry">图形错误</string>
+    <string name="gis_error_property">属性错误</string>
+
+    <!-- 数据采集 -->
+    <string name="event_data_collection_title">数据采集</string>
+    <string name="event_btn_refresh">刷新</string>
+    <string name="event_data_collection_time">采集时间</string>
+    <string name="event_data_collection_hdop">采集精度</string>
+    <string name="event_data_collection_x">X</string>
+    <string name="event_data_collection_y">Y</string>
+    <string name="event_data_collection_lon">经度</string>
+    <string name="event_data_collection_lat">纬度</string>
+    <string name="event_tansfer_location_error">坐标转换出错</string>
+    <string name="event_no_location">没有当前坐标，请刷新后重试</string>
+    <string name="event_no_position">没有选取上报坐标和地址</string>
+
+    <!-- 异常捕获 -->
+    <string name="app_exception_msg1">亲，程序即将崩溃了...</string>
+    <string name="app_exception_msg2">崩溃原因：</string>
+    <string name="app_exception_msg3">好的</string>
+
+    <!-- 资产信息-->
+    <string name="asset_loading_asset_info">正在获取资产信息</string>
+    <string name="asset_loading_asset_record">正在获取设备巡查记录</string>
+    <string name="asset_loading_asset_modify_record">正在获取资产变更记录</string>
+    <string name="asset_no_asset_modify_record">暂无资产变更记录</string>
+    <string name="asset_patrol_record_blank">暂无设备巡查记录</string>
+    <string name="asset_info_blank">暂无资产信息</string>
+    <string name="asset_feedback_info">反馈详情</string>
+    <string name="asset_rectify_label">整改</string>
+    <string name="asset_modify_record">变更记录</string>
+    <string name="asset_feedback_report_title">反馈上报</string>
+    <string name="asset_feedback_report">资产反馈上报</string>
+    <string name="asset_info_blank_content">当前没有资产信息</string>
+    <string name="asset_info_modify_blank_content">当前资产没有变更记录</string>
+    <string name="asset_no_more">没有更多数据加载</string>
+    <string name="asset_name">资产名称</string>
+    <string name="asset_gid">资产编号</string>
+    <string name="cache_data_assetinfo_error">缓存资产信息失败</string>
+    <string name="cache_data_asset_last_feed_info_error">缓存资产最近一次反馈信息失败</string>
+    <string name="asset_detail_info_title">资产详情</string>
+    <string name="asset_detail_info_blank_content">当前资产暂无详情信息</string>
+    <string name="asset_patrol_record_title">巡查记录</string>
+    <string name="asset_land_name_label">土地名称:</string>
+    <string name="asset_house_name_label">房屋名称:</string>
+    <string name="asset_usage_label">用途:</string>
+    <string name="asset_create_time_label">创建日期:</string>
+    <string name="asset_location_label">所在位置:</string>
+    <string name="asset_tenant_label">租户:</string>
+    <string name="asset_phone_label">联系方式:</string>
+    <string name="asset_rent_label">租金:</string>
+    <string name="asset_department_label">产权单位:</string>
+    <string name="asset_remark_label">备注:</string>
+    <string name="asset_update_time_label">更新日期:</string>
+    <string name="asset_change_people_label">变更人:</string>
+    <string name="asset_no_label">资产编号:</string>
+    <string name="asset_map_location">资产定位</string>
+
+
+    <!--二次泵房-->
+    <string name="pump_all">全部</string>
+    <string name="pump_sign_in">已签到</string>
+    <string name="pump_feedback">已反馈</string>
+    <string name="pump_sign_out">已签退</string>
+    <string name="notify_form_restore">有未上报的数据，是否继续编辑，取消将放弃已填写数据！</string>
+    <string name="add_attachment">添加文件</string>
+    <string name="add_attachment_open">打开</string>
+    <string name="pump_fleflow_time_unit">分钟</string>
+
+    <!--排水管理-->
+    <string name="drain_add_new_plan">新增计划</string>
+    <string name="drain_plans_management">计划管理</string>
+    <string name="drain_maintenance_management">养护管理</string>
+    <string name="drain_fleflow_record">养护记录</string>
+    <string name="drain_without_fleflow_record">没有养护记录</string>
+    <string name="drain_daily_paln_title">日计划</string>
+    <string name="drain_next_day_daily_plan_title">明日计划</string>
+    <string name="drain_daily_finish_title">日完成量</string>
+    <string name="drain_daily_report_title">日报填写</string>
+    <string name="drain_plan_audit_title">计划审核</string>
+    <string name="drain_plan_modify_title">计划修改</string>
+    <string name="drain_plan_change_title">计划变更</string>
+    <string name="drain_plan_daily_plan_change_title">日计划变更</string>
+    <string name="drain_plan_tomorrow_plan_change_title">明日计划变更</string>
+    <string name="drain_plan_time">养护计划时间</string>
+    <string name="drain_maintenance_plan_detail_info">养护计划详情</string>
+    <string name="drain_plan_modify_record_blank">暂无养护计划变更记录</string>
+    <string name="drain_plan_modify_record_title">养护计划变更历史记录</string>
+    <string name="drain_plan_apply_title">养护计划申请</string>
+    <string name="drain_plan_search_title">计划筛选</string>
+    <string name="drain_plan_operator">操作人:</string>
+    <string name="drain_plan_operate_description">描述:</string>
+    <string name="drain_plan_log_preview">查看日志</string>
+    <string name="drain_loading_plans_info">正在获取计划列表信息</string>
+    <string name="drain_plan_info_blank_content">当前没有计划信息</string>
+    <string name="drain_plan_no_more">没有更多数据加载</string>
+    <string name="drain_plan_modify_record">正在获取计划变更记录信息</string>
+    <string name="drain_plan_detail_info">正在获取计划详情信息</string>
+    <string name="drain_plan_region_select">选择片区</string>
+    <string name="drain_plan_detail_blank">暂无养护计划详情</string>
+
+    <string name="drain_plan_feedback_detail_blank">该片区当天未上报养护记录信息</string>
+    <string name="drain_plan_default_month_plantime">1970年01月</string>
+    <string name="drain_plan_default_suffix">月养护计划</string>
+    <string name="drain_plan_feedback_record_empty">当前暂无养护记录</string>
+
+    <string name="drain_plan_state_wait_audit">待审批</string>
+    <string name="drain_plan_state_audited">审批通过</string>
+    <string name="drain_plan_state_back_audit">审批驳回</string>
+    <string name="drain_plan_state_change_audit">变更待审批</string>
+    <string name="drain_plan_state_back_change">变更驳回</string>
+    <string name="drain_plan_state_changed">变更通过</string>
+    <string name="drain_daily_plan_state_wait_audit">日计划变更申请</string>
+    <string name="drain_daily_plan_state_back_changed">日计划变更驳回</string>
+    <string name="drain_daily_plan_state_changed">日计划变更通过</string>
+
+    <string name="drain_btn_daily_plan">日计划</string>
+    <string name="drain_btn_daily_finished">日完成量</string>
+    <string name="drain_btn_flelow_record">养护记录</string>
+    <string name="drain_btn_modify">修改</string>
+    <string name="drain_btn_change">变更</string>
+    <string name="drain_btn_audit">进入审批</string>
+    <string name="drain_btn_daily_plan_change">日计划变更</string>
+    <string name="drain_btn_tomorrow_daily_plan_change">明日计划变更</string>
+    <string name="drain_btn_change_record">变更记录</string>
+    <string name="drain_btn_daily_plan_changing">日计划变更申请中</string>
+    <string name="drain_btn_daily_plan_tm_changing">明日计划变更申请中</string>
+
+    <string name="drain_plan_daily_plan_management">日计划审批管理</string>
+    <string name="drain_daily_plan_info_blank_content">当前没有日计划信息</string>
+    <string name="drain_daily_plan_modify_info_blank_content">当前没有日计划变更信息</string>
+    <string name="drain_loading_daily_plans_info">正在获取日计划列表信息</string>
+    <string name="drain_loading_daily_plan_modify_records_info">正在获取日计划变更记录信息</string>
+    <string name="drain_plan_daily_plan_modify_record_title">日养护计划变更历史记录</string>
+    <string name="drain_plan_daily_plan_modify_record_detail_title">日计划变更详情</string>
+    <string name="drain_plan_daily_plan_audit_title">日计划审核</string>
+    <string name="drain_plan_all">全部</string>
+    <string name="drain_plan_default_daily_plantime">01月01日</string>
+    <string name="drain_plan_tab_title_wait_audit">待审批</string>
+    <string name="drain_plan_tab_title_already_audited">已审批</string>
+    <string name="drain_plan_tab_title_in_doing">进行中</string>
+    <string name="drain_plan_tab_title_already_done">已完结</string>
+    <string name="drain_loading_plans_state_info">正在获取计划状态信息</string>
+    <string name="drain_plan_select_end_time_error_tips">结束时间必须大于开始时间，请重选</string>
+    <string name="drain_plan_select_start_time_null_tips">开始时间不能为空，请重选</string>
+    <string name="drain_plan_select_end_time_null_tips">结束时间不能为空，请重选</string>
+    <string name="drain_loading_fleflow_records_info">正在获取计划状态信息</string>
+    <string name="drain_department_title">养护单位X</string>
+
+    <string name="drain_attendance_title">考勤</string>
+    <string name="drain_attendance_record">记录</string>
+    <string name="drain_attendance_record_title">考勤记录</string>
+    <string name="drain_loading_attendance_record_info">正在获取考勤记录信息</string>
+    <string name="drain_loading_attendance_info">正在获取考勤信息</string>
+    <string name="drain_loading_attendance_state_info">正在获取考勤状态信息</string>
+    <string name="drain_attendance_prepare_tips">设定%1$时间为%2$</string>
+    <string name="drain_out_count_record_title">出圈记录</string>
+    <string name="drain_info_blank_content">当前没有考勤记录信息</string>
+    <string name="drain_loading_upload_sign_in_info">正在上报签到信息</string>
+    <string name="drain_loading_upload_sign_out_info">正在上报签退信息</string>
+    <string name="drain_sign_in_label">签到</string>
+    <string name="drain_sign_out_label">签退</string>
+    <string name="drain_attendance_map_location">考勤定位</string>
+    <string name="drain_attendance_record_info_blank_content">暂无考勤记录信息</string>
+    <string name="drain_loading_out_of_circle_record_info">正在获取出圈记录信息</string>
+    <string name="drain_out_circle_info_blank_content">当前没有出圈信息</string>
+    <string name="drain_sign_in_success_tips">签到成功！</string>
+    <string name="drain_sign_in_fail_tips">签到失败！</string>
+    <string name="drain_sign_out_success_tips">签退成功！</string>
+    <string name="drain_sign_out_fail_tips">签退失败！</string>
 </resources>

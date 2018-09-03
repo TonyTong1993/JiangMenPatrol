@@ -10,13 +10,35 @@
         android:paddingLeft="38dp"
         android:paddingRight="38dp"
        >
+        <LinearLayout
+            android:id="@+id/id_ll_title"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="100dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_title_Login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:gravity="center"
+                android:onClick="onTitleViewClick"
+                android:text="@string/app_name_main"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"
+
+                />
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/ll_user_name"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="120dp"
+            android:layout_below="@id/id_ll_title"
+            android:layout_marginTop="20dp"
             android:background="@null"
             android:gravity="center"
             >
@@ -103,16 +125,42 @@
                 android:textSize="17sp" />
 
         </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_forget_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_pwd"
+            android:layout_marginTop="15dp"
+            android:gravity="center_vertical|right"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:button="@drawable/login_check_selector"
+                android:gravity="center_vertical"
+                android:padding="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="忘记密码"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+        </LinearLayout>
 
         <Button
             android:id="@+id/bt_ok"
-            android:layout_width="120dp"
+            android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_below="@id/ll_checkbox"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="35dp"
             android:background="@drawable/rectangle_login_btn_bg"
-            android:text="@string/btn_login"
+            android:text="@string/login"
             android:textColor="@android:color/white"
             android:textSize="18sp" />
 

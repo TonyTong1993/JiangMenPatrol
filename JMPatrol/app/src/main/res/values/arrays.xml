@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="target_server">
+        <item>@string/setting_target_server_pro</item>
+        <item>@string/setting_target_server_uat</item>
+    </string-array>
+    <string-array name="workorder_tabs">
+        <item>@string/workorder_received</item>
+        <item>@string/workorder_accepted</item>
+        <item>@string/workorder_delayApply</item>
+        <item>@string/workorder_reject</item>
+        <item>@string/workorder_complete</item>
+    </string-array>
+    <string-array name="message_center_tabs">
+        <item>@string/message_new</item>
+        <item>@string/message_handled</item>
+    </string-array>
+    <!-- WorkOrderbtns begin -->
+    <string-array name="workorder_btns_back">
+        <item>@string/btn_back</item>
+        <item>@string/btn_accept</item>
+    </string-array>
+    <string-array name="workorder_btns_accept">
+        <item>@string/btn_back</item>
+        <item>@string/btn_feedback</item>
+        <item>@string/btn_askfinish</item>
+    </string-array>
+    <!-- WorkOrderbtns end -->
+    <string-array name="workorder_month">
+        <item>@string/january</item>
+        <item>@string/february</item>
+        <item>@string/march</item>
+        <item>@string/april</item>
+        <item>@string/may</item>
+        <item>@string/june</item>
+        <item>@string/july</item>
+        <item>@string/agust</item>
+        <item>@string/september</item>
+        <item>@string/october</item>
+        <item>@string/november</item>
+        <item>@string/december</item>
+    </string-array>
+
+    <!-- Planningtask begin -->
+    <string-array name="planningtask_tabs">
+        <item>@string/event_planningtask_title_all</item>
+        <item>@string/event_planningtask_title_day</item>
+        <item>@string/event_planningtask_title_night</item>
+    </string-array>
+
+    <string-array name="planningtask_execute_filter">
+        <item>@string/planningtask_all</item>
+        <item>@string/planningtask_arrived</item>
+        <item>@string/planningtask_not_arrived</item>
+        <item>@string/planningtask_has_feedback</item>
+    </string-array>
+    <!-- Planningtask end -->
+
+    <string-array name="pump_execute_filter">
+        <item>@string/pump_all</item>
+        <item>@string/pump_sign_in</item>
+        <item>@string/pump_feedback</item>
+        <item>@string/pump_sign_out</item>
+    </string-array>
+
+    <!-- Custom Report begin -->
+    <string-array name="custom_action_sheet_image_menus">
+        <item>@string/take_photo</item>
+        <item>@string/select_photo_from_album</item>
+    </string-array>
+    <string-array name="workorder_pop_menu_finish">
+        <item>@string/menu_workorder_finish_all</item>
+        <item>@string/menu_workorder_finish_wait_destroy_workorder</item>
+        <item>@string/menu_workorder_finish_finish_destroy_workorder</item>
+        <item>@string/menu_workorder_finish_return_workorder_to_system</item>
+    </string-array>
+    <string-array name="workorder_pop_menu_todo">
+        <item>@string/menu_workorder_todo_all</item>
+        <item>@string/menu_workorder_todo_my_wait_dispatch</item>
+        <item>@string/menu_workorder_todo_my_wait_recieve</item>
+        <item>@string/menu_workorder_todo_my_wait_scheduling</item>
+    </string-array>
+    <string-array name="workorder_pop_menu_operator">
+        <item>@string/menu_workorder_process_all</item>
+
+        <item>@string/menu_workorder_process_wait_explore</item>
+        <item>@string/menu_workorder_process_wait_repaire</item>
+        <item>@string/menu_workorder_process_wait_finish_work</item>
+        <item>@string/menu_workorder_process_finish_work_audit</item>
+        <item>@string/menu_workorder_process_admin_has_audit</item>
+        <item>@string/menu_workorder_process_delay_approve</item>
+        <item>@string/menu_workorder_process_delay_reject</item>
+        <item>@string/menu_workorder_process_assist_approve</item>
+        <item>@string/menu_workorder_process_assist_reject</item>
+        <item>@string/menu_workorder_process_finish_work_reject</item>
+
+        <item>@string/menu_workorder_process_finish_work_approve</item>
+        <item>@string/menu_workorder_process_delay_apply</item>
+        <item>@string/menu_workorder_process_assist_apply</item>
+        <item>@string/menu_workorder_process_transfer_appyly</item>
+        <item>@string/menu_workorder_process_return_apply</item>
+        <item>@string/menu_workorder_process_process_report</item>
+        <item>@string/menu_workorder_process_transfer_accept</item>
+        <item>@string/menu_workorder_process_transfer_reject</item>
+        <item>@string/menu_workorder_process_return_approve</item>
+        <item>@string/menu_workorder_process_return_reject</item>
+
+        <item>@string/menu_workorder_process_delay_cancel</item>
+        <item>@string/menu_workorder_process_assist_cancel</item>
+        <item>@string/menu_workorder_process_transfer_cancel</item>
+        <item>@string/menu_workorder_process_return_cancel</item>
+        <item>@string/menu_workorder_process_workoder_rebuild</item>
+        <item>@string/menu_workorder_process_return_to_hotline</item>
+        <item>@string/menu_workorder_process_return_to_transfer_apply</item>
+        <item>@string/menu_workorder_process_return_transfer_approve</item>
+        <item>@string/menu_workorder_process_return_transfer_reject</item>
+        <item>@string/menu_workorder_process_return_transfer_cancel</item>
+
+        <item>@string/menu_workorder_process_admin_not_agree</item>
+        <item>@string/menu_workorder_process_admin_agree</item>
+
+
+    </string-array>
+     <string-array name="workorder_pop_menu_summary">
+        <item>@string/menu_summary_static</item>
+        <item>@string/menu_summary_details</item>
+    </string-array>
+    <string-array name="custom_action_sheet_video_menus">
+        <item>@string/take_video</item>
+        <item>@string/select_video_from_album</item>
+    </string-array>
+    <string-array name="custom_action_sheet_audio_menus">
+        <item>@string/take_record_audio</item>
+        <item>@string/select_audio_from_album</item>
+    </string-array>
+    <!-- Custom Report end -->
+     <!-- project  begin -->
+     <string-array name="project_type">
+        <item>@string/project_type1</item>
+        <item>@string/project_type2</item>
+        <item>@string/project_type3</item>
+        <item>@string/project_type4</item>
+        <item>@string/project_type5</item>
+    </string-array>
+      <!-- project  end -->
+
+
+    <!-- Main Meun Subname begin -->
+    <string-array name="main_meun_subnames">
+        <item>@string/main_meun_subname_workorder</item>
+        <item>@string/main_meun_subname_patrolPlanTask</item>
+        <item>@string/main_meun_subname_flexflowPlanTask</item>
+        <item>@string/main_meun_subname_asset_flexflowPlanTask</item>
+        <item>@string/main_meun_subname_pump_flexflowPlanTask</item>
+        <item>@string/main_meun_subname_plan_management</item>
+        <item>@string/main_meun_subname_daily_plan_management</item>
+    </string-array>
+    <!-- Main Meun Subname end -->
+
+    <string-array name="clear_memeory_types">
+        <item>@string/system_settings_clear_memory_medias</item>
+        <item>@string/system_settings_clear_memory_maps</item>
+    </string-array>
+
+    <string-array name="notification_types">
+        <item>wo_工单</item>
+        <item>xj_巡检</item>
+        <item>yh_养护</item>
+        <item>zb_值班</item>
+        <item>msg通知</item>
+        <item>sj_事件</item>
+        <item>kg_开工</item>
+        <item>sy_试压</item>
+        <item>js_接水</item>
+        <item>jg_竣工</item>
+    </string-array>
+</resources>

@@ -1,9 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="black_theme_1">#ff333333</color>
+    <color name="black_theme_2">#4f4f4f</color>
+    <color name="white_theme_1">#ffffffff</color>
+    <color name="white_theme_2">#F7F7F7</color>
+    <color name="blue_theme_2">#6C75B7</color>
+    <color name="blue_theme_3">#ff3b96ea</color>
+    <color name="blue_theme_4">#1DB9F2</color>
+    <color name="font_level_1">#000000</color>
+    <color name="font_level_2">#4f4f4f</color>
+    <color name="font_level_3">#5b5b5b</color>
+    <color name="font_level_4">#999999</color>
+    <color name="map_toolbar_pressed">#ffcccccc</color>
+    <color name="map_toolbar_normal">#00000000</color>
+    <color name="map_popup_tab">#ff3b96ea</color>
+    <color name="tab">#00A7DB</color>
+    <color name="text_darkGray">#ff666666</color>
+    <color name="white">#FFFFFF</color> <!--白色 -->
+    <color name="ics_blue">#ff33b5e5</color>
+    <color name="text_lightGray">#ff9e9fa1</color>
+    <color name="group_bkcolor">#efeff4</color>
+    <color name="white_text">#ffffffff</color>
+    <color name="black_text">#ff000000</color>
+    <color name="default_text">#333333</color>
+    <color name="geo_outline_color">#ff4500</color>
+    <color name="geo_fill_color">#20cd5c5c</color>
+    <color name="geo_text_color">#900000ff</color>
+    <color name="track_line_color">#f0a52a2a</color>
+    <color name="arrived_line_color">#0000CD</color>
+    <color name="light_gray">#FFcccccc</color>
+    <color name="main_toolbar">#00000000</color>
+    <color name="main_toolbar_pressed">#ffcccccc</color>
+    <!-- 通用列表背景 -->
+    <color name="list_background">#fff6f6f6</color>
+    <color name="text_gray">#585858</color>
+    <!-- 自定义录音效果颜色 -->
+    <color name="title_blue">#ff3b96ea</color>
+    <color name="green_pressed">#228B22</color>
 
-    <color name="group_bkcolor">#ABC3F6</color>
-    <color name="textColorHint">#BBD9F7</color>
+    <!-- 按照江门移动规范设计的颜色值 -->
+    <color name="screen_background">#f4f5f6</color>
+    <color name="content_background">#ffffff</color>
+    <color name="blue_normal">#288ef0</color>
+    <color name="blue_pressed">#0b5dac</color>
+    <color name="txt_hint">#b4b4b4</color>
+    <color name="txt_label">#686868</color>
+    <color name="txt_black_normal">#333333</color>
+    <color name="divider_thick">#e7e7e7</color>
+    <color name="blue">#0000ff</color>
+    <!-- 罚单列表状态与按钮颜色 -->
+    <color name="punish_green">#32B756</color>
+    <color name="punish_yellow">#Ec8B2c</color>
+    <color name="punish_red">#f7676a</color>
+    <color name="punish_blue">#7FBBEA</color>
+    <!-- 养护巡检任务颜色 -->
+    <color name="plan_task_progress_bar_arrive">#FF4040</color>
+    <color name="plan_task_progress_bar_feedback">#FF8C00</color>
+    <color name="plan_task_progress_bar_cover">#2E8B57</color>
+
+    <!-- Tab颜色 -->
+    <color name="tab_tv_nor">#797979</color>
+    <color name="tab_tv_sel">#3399dd</color>
+    <color name="item_form_common_title">#efeff4</color>
+
+    <!-- 图例颜色 -->
+    <color name="legend_blue">#0000CD</color>
+    <color name="legend_red">#B22222</color>
+    <color name="legend_green">#7FFF00</color>
+    <color name="head_bg">#663300</color>
+
+    <color name="lv_item_bg">#202881f0</color>
+    <color name="lv_label_orange">#f69e41</color>
+    <color name="rect_bg">#d3d3d3</color>
+
+    <color name="circle_bg_green">#3cb371</color>
+    <color name="divider_bg">#afafaf</color>
+    <color name="textColorHint">#ffffff</color>
 </resources>

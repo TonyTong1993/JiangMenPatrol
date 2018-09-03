@@ -21,6 +21,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        this.setTheme(android.R.style.Theme_Holo_Light);
         initUI();
         initEvent();
     }
