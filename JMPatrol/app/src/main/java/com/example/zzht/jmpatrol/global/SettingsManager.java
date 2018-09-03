@@ -2,6 +2,8 @@ package com.example.zzht.jmpatrol.global;
 
 import android.content.Context;
 
+import com.example.zzht.jmpatrol.utils.PreferencesUtil;
+
 public class SettingsManager {
     private static SettingsManager instance;
     private static final String KEY_SERVER_TYPE = "KEY_SERVER_TYPE";
@@ -60,8 +62,7 @@ public class SettingsManager {
     public static String TARGET_PROMOTION_PORT = "8080";
     public static String TARGET_PROMOTION_DEMO_PORT = "8080";
 
-
-    public static final String TARGET_VIRTUAL__PATH = "api/v1.1/omsService";
+    public static final String TARGET_VIRTUAL_PATH = "ServiceEngine";
 
     private SettingsManager() {
         TARGET_SERVER_PROTOCOL = "http";
@@ -85,6 +86,94 @@ public class SettingsManager {
         }
 
         return instance;
+    }
+
+    public int getServerType() {
+        return PreferencesUtil.getInt(context, KEY_SERVER_TYPE, -1);
+    }
+
+    public void setServerType(int type) {
+        PreferencesUtil.putInt(context, KEY_SERVER_TYPE, type);
+    }
+
+    public void setProtocolA(String protocol) {
+        PreferencesUtil.putString(context, KEY_PROTOCOL_A, protocol);
+    }
+
+    public String getProtocolA() {
+        return PreferencesUtil.getString(context, KEY_PROTOCOL_A, "");
+    }
+
+    public void setServerIPA(String ip) {
+        PreferencesUtil.putString(context, KEY_SERVER_IP_A, ip);
+    }
+
+    public String getServerIPA() {
+        return PreferencesUtil.getString(context, KEY_SERVER_IP_A, "");
+    }
+
+    public void setServerPortA(String port) {
+        PreferencesUtil.putString(context, KEY_SERVER_PORT_A, port);
+    }
+
+    public String getServerPortA() {
+        return PreferencesUtil.getString(context, KEY_SERVER_PORT_A, "");
+    }
+
+    public void setServerVirtualPathA(String path) {
+        PreferencesUtil.putString(context, KEY_SERVER_VIRTUAL_PATH_A, path);
+    }
+
+    public String getServerVirtualPathA() {
+        return PreferencesUtil.getString(context, KEY_SERVER_VIRTUAL_PATH_A, "");
+    }
+
+    public void setLastEnvironmentIndex(int lastIndex) {
+        PreferencesUtil.putInt(context, LAST_ENVIRONMENT_INDEX, lastIndex);
+    }
+
+    public int getLastEnvironmentIndex() {
+        return PreferencesUtil.getInt(context, LAST_ENVIRONMENT_INDEX,0);
+    }
+
+    public void setProtocolB(String protocol) {
+        PreferencesUtil.putString(context, KEY_PROTOCOL_B, protocol);
+    }
+
+    public String getProtocolB() {
+        return PreferencesUtil.getString(context, KEY_PROTOCOL_B, "");
+    }
+
+    public void setServerIPB(String ip) {
+        PreferencesUtil.putString(context, KEY_SERVER_IP_B, ip);
+    }
+
+    public String getServerIPB() {
+        return PreferencesUtil.getString(context, KEY_SERVER_IP_B, "");
+    }
+
+    public void setServerPortB(String port) {
+        PreferencesUtil.putString(context, KEY_SERVER_PORT_B, port);
+    }
+
+    public String getServerPortB() {
+        return PreferencesUtil.getString(context, KEY_SERVER_PORT_B, "");
+    }
+
+    public void setServerVirtualPathB(String path) {
+        PreferencesUtil.putString(context, KEY_SERVER_VIRTUAL_PATH_B, path);
+    }
+
+    public String getServerVirtualPathB() {
+        return PreferencesUtil.getString(context, KEY_SERVER_VIRTUAL_PATH_B, "");
+    }
+
+    public void setServerTypeSetStatus(boolean isSet) {
+        PreferencesUtil.putBoolean(context, KEY_IS_SERVER_TYPE_SET, isSet);
+    }
+
+    public boolean isServerTypeSet() {
+        return PreferencesUtil.getBoolean(context, KEY_IS_SERVER_TYPE_SET);
     }
 
 

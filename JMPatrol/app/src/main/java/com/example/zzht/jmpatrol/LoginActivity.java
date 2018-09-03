@@ -8,8 +8,6 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.example.zzht.jmpatrol.global.ServiceUrlManager;
-
 public class LoginActivity extends Activity implements View.OnClickListener {
     private EditText txtUserName;
     private EditText txtPassword;
@@ -22,7 +20,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login_new);
+        setContentView(R.layout.activity_login);
         initUI();
         initEvent();
     }
@@ -68,6 +66,5 @@ public class LoginActivity extends Activity implements View.OnClickListener {
        String userName = txtUserName.getText().toString().trim();
        String passWord = txtPassword.getText().toString().trim();
        System.out.print("onLoginClick");
-        ServiceUrlManager.getInstance().getRootServiceUrl();
     }
 }

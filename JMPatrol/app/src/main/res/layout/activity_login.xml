@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@mipmap/new_login_bg"
-        android:paddingLeft="30dp"
-        android:paddingRight="30dp">
-
+        android:paddingHorizontal="38dp"
+       >
 
         <LinearLayout
             android:id="@+id/ll_user_name"
@@ -19,33 +18,30 @@
             android:layout_marginTop="120dp"
             android:background="@null"
             android:gravity="center"
-            android:orientation="horizontal"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="账户:"
-                android:textColor="@android:color/white"
-                android:textSize="17sp" />
+            >
 
             <EditText
                 android:id="@+id/et_username"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="10dp"
                 android:layout_weight="1"
-                android:background="@drawable/rectangle_login_bg"
                 android:gravity="center_vertical"
                 android:hint="@string/login_user_name_input"
-                android:paddingLeft="@dimen/layout_vertical_margin_10dp"
-                android:paddingRight="@dimen/layout_vertical_margin_10dp"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
                 android:singleLine="true"
                 android:textColor="@android:color/white"
+                android:textColorHint="@color/textColorHint"
+                android:background="@null"
                 android:textSize="17sp" />
         </LinearLayout>
-
+        <include
+            android:id="@+id/splite_line_username"
+            layout="@layout/item_splitline_h"
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_below="@id/ll_user_name"
+            android:layout_gravity="bottom" />
         <LinearLayout
             android:id="@+id/ll_pwd"
             android:layout_width="match_parent"
@@ -55,40 +51,36 @@
             android:layout_marginTop="30dp"
             android:background="@null"
             android:gravity="center"
-            android:orientation="horizontal"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="密码:"
-                android:textColor="@android:color/white"
-                android:textSize="17sp" />
+            >
 
             <EditText
                 android:id="@+id/et_pwd"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="10dp"
                 android:layout_weight="1"
-                android:background="@drawable/rectangle_login_bg"
                 android:gravity="center_vertical"
                 android:hint="@string/login_pwd_input"
                 android:inputType="textPassword"
-                android:paddingLeft="@dimen/layout_vertical_margin_10dp"
-                android:paddingRight="@dimen/layout_vertical_margin_10dp"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
                 android:textColor="@android:color/white"
+                android:textColorHint="@color/textColorHint"
+                android:background="@null"
                 android:textSize="17sp" />
         </LinearLayout>
-
+        <include
+            android:id="@+id/splite_line_pwd"
+            layout="@layout/item_splitline_h"
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_below="@id/ll_pwd" />
         <LinearLayout
             android:id="@+id/ll_checkbox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/ll_pwd"
             android:layout_marginTop="15dp"
-            android:gravity="center_vertical|right"
+            android:gravity="center_vertical|left"
             android:orientation="horizontal">
 
             <CheckBox

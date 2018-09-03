@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">JMPatrol</string>
+    <string name="network_not_available">网络连接不可用，请检查网络连接。</string>
+    <string name="network_access_error">访问服务器出现错误。可能是因为当前网络不可用，或网络限制导致无法访问服务器。</string>
+    <string name="network_default_error_msg">请求失败</string>
+    <string name="network_request_timeout">请求超时</string>
     <!-- LoginActivity begin -->
     <string name="be_loginning_in">正在登录中……</string>
     <string name="getting_menus">正在查询菜单</string>
@@ -10,4 +14,33 @@
     <string name="login_pwd_input">请输入登录密码</string>
     <string name="login_user_name_input">请输入您的用户名</string>
     <!-- LoginActivity end -->
+
+    <!-- GpsStateActivity begin -->
+    <string name="gps_state_title">GPS状态</string>
+    <string name="gps_state_null">null</string>
+    <string name="gps_state_num">序号:</string>
+    <string name="gps_state_longitude">经度</string>
+    <string name="gps_state_latitude">纬度</string>
+    <string name="gps_state_accuracy">精度</string>
+    <string name="gps_state_provider">提供商</string>
+    <string name="gps_state_coord_x">X坐标</string>
+    <string name="gps_state_coord_y">Y坐标</string>
+    <string name="gps_state_status">状态</string>
+    <string name="gps_state_time">时间</string>
+    <string name="gps_state_recent_upload_time">最近上传时间</string>
+    <string name="gps_state_successful_upload_times">成功上传次数</string>
+    <string name="gps_state_cpu_usage">CPU使用率:</string>
+    <string name="gps_state_25">25%</string>
+    <string name="gps_state_battery">电量:</string>
+    <string name="gps_state_50">50%</string>
+    <string name="gps_state_battery_memory_usage">内存使用率:</string>
+    <string name="gps_state_all_record">所有记录</string>
+    <string name="gps_state_all_record_hint">点击查看GPS历史记录信息</string>
+    <string name="gps_state_didnot_set">未设置GPS权限，是否前往设置</string>
+    <string name="gps_state_set_commit">确认</string>
+    <string name="gps_state_set_cancel">取消</string>
+    <string name="gps_state_notice">提示</string>
+    <string name="gps_state_not_upload_record">未上传记录</string>
+    <string name="gps_state_not_upload_record_hint">点击查看未上传GPS记录信息</string>
+    <!-- GpsStateActivity end -->
 </resources>

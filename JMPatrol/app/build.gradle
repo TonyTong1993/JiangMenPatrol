@@ -20,4 +20,9 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.google.code.gson:gson:2.8.5'
+    compile project(path: ':extra:LogLib')
+    compile project(path: ':extra:HttpForAndroid')
+    compile project(path: ':extra:Z3AppLibrary')
+    compile project(path: ':extra:EventCore')
 }

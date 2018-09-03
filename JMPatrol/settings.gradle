@@ -1,2 +1,2 @@
-include ':app', ':extra:Z3AppLibrary', ':extra:HttpForAndroid', ':extra:UIResourceLibrary';
+include ':app', ':extra:Z3AppLibrary', ':extra:HttpForAndroid', ':extra:UIResourceLibrary',':extra:LogLib',':extra:EventCore';
 
