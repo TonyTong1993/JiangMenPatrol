@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="365px"
+    android:layout_height="295px"
+    android:orientation="vertical"
+    android:background="@drawable/css_bg_round"
+    tools:ignore="PxUsage" >
+
+    <ListView
+        android:id="@+id/ltv_attrs"
+        android:layout_width="355px"
+        android:layout_height="285px"
+        android:layout_margin="5.0px"
+        android:cacheColorHint="#00000000"
+        android:focusable="false"
+        android:clickable="false"
+        android:divider="#403a96eb"
+        android:dividerHeight="1dip" 
+        android:scrollbars="vertical">
+    </ListView>
+
+</RelativeLayout>

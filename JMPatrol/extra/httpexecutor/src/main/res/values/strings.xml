@@ -1,4 +1,0 @@
-<resources>
-    <string name="app_name">HttpExecutor</string>
-    <string name="network_not_available">网络连接不可用，请检查网络连接。</string>
-</resources>

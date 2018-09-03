@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Menus>
+   <Menu>
+    <Name>点击查询</Name>
+    <IconName>icon_btn_click_query</IconName>
+    <Deleteable>0</Deleteable>
+    <Dragable>0</Dragable>
+    <Placement>center</Placement>
+    <SubName>点击地图查询管网及设备信息</SubName>
+    <Comand>ClickQueryCommandXtd</Comand>
+  </Menu>
+  <Menu>
+    <Name>距离测量</Name>
+    <IconName>icon_btn_measure_length</IconName>
+    <Deleteable>0</Deleteable>
+    <Dragable>0</Dragable>
+    <Placement>center</Placement>
+    <SubName>地图上测量两点间距离</SubName>
+    <Comand>MeasureLengthCommandXtd</Comand>
+  </Menu>
+  <Menu>
+    <Name>面积量算</Name>
+    <IconName>icon_btn_measure_acreage</IconName>
+    <Deleteable>0</Deleteable>
+    <Dragable>0</Dragable>
+    <Placement>center</Placement>
+    <SubName>地图上量算多边形面积</SubName>
+    <Comand>MeasureAreCommandXtd</Comand>
+  </Menu>
+  <Menu>
+    <Name>爆管分析</Name>
+    <IconName>icon_btn_pipeaccident</IconName>
+    <Deleteable>0</Deleteable>
+    <Dragable>0</Dragable>
+    <Placement>center</Placement>
+    <SubName>爆管分析</SubName>
+    <Comand>PipeAccidentCommandXtd</Comand>
+  </Menu>
+  <Menu>
+    <Name>管网统计</Name>
+    <IconName>icon_btn_statistic</IconName>
+    <Deleteable>0</Deleteable>
+    <Dragable>0</Dragable>
+    <Placement>center</Placement>
+    <SubName>统计管网信息</SubName>
+    <Comand>PipeStatisticCommandXtd</Comand>
+  </Menu>
+  <Menu>
+    <Name>断面查询</Name>
+    <IconName>icon_btn_pipecrossanalysis</IconName>
+    <Deleteable>0</Deleteable>
+    <Dragable>0</Dragable>
+    <Placement>center</Placement>
+    <SubName>查询断面信息</SubName>
+    <Comand>PipeCrossCommandXtd</Comand>
+  </Menu>
+  <Menu>
+    <Name>管网监控</Name>
+    <IconName>icon_btn_pipemonitor</IconName>
+    <Deleteable>0</Deleteable>
+    <Dragable>1</Dragable>
+    <Placement>center</Placement>
+    <SubName>监测管网及设备运行情况</SubName>
+    <Comand>PipeMonitorCommandXtd</Comand>
+  </Menu>
+  <Menu>
+    <Name>辅助导航</Name>
+    <IconName>icon_menu_navigation</IconName>
+    <Deleteable>0</Deleteable>
+    <Dragable>0</Dragable>
+    <Placement>center</Placement>
+    <SubName>长距离车辆行驶导航，局部区域高精度设备导航</SubName>
+    <Comand>NavigationCommandXtd</Comand>
+  </Menu>
+</Menus>
+
+
+
+
+
+
+

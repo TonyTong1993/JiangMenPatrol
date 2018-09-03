@@ -10,13 +10,9 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/extra" />
-            <option value="$PROJECT_DIR$/extra/EventCore" />
-            <option value="$PROJECT_DIR$/extra/GlobalModel" />
             <option value="$PROJECT_DIR$/extra/HttpForAndroid" />
-            <option value="$PROJECT_DIR$/extra/LogLib" />
             <option value="$PROJECT_DIR$/extra/UIResourceLibrary" />
             <option value="$PROJECT_DIR$/extra/Z3AppLibrary" />
-            <option value="$PROJECT_DIR$/extra/httpexecutor" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

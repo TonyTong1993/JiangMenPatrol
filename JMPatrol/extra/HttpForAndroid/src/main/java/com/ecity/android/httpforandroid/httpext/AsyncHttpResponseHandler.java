@@ -84,7 +84,6 @@ public class AsyncHttpResponseHandler {
         // Set up a handler to post events back to the correct thread if possible
         if(Looper.myLooper() != null) {
             handler = new Handler(){
-                @Override
                 public void handleMessage(Message msg){
                     AsyncHttpResponseHandler.this.handleMessage(msg);
                 }
@@ -238,9 +237,10 @@ public class AsyncHttpResponseHandler {
 		try {
 			brd = new BufferedReader(new InputStreamReader(responseBody,"utf-8"));
 		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
-
-			} catch (Exception e) {
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	    
@@ -251,11 +251,13 @@ public class AsyncHttpResponseHandler {
 			    sb.append(line);
 			}
 		} catch (IOException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	    try {
 			brd.close();
 		} catch (IOException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	   

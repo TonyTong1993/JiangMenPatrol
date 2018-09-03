@@ -2,5 +2,8 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/extra/HttpForAndroid" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/extra/UIResourceLibrary" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/extra/Z3AppLibrary" vcs="svn" />
   </component>
 </project>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Menus>
+   <Menu>
+    <Name>清除图形</Name>
+    <IconName>icon_btn_clean</IconName>
+    <Deleteable>0</Deleteable>
+    <Dragable>0</Dragable>
+    <Placement>center</Placement>
+    <SubName>清除地图上绘制的临时图形和气泡</SubName>
+    <Comand>CleanMapCommandXtd</Comand>
+  </Menu>
+  <Menu>
+    <Name>距离测量</Name>
+    <IconName>icon_btn_measure_length</IconName>
+    <Deleteable>0</Deleteable>
+    <Dragable>0</Dragable>
+    <Placement>center</Placement>
+    <SubName>地图上测量两点间距离</SubName>
+    <Comand>MeasureLengthCommandXtd</Comand>
+  </Menu>
+  <Menu>
+    <Name>面积量算</Name>
+    <IconName>icon_btn_measure_acreage</IconName>
+    <Deleteable>0</Deleteable>
+    <Dragable>0</Dragable>
+    <Placement>center</Placement>
+    <SubName>地图上量算多边形面积</SubName>
+    <Comand>MeasureAreCommandXtd</Comand>
+  </Menu>
+  <Menu>
+    <Name>辅助导航</Name>
+    <IconName>icon_btn_navigation</IconName>
+    <Deleteable>0</Deleteable>
+    <Dragable>0</Dragable>
+    <Placement>center</Placement>
+    <SubName>长距离车辆行驶导航，局部区域高精度设备导航</SubName>
+    <Comand>NavigationCommandXtd</Comand>
+  </Menu>
+  <Menu>
+    <Name>断面查询</Name>
+    <IconName>icon_btn_pipecrossanalysis</IconName>
+    <Deleteable>0</Deleteable>
+    <Dragable>0</Dragable>
+    <Placement>center</Placement>
+    <SubName>查询断面信息</SubName>
+    <Comand>PipeCrossCommandXtd</Comand>
+  </Menu>
+</Menus>
+
+
+
+
+
+
+
