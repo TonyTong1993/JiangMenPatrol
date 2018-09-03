@@ -7,7 +7,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@mipmap/new_login_bg"
-        android:paddingHorizontal="38dp"
+        android:paddingLeft="38dp"
+        android:paddingRight="38dp"
        >
 
         <LinearLayout
@@ -26,6 +27,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center_vertical"
+                android:layout_gravity="center_horizontal"
                 android:hint="@string/login_user_name_input"
                 android:paddingLeft="2dp"
                 android:paddingRight="2dp"
