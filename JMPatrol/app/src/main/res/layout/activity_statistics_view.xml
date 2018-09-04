@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/screen_background"
+    android:orientation="vertical">
+
+    <com.ecity.cswatersupply.ui.widght.CustomTitleView
+        android:id="@+id/customTitleView1"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/activity_title_height"></com.ecity.cswatersupply.ui.widght.CustomTitleView>
+
+    <ScrollView
+        android:id="@+id/sv_summary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbarStyle="outsideOverlay">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                layout="@layout/item_splitline_h"
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+
+            <LinearLayout
+                android:id="@+id/ll_item_select_people"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_40"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/shape_textview_background"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    android:id="@+id/tv_slelet_people"
+                    android:layout_width="0dp"
+                    android:layout_weight="5"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="fill_vertical"
+                    android:text="负责人"
+                    android:textColor="@color/txt_black_normal"
+                    android:textSize="@dimen/title_font_size_2" />
+
+                <LinearLayout
+                    android:id="@+id/spinner_type"
+                    android:layout_width="0dp"
+                    android:layout_height="30.0dip"
+                    android:layout_marginBottom="3dip"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="3dip"
+                    android:layout_weight="5"
+                    android:background="@drawable/css_bg_round_transparent"
+                    android:baselineAligned="false"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textColor="@color/blue" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <include
+                layout="@layout/item_splitline_h"
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+
+            <LinearLayout
+                android:id="@+id/ll_item_title"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_40"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/shape_textview_background"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    android:id="@+id/tv_item_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="fill_vertical"
+                    android:text="@string/pie_data_source_static_type"
+                    android:textColor="@color/txt_black_normal"
+                    android:textSize="@dimen/title_font_size_2" />
+
+                <RadioGroup
+                    android:id="@+id/rg_custom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp"></RadioGroup>
+            </LinearLayout>
+
+            <include
+                layout="@layout/item_splitline_h"
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_50"
+                android:background="@color/content_background"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_item_date_start"
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/margin_50"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:singleLine="false"
+                    android:text="起始时间"
+                    android:textColor="@color/txt_black_normal"
+                    android:textSize="@dimen/font_18" />
+
+                <RelativeLayout
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/margin_50"
+                    android:layout_weight="3">
+
+                    <Button
+                        android:id="@+id/btn_select_date_start"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_50"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/shape_default_input_normal"
+                        android:gravity="center_vertical"
+                        android:hint="@string/hint_choose"
+                        android:paddingEnd="0dip"
+                        android:paddingLeft="0dip"
+                        android:paddingRight="0dip"
+                        android:paddingStart="0dip"
+                        android:singleLine="true"
+                        android:textColor="@color/txt_label"
+                        android:textSize="@dimen/font_18" />
+
+                    <ImageView
+                        android:layout_width="@dimen/margin_40"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@null"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/img_arrow" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_50"
+                android:background="@color/content_background"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_item_date_title_finish"
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/margin_50"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:singleLine="false"
+                    android:text="结束时间"
+                    android:textColor="@color/txt_black_normal"
+                    android:textSize="@dimen/font_18" />
+
+                <RelativeLayout
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/margin_50"
+                    android:layout_weight="3">
+
+                    <Button
+                        android:id="@+id/btn_select_date_finish"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_50"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/shape_default_input_normal"
+                        android:gravity="center_vertical"
+                        android:hint="@string/hint_choose"
+                        android:paddingEnd="0dip"
+                        android:paddingLeft="0dip"
+                        android:paddingRight="0dip"
+                        android:paddingStart="0dip"
+                        android:singleLine="true"
+                        android:textColor="@color/txt_label"
+                        android:textSize="@dimen/font_18" />
+
+                    <ImageView
+                        android:layout_width="@dimen/margin_40"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@null"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/img_arrow" />
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_50"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:singleLine="false"
+                android:text="@string/table_view_title"
+                android:textColor="@color/txt_black_normal"
+                android:textSize="@dimen/font_18" />
+
+            <LinearLayout
+                android:id="@+id/ll_summary_table_view"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="10dp"
+                android:background="@color/content_background"
+                android:orientation="vertical">
+
+                <com.ecity.cswatersupply.ui.widght.ListViewForScrollView
+                    android:id="@+id/lv_summary_table"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_10"
+                    android:visibility="visible"></com.ecity.cswatersupply.ui.widght.ListViewForScrollView>
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

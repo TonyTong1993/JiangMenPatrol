@@ -1,20 +1,351 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="android:Theme.Holo.Light">
-        <!-- Customize your theme here. -->
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
     </style>
 
-    <style name="AppTheme.NoActionBar">
-        <item name="android:windowActionBar">false</item>
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="Text" />
+
+    <style name="Text.primaryWitheTitle" parent="@style/Text">
+        <item name="android:textSize">@dimen/title_font_size_2</item>
+        <item name="android:textColor">@color/white_theme_1</item>
+    </style>
+
+    <style name="popwin_anim_style">
+        <item name="android:windowEnterAnimation">@anim/showpopwin</item>
+        <item name="android:windowExitAnimation">@anim/dismisspopwin</item>
+    </style>
+
+    <style name="workorder_more_btn_popup_tophalf_anim">
+        <item name="android:windowEnterAnimation">@anim/scale_right_top_in</item>
+        <item name="android:windowExitAnimation">@anim/scale_right_top_out</item>
+    </style>
+
+    <style name="workorder_more_btn_popup_bottomhalf_anim">
+        <item name="android:windowEnterAnimation">@anim/scale_right_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/scale_right_bottom_out</item>
+    </style>
+
+    <style name="tasklist_list_common">
+        <item name="android:background">@color/list_background</item>
+        <item name="android:cacheColorHint">@color/transparent</item>
+        <item name="android:choiceMode">singleChoice</item>
+        <item name="android:fastScrollEnabled">false</item>
+        <item name="android:divider">@color/transparent</item>
+        <item name="android:dividerHeight">20dp</item>
+    </style>
+    
+    <style name="tasklist_list_min">
+        <item name="android:background">@color/list_background</item>
+        <item name="android:cacheColorHint">@color/transparent</item>
+        <item name="android:choiceMode">singleChoice</item>
+        <item name="android:fastScrollEnabled">false</item>
+        <item name="android:divider">@color/transparent</item>
+        <item name="android:dividerHeight">1dp</item>
+    </style>
+    
+     <style name="tasklist_list_common_large">
+        <item name="android:background">@color/list_background</item>
+        <item name="android:cacheColorHint">@color/transparent</item>
+        <item name="android:choiceMode">singleChoice</item>
+        <item name="android:fastScrollEnabled">false</item>
+        <item name="android:divider">@null</item>
+        <item name="android:dividerHeight">0dp</item>
+    </style>
+
+    <!-- 通用列表风格 -->
+    <style name="common_list">
+        <item name="android:background">@color/list_background</item>
+        <item name="android:cacheColorHint">@color/transparent</item>
+        <item name="android:choiceMode">singleChoice</item>
+        <item name="android:fastScrollEnabled">false</item>
+        <item name="android:listSelector">@drawable/taskitem_bg_selector</item>
+    </style>
+
+    <!-- 多布局列表通用风格 -->
+    <style name="multiple_type_list">
+        <item name="android:background">@color/transparent</item>
+        <item name="android:cacheColorHint">@color/transparent</item>
+        <item name="android:choiceMode">singleChoice</item>
+        <item name="android:fastScrollEnabled">false</item>
+        <item name="android:divider">@null</item>
+    </style>
+
+    <style name="tasklist_padding">
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingTop">20dip</item>
+        <item name="android:paddingBottom">20dip</item>
+    </style>
+
+    <style name="tasklist_item_padding">
+        <item name="android:paddingLeft">10dip</item>
+        <item name="android:paddingRight">10dip</item>
+        <item name="android:paddingTop">12dip</item>
+        <item name="android:paddingBottom">12dip</item>
+    </style>
+
+    <style name="common_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
         <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
     </style>
 
-    <style name="AppTheme.Full" parent="AppTheme.NoActionBar">
-        <item name="android:windowFullscreen">true</item>
-    </style>
-    <style name="AppTheme.Splash" parent="AppTheme.Full">
-        <item name="android:windowBackground">@mipmap/splash_bg</item>
+    <style name="layercontrolwin_anim_style">
+        <item name="android:windowEnterAnimation">@anim/status_bar_in</item>
+        <item name="android:windowExitAnimation">@anim/status_bar_out</item>
     </style>
 
+    <!-- lv_item_planningtask -->
+    <style name="item_ll_styles">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="item_textview_des_styles">
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/default_text</item>
+        <item name="android:textSize">@dimen/title_font_size_2</item>
+    </style>
+
+    <style name="item_textview_content_styles">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:textSize">@dimen/title_font_size_2</item>
+    </style>
+
+    <style name="item_planningtask_check_item_ll_styles">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+    
+    <style name="Theme.TabPageIndicatorDefaults" parent="android:Theme.Holo.Light">
+        <item name="android:windowNoTitle">true</item>
+        <item name="vpiTabPageIndicatorStyle">@style/MyTabPageIndicator</item>
+        <item name="vpiTabTextStyle">@style/MyTabPageIndicator.Text</item>
+    </style>
+    <style name="MyTabPageIndicator" parent="Widget.TabPageIndicator">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:background">@drawable/selector_tab_indicator</item>
+        <item name="android:dividerPadding">8dp</item>  
+        <item name="android:paddingLeft">22dip</item>
+        <item name="android:paddingRight">22dip</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+    </style>
+    <style name="MyTabPageIndicator.Text" parent="android:TextAppearance.Medium">
+        <item name="android:textColor">@drawable/selector_indicator_tabtext</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:typeface">monospace</item> 
+    </style>
+    <style name="Theme.MainScreenTabPageIndicator" parent="android:Theme.Holo.Light">
+        <item name="vpiTabPageIndicatorStyle">@style/MainScreenTabPageIndicator</item>
+        <item name="vpiTabTextStyle">@style/MainScreenTabPageIndicator.Text</item>
+    </style>
+
+    <style name="MainScreenTabPageIndicator" parent="Widget.TabPageIndicator">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:dividerPadding">5dp</item>
+        <item name="android:paddingLeft">5dip</item>
+        <item name="android:paddingRight">5dip</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:background">@null</item>
+        <item name="android:textColor">@color/main_tab_text</item>
+    </style>
+
+    <style name="MainScreenTabPageIndicator.Text" parent="android:TextAppearance.Medium">
+        <item name="android:textSize">16sp</item>
+        <item name="android:typeface">monospace</item>
+    </style>
+    <style name="StyleProgressBarMini" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:maxHeight">50dip</item>
+        <item name="android:minHeight">18dip</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>
+        <item name="android:progressDrawable">@drawable/shape_progressbar_mini</item>
+    </style>
+     <style name="item_textview_rate_styles">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/title_font_size_2</item>
+        <item name="android:layout_marginLeft">0dp</item>
+    </style>
+    <style name="popup_tophalf_anim">
+        <item name="android:windowEnterAnimation">@anim/scale_right_top_in</item>
+        <item name="android:windowExitAnimation">@anim/scale_right_top_out</item>
+    </style>
+
+    <style name="popup_bottomhalf_anim">
+        <item name="android:windowEnterAnimation">@anim/scale_right_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/scale_right_bottom_out</item>
+    </style>
+    
+    <style name="layercontrol_list_style">
+        <item name="android:background">@color/white</item>
+        <item name="android:cacheColorHint">#ffffffff</item>
+        <item name="android:divider">@drawable/dividing_lines</item>
+        <item name="android:dividerHeight">1dip</item>
+        <item name="android:fastScrollEnabled">false</item>
+        <item name="android:fadingEdge">none</item>
+    </style>
+    
+    <style name="item_textview_earthquake_styles">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/txt_label</item>
+        <item name="android:textSize">@dimen/lv_item_font_size_level_2</item>
+        <item name="android:paddingLeft">2dp</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    
+     <style name="item_btn_summary_detail_styles">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white_text</item>
+        <item name="android:textSize">@dimen/title_font_size_4</item>
+        <item name="android:paddingLeft">2dp</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="item_text_summary_detail_title_styles">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_darkGray</item>
+        <item name="android:textSize">@dimen/title_font_size_3</item>
+        <item name="android:paddingLeft">2dp</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="item_textview_earthquake_text_styles">
+        <item name="android:layout_width">wrap_content</item> 
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black_text</item>
+        <item name="android:textSize">@dimen/lv_item_font_size_level_2</item>
+        <item name="android:paddingLeft">2dp</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    
+    <style name="item_textview_summary_detail_text_styles">
+        <item name="android:layout_width">wrap_content</item> 
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/title_blue</item>
+        <item name="android:textSize">@dimen/title_font_size_3</item>
+        <item name="android:paddingLeft">2dp</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="item_quakeinfo_llayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@color/divider_thick</item>
+    </style>
+    <style name="item_quakeinfo_text_styles">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black_text</item>
+        <item name="android:textSize">@dimen/lv_item_font_size_level_2</item>
+        <item name="android:layout_marginTop">@dimen/margin_10</item>
+        <item name="android:layout_marginBottom">@dimen/margin_5</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    <style name="earth_quakeinfo_detaile_pop">
+        <item name="android:windowEnterAnimation">@anim/show_pop_from_bottom</item>
+        <item name="android:windowExitAnimation">@anim/dimiss_pop_from_bottom</item>
+    </style>
+    <style name="Theme.TabPageIndicatorEmergency" parent="android:Theme.Holo.Light">
+        <item name="vpiTabPageIndicatorStyle">@style/EmergencyWidget.TabPageIndicator</item>
+        <item name="android:windowNoTitle">true</item>  
+        <item name="android:animationDuration">5000</item>
+        <item name="android:windowContentOverlay">@null</item>  
+    </style>
+    
+    <style name="EmergencyWidget.TabPageIndicator" parent="Widget">
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/vpi__tab_indicator</item>
+        <item name="android:paddingLeft">22dip</item>
+        <item name="android:paddingRight">22dip</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:textAppearance">@style/EmergencyTextAppearance.TabPageIndicator</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="EmergencyTextAppearance.TabPageIndicator" parent="Widget">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@style/MyTabPageIndicator.Text</item>
+    </style>
+
+    <style name="ActionSheet" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowAnimationStyle">@style/ActionSheetAnimation</item>
+    </style>
+     <style name="vertical_layout">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:background">@drawable/summary_table_spinner</item> 
+    </style>
+    <style name="horizontal_layout">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@drawable/summary_table_spinner</item> 
+    </style>
+    <style name="tv_contact_name">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/margin_10</item>
+        <item name="android:textColor">@color/text_darkGray</item>
+        <item name="android:textSize">@dimen/font_12</item>
+    </style>
+    <style name="tv_contact_value">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/margin_10</item>
+        <item name="android:layout_marginTop">@dimen/margin_5</item>
+        <item name="android:textSize">@dimen/font_18</item>
+    </style>
+    <style name="customDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style>
 </resources>

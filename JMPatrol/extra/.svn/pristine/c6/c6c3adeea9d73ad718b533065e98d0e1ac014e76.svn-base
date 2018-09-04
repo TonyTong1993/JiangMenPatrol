@@ -1,0 +1,32 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "24.0.1"
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 18
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    /**
+     * 目前 Android Studio不支持自动添加 .so文件（Eclipse是支持的），所以我们需要手动加载libs下的.so的动态库
+     */
+    sourceSets {
+        main() {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+dependencies {
+    compile project(':extra:Z3AppLibrary')
+    compile 'com.android.support:support-v4:23.4.0'
+    compile files('libs/BaiduLBS_Android.jar')
+}

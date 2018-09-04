@@ -1,0 +1,10 @@
+<resources>
+
+    <string name="app_name">ZXingProj</string>
+
+    <string name="scan_input">手动输入</string>
+    <string name="light_on">关闭灯光</string>
+    <string name="light_off">打开灯光</string>
+    <string name="device_num">设备编码</string>
+    <string name="ok">确&#160;&#160;认</string>
+</resources>

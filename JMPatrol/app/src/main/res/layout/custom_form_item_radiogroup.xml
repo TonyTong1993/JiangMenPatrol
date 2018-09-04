@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_50"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip" >
+
+        <include
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            layout="@layout/custom_form_item_title_new" />
+
+        <TextView
+            android:id="@+id/tv_item_value"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="3"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/margin_50"
+            android:textColor="@color/txt_label"
+            android:textColorHint="@color/txt_black_normal"
+            android:textSize="@dimen/font_18"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        layout="@layout/item_splitline_h" />
+
+    <RadioGroup
+        android:id="@+id/rg_custom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+    </RadioGroup>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="15dip"
+        layout="@layout/item_splitline_h" />
+
+</LinearLayout>

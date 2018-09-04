@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.ecity.cswatersupply.ui.widght.MapActivityTitleView
+        android:id="@+id/view_title_mapactivity"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/activity_title_height" 
+        >
+    </com.ecity.cswatersupply.ui.widght.MapActivityTitleView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.esri.android.map.MapView
+            android:id="@+id/map"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+        </com.esri.android.map.MapView>
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <com.ecity.cswatersupply.ui.widght.MapOperatorTipsView
+                android:id="@+id/map_tips_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/status_bar"
+                android:layout_gravity="top" />
+
+            <Button
+                android:id="@+id/report"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:background="@drawable/css_main_report"
+                android:visibility="gone"/>
+
+            <com.ecity.cswatersupply.ui.widght.MapLegendView
+                android:id="@+id/map_legend_view"
+                android:layout_width="fill_parent"
+                android:layout_height="140dp"
+                android:visibility="visible" />
+        
+            <FrameLayout
+                android:id="@+id/fl_toobar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:layout_alignParentBottom="true" >
+
+                <include
+                    android:id="@+id/view_map_foot_toolbar"
+                    layout="@layout/view_map_foot_toolbar"
+                    android:visibility="gone" />
+                
+                <com.ecity.cswatersupply.ui.widght.MapNavigationFlexflowView
+                    android:id="@+id/view_map_show_point_flexflow_detaile"
+                    android:layout_width="fill_parent"
+                    android:layout_height="140dp"
+                    android:visibility="gone" />
+                
+                <com.ecity.cswatersupply.ui.widght.MapNavigationView
+                    android:id="@+id/view_map_show_point_detaile"
+                    android:layout_width="fill_parent"
+                    android:layout_height="140dp"
+                    android:visibility="gone" />
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/results_viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dip"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/css_map_toolbar_foot"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <!--解决7.0的系统popwindow弹出位置不对，提供弹出popwindow的Achor-->
+            <TextView
+                android:id="@+id/pop_achor"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_above="@id/fl_toobar"
+                android:layout_marginLeft="@dimen/margin_4"
+                android:layout_marginRight="@dimen/margin_4"
+                android:layout_marginBottom="@dimen/margin_60"
+                android:background="@color/transparent" >
+            </TextView>
+
+            <include
+                android:id="@+id/rl_map_zoom_control"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/fl_toobar"
+                android:layout_alignParentTop="true"
+                layout="@layout/view_map_zoom" />
+        </RelativeLayout>
+    </FrameLayout>
+
+</LinearLayout>

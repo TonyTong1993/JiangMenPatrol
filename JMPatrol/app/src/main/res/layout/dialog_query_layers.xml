@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"  >
+
+	<RelativeLayout
+		android:id="@+id/rl_spn_container"
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/margin_46"
+		android:background="@color/white"
+		android:layout_alignParentTop="true"
+		android:layout_alignParentLeft="true"
+		android:layout_alignParentStart="true">
+
+		<!--
+		<Spinner
+			android:id="@+id/spn_value"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:gravity="center_vertical"
+			android:background="@drawable/shape_textview_background"
+			android:spinnerMode="dialog"
+			android:textColor="@color/txt_black_normal"
+			android:textSize="@dimen/font_18"
+			android:prompt="@string/please_select"/>  -->
+
+		<LinearLayout
+			android:id="@+id/ll_spinner_environment"
+			android:layout_width="match_parent"
+			android:layout_height="40dp"
+			android:layout_centerVertical="true"
+			android:orientation="vertical" >
+
+			<TextView
+				android:id="@+id/tv_environment"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_marginLeft="@dimen/margin_5"
+				android:gravity="left|center_vertical"
+				android:textColor="@color/black"
+				android:textSize="@dimen/font_18" />
+		</LinearLayout>
+
+		<ImageView
+			android:id="@+id/iv_spn_value"
+			android:layout_width="@dimen/margin_40"
+			android:scaleType="centerInside"
+			android:layout_height="match_parent"
+			android:layout_alignParentEnd="true"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"
+			android:src="@drawable/arrow_down"
+			android:contentDescription="@null" />
+	</RelativeLayout>
+
+	<include
+		android:id="@+id/view"
+		android:layout_width="match_parent"
+		android:layout_height="0.5dip"
+		android:layout_below="@+id/rl_spn_container"
+		layout="@layout/item_splitline_h" />
+
+    <ListView
+        android:id="@+id/layerList"
+        style="@style/layercontrol_list_style"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/margin_300"
+		android:layout_below="@+id/view"
+		android:layout_alignParentLeft="true"
+		android:layout_alignParentStart="true" />
+
+	<include
+		android:id="@+id/dialog_buttons"
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/margin_46"
+		android:layout_below="@+id/layerList"
+		layout="@layout/view_dialog_buttons"/>
+</RelativeLayout>

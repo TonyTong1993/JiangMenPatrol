@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/item_ll_styles"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp" >
+
+    <TextView
+        android:id="@+id/tv_title_map_offline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_darkGray"
+        android:textSize="@dimen/title_font_size_2" />
+
+    <TextView
+        android:id="@+id/map_offline_download_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/blue_normal"
+        android:textSize="@dimen/title_font_size_3" />
+
+    <SeekBar
+        android:id="@+id/progressbar_map_offline_dowload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:max="100"
+        android:maxHeight="5dp"
+        android:minHeight="5dp"
+        android:progressDrawable="@drawable/shape_progressbar_bg_arrive"
+        android:thumb="@null" />
+
+</LinearLayout>

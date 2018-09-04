@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hold_on_please">请稍候</string>
+    <string name="event_report_error_format_conversion">格式转换出错</string>
+    <string name="remove">移除</string>
+    <item name="lv_item_view_tag_key" type="id"/>
+    <string name="load_image_error">加载图片失败</string>
+    <string name="audio_changing">正在转换为MP3格式...</string>
+    <string name="empty_directory">Empty Directory</string>
+    <string name="storage_removed">Storage was removed or unmounted.</string>
+    <string name="choose_file">Select a file</string>
+    <string name="error_selecting_file">Error selecting File</string>
+    <string name="internal_storage">Internal storage</string>
+    <string name="select_files">文件选择</string>
+    <string name="finish">完成</string>
+    <string name="audio_length">时长:</string>
+    <string name="add_audio">添加录音</string>
+
+    <string name="str_cancel">取  消</string>
+    <string name="str_cancel_nosp">取消</string>
+    <string name="str_ok_nosp">确定</string>
+    <string name="str_close">关闭</string>
+    <string name="str_clear">清除</string>
+    <string name="str_down">完成</string>
+    <string name="str_yes">是</string>
+    <string name="str_no">否</string>
+
+    <string name="str_ambulance">相册</string>
+    <string name="str_takephoto">拍照</string>
+	<string name="str_selamfrombulance">从相册中选取</string>
+	<string name="str_selambulance">选择照片</string>
+	<string name="str_selambulance_limit">最多选择9张图片</string>
+	<string name="str_savephotoing">正在保存照片</string>
+    <string name="str_photo_already_exist">图片已经存在</string>
+
+    <string name="str_select_attachment_limit">最多选择%1$d个附件</string>
+    <string name="action_menu_title">请选择</string>
+    <string name="take_video">拍摄视频</string>
+    <string name="take_record_audio">录音</string>
+    <string name="select_audio_from_album">从文件中选择</string>
+
+</resources>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout
+        android:id="@+id/ll_item_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_50"
+        android:background="@color/transparent"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            android:id="@+id/tv_item_star"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="start|center_vertical"
+            android:text="@string/star_required_mark"
+            android:textColor="#FF0000"
+            android:textSize="@dimen/font_18" />
+
+        <TextView
+            android:id="@+id/tv_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="fill_vertical"
+            android:text="@string/hello_world"
+            android:textColor="@color/txt_label"
+            android:textSize="@dimen/font_18" />
+    </LinearLayout>
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        layout="@layout/item_splitline_h" />
+
+    <com.ecity.cswatersupply.ui.widght.GridViewForScrollView
+        android:id="@+id/gridviewImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="10dip"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dip"
+        android:horizontalSpacing="3dp"
+        android:listSelector="@color/transparent"
+        android:numColumns="4"
+        android:scrollbars="none"
+        android:verticalSpacing="5dp" 
+        android:visibility="gone" >
+    </com.ecity.cswatersupply.ui.widght.GridViewForScrollView>
+
+    <ViewStub
+        android:id="@+id/viewStub_galley"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout="@layout/view_galley"
+        android:visibility="gone" />
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="15dip"
+        layout="@layout/item_splitline_h" />
+
+</LinearLayout>

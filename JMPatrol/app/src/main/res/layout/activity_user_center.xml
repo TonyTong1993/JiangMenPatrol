@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#eee"
+    android:orientation="vertical" >
+
+    <com.ecity.cswatersupply.ui.widght.CustomTitleView
+        android:id="@+id/view_title_user_center"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/activity_title_height" >
+    </com.ecity.cswatersupply.ui.widght.CustomTitleView>
+
+    <Button
+        android:id="@+id/btn_change_password"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="61dp"
+        android:background="@color/content_background"
+        android:onClick="onChangePasswordButtonClicked"
+        android:text="@string/change_password"
+        android:textColor="@color/blue_normal"
+        android:textSize="17sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ListView
+        android:id="@+id/user_inforlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_change_password"
+        android:layout_below="@id/view_title_user_center"
+        android:layout_marginBottom="20dp"
+        android:background="@color/content_background"
+        android:divider="@null" >
+    </ListView>
+
+</RelativeLayout>

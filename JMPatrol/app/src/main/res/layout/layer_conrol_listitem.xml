@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:clickable="false"
+    >
+    <ImageView 
+        android:id="@+id/layer_icon"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:scaleType="centerInside"
+        android:contentDescription="图层标示"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/navigation_locate"
+        />
+    <TextView 
+        android:id="@+id/layer_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/layer_icon"
+        android:text="地形图"
+        android:textColor="#ff000000"
+        android:textSize="17sp" />
+    <ToggleButton
+        android:id="@+id/tv_loadType"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"        
+        android:background="@drawable/togglebutton_selector"
+        android:textOff=""
+        android:textOn="" />
+    
+
+</RelativeLayout>

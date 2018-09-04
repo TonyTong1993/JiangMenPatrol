@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_planningtask_base"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_workorder_list_shape"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_location"
+        style="@style/item_ll_styles" >
+
+        <TextView
+            style="@style/item_textview_des_styles"
+            android:text="@string/planningtask_task_in_position" />
+
+        <TextView
+            android:background="@color/red"
+            android:id="@+id/planningtask_task_in_position"
+            style="@style/item_textview_content_styles" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/ll_name"
+        style="@style/item_ll_styles"
+        android:layout_below="@id/ll_location" >
+
+        <TextView
+            style="@style/item_textview_des_styles"
+            android:text="@string/planningtask_task_name" />
+
+        <TextView
+            android:id="@+id/planningtask_name"
+            style="@style/item_textview_content_styles" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_type"
+        style="@style/item_ll_styles"
+        android:layout_below="@id/ll_name" >
+
+        <TextView
+            style="@style/item_textview_des_styles"
+            android:text="@string/planningtask_type" />
+
+        <TextView
+            android:id="@+id/planningtask_type"
+            style="@style/item_textview_content_styles" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_start_time"
+        style="@style/item_ll_styles"
+        android:layout_below="@id/ll_type" >
+
+        <TextView
+            style="@style/item_textview_des_styles"
+            android:text="@string/planningtask_task_start" />
+
+        <TextView
+            android:id="@+id/planningtask_start_time"
+            style="@style/item_textview_content_styles" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_end_time"
+        style="@style/item_ll_styles"
+        android:layout_below="@id/ll_start_time" >
+
+        <TextView
+            style="@style/item_textview_des_styles"
+            android:text="@string/planningtask_task_end" />
+
+        <TextView
+            android:id="@+id/planningtask_end_time"
+            style="@style/item_textview_content_styles" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_plan_linelen"
+        style="@style/item_ll_styles"
+        android:layout_below="@id/ll_end_time" >
+
+        <TextView
+            style="@style/item_textview_des_styles"
+            android:text="@string/planningtask_task_linelen" />
+
+        <TextView
+            android:id="@+id/planningtask_plan_linelen"
+            style="@style/item_textview_content_styles" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_plan_pointcount"
+        style="@style/item_ll_styles"
+        android:layout_below="@id/ll_plan_linelen" >
+
+        <TextView
+            style="@style/item_textview_des_styles"
+            android:text="@string/planningtask_task_pointcount" />
+
+        <TextView
+            android:id="@+id/planningtask_plan_pointcount"
+            style="@style/item_textview_content_styles" />
+    </LinearLayout>
+</RelativeLayout>

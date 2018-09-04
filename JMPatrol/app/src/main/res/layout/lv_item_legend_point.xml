@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:clickable="false"
+    android:gravity="center_vertical"
+    android:layout_margin="5dp" >
+    <LinearLayout
+        android:id="@+id/point_status_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp" >
+
+        <TextView
+            android:id="@+id/point_status_text"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/point_image_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:gravity="center_vertical"
+        android:layout_toEndOf="@id/point_status_ll"
+        android:layout_toRightOf="@id/point_status_ll"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp" >
+
+        <ImageView
+            android:id="@+id/point_image"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:background="@drawable/map_location_grey"
+            android:layout_marginTop="1dp"
+            android:contentDescription="@null"
+            android:scaleType="centerInside" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/point_num_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:gravity="center_vertical"
+        android:layout_toEndOf="@id/point_image_ll"
+        android:layout_toRightOf="@id/point_image_ll" >
+        
+        <TextView
+            android:id="@+id/point_num_text"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:textSize="17sp" />
+    </LinearLayout>
+    
+    <ToggleButton
+        android:id="@+id/point_loadType_tb"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/togglebutton_selector"
+        android:checked="true"
+        android:textOff=""
+        android:textOn=""/>
+
+</RelativeLayout>

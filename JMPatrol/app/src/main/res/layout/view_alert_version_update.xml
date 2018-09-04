@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/shape_dialog_bottom" >
+
+    <LinearLayout
+        android:id="@+id/ll_dialogTile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_30"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/dialog_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/font_level_1"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_10"
+            android:textSize="@dimen/font_18" />
+
+        <RelativeLayout
+            android:id="@+id/rl_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom" >
+
+            <EditText
+                android:id="@+id/et_punish_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="@string/dialog_hint"
+                android:textColor="@color/txt_hint"
+                android:textSize="@dimen/font_17" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_alignRight="@+id/et_punish_pay"
+                android:layout_below="@id/et_punish_pay"
+                android:background="@color/txt_hint" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/dialog_divid"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/ll_dialogTile"
+        android:layout_marginTop="@dimen/margin_30"
+        android:background="@color/txt_hint" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialog_divid"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <TextView
+            android:id="@+id/punish_dialog_negative"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/margin_60"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/later"
+            android:textSize="@dimen/font_20" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="@dimen/margin_60"
+            android:background="@color/txt_hint" />
+
+        <TextView
+            android:id="@+id/punish_dialog_positive"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/margin_60"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/ok"
+            android:textColor="@color/blue_theme_3"
+            android:textSize="@dimen/font_20" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,25 +1,696 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.zzht.jmpatrol">
-   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
+    package="com.ecity.cswatersupply"
+    android:versionCode="112"
+    android:versionName="0.8.23" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+
+    <!-- 部分android6.0及以上手机需要 -->
+    <uses-permission-sdk-23 android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission-sdk-23 android:name="android.permission.CAMERA" />
+
+    <!-- 信鸽 permissions begin -->
+    <!-- 【必须】 信鸽SDK所需权限 -->
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <!-- 【可选】 信鸽SDK所需权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BATTERY_STATS" />
+    <!-- 信鸽 permissions end -->
+
+    <!-- 蓝牙的权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 在SD卡中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 往SD卡中写入数据权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
     <application
-        android:name=".global.HostApplication"
+        android:name="com.ecity.cswatersupply.HostApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:supportsRtl="true"
+        android:icon="@drawable/logo_main"
+        android:label="@string/app_name_cswatersupply"
         android:theme="@android:style/Theme.Holo.Light.NoActionBar">
         <activity
-            android:name=".global.SplashActivity"
-            android:theme="@style/AppTheme.Splash">
+            android:name="com.ecity.cswatersupply.ui.activities.WorkOrderDetailFragmentActivity"
+            android:label="@string/title_activity_workorder_detail"></activity>
+        <activity
+            android:name="com.ecity.cswatersupply.ui.activities.WorkOrderDetailFragmentActivity1"
+            android:label="@string/title_activity_workorder_detail" >
+        </activity>
+        <activity
+            android:name="com.ecity.cswatersupply.ui.activities.WorkOrderSummaryDetailActivity"
+            android:label="@string/title_activity_workorder_detail"></activity>
+        <activity
+            android:name=".ui.activities.DeviceUsageActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.SignInActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.SystemSettingsActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.MemoryClearActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.AboutUsActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.ui.activities.WelcomeActivity"
+            android:label="@string/app_name_cswatersupply">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".MainActivity" />
+
+        <service android:name="com.ecity.cswatersupply.service.AppStatusService"></service>
+
+        <activity android:name="com.ecity.cswatersupply.ui.activities.GuideActivity" />
+        <activity
+            android:name="com.ecity.cswatersupply.ui.activities.MainActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name_cswatersupply"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name="com.ecity.cswatersupply.ui.activities.LoginActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.ui.activities.LoginSettingActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.workorder.view.WorkOrderFilterActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.workorder.view.CustomWorkOrderActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.workorder.view.WorkOrderListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.utils.tpk.MapOfflineActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.ui.activities.MapActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.contact.TakePhoneActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.ui.activities.GpsStateActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.ui.activities.GpsHistoryActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.ui.activities.UserCenterActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.workorder.WorkOrderDetailFlowInfoActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.workorder.WorkOrderDetailFlowInfoActivity1"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.workorder.WorkOrderOperationLogActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.workorder.WorkOrderLogBackActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.workorder.WorkOrderSearchActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.workorder.WorkOrderSearchActivity1"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.workorder.WorkOrderFinishActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ecity.cswatersupply.workorder.WorkOrderChooseMaterialActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.ecity.cswatersupply.workorder.WorkOrderFinishHandleTypeActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.ecity.cswatersupply.ui.activities.MapPoiSearchActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="com.ecity.cswatersupply.ui.activities.MapAddressSearchActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="com.ecity.cswatersupply.ui.activities.planningtask.PlanningTaskActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.ui.activities.planningtask.TaskAttrListsActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.ui.activities.planningtask.InspectSelectActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.ui.activities.ReportEventTypeSelectActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.ui.activities.EventListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.workorder.view.WorkOrderSummaryActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.workorder.view.WorkLeaderDetailActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.ecity.cswatersupply.ui.activities.CustomIncreaseReportActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.ecity.cswatersupply.ui.activities.CustomReportActivity1"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.ecity.cswatersupply.workorder.view.FormActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.ecity.cswatersupply.ui.activities.FZFeedBackCustomReportActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.ecity.cswatersupply.ui.activities.GISErrorReportActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.ecity.cswatersupply.ui.activities.CustomChildReportActivity1"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.ecity.cswatersupply.ui.activities.CustomMainReportActivity1"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.ecity.cswatersupply.ui.activities.ChangePasswordActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name="com.ecity.cswatersupply.ui.activities.SelectGroupTreeActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name="com.ecity.cswatersupply.ui.activities.PumpSelectActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.ecity.cswatersupply.ui.activities.PumpManagementActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.ecity.cswatersupply.ui.activities.PumpDetailActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.ecity.cswatersupply.ui.activities.ShowPumpDataInWebViewActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.ecity.medialibrary.activity.AlbumSelectActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.medialibrary.activity.ImageGridActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.medialibrary.activity.PhotoActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.hzw.graffiti.GraffitiActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name_cswatersupply"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.ecity.medialibrary.activity.TakeVideoActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.medialibrary.activity.PlayVideoActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.medialibrary.activity.FileChooserActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dtr.zxing.activity.CaptureActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name_cswatersupply"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.ecity.afilechooser.FileChooserActivity2"
+            android:exported="true"
+            android:icon="@drawable/ic_chooser"
+            android:label="@string/choose_file">
+            <intent-filter>
+                <action android:name="android.intent.action.GET_CONTENT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.OPENABLE" />
+
+                <data android:mimeType="*/*" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.ecity.cswatersupply.workorder.WorkOrderBackAuditActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
+        <activity
+            android:name="com.ecity.cswatersupply.workorder.WorkOrderBackTransferAuditActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
+        <activity
+            android:name="com.ecity.android.contactmanchooser.ChooseContactManActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.workorder.view.FullScreenPhotoActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+
+        <service android:name="com.zzz.ecity.android.applibrary.service.PositionService" />
+        <service android:name="com.ecity.cswatersupply.xg.service.NotificationListener" />
+        <!-- Leakcanary configuration begin -->
+        <service
+            android:name="com.squareup.leakcanary.internal.HeapAnalyzerService"
+            android:enabled="false"
+            android:process=":leakcanary" />
+        <service
+            android:name="com.squareup.leakcanary.DisplayLeakService"
+            android:enabled="false" />
+
+        <activity
+            android:name="com.squareup.leakcanary.internal.DisplayLeakActivity"
+            android:enabled="false"
+            android:icon="@drawable/__leak_canary_icon"
+            android:label="@string/__leak_canary_display_activity_label"
+            android:taskAffinity="com.squareup.leakcanary"
+            android:theme="@style/__LeakCanary.Base">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- Leakcanary configuration end -->
+
+
+        <!-- Emergency Begin -->
+        <activity
+            android:name="com.ecity.cswatersupply.emergency.activity.QuickReportListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.emergency.activity.KnowledgeBaseActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.TabPageIndicatorEmergency" />
+        <activity
+            android:name="com.ecity.cswatersupply.emergency.activity.NewsAnnounActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.TabPageIndicatorEmergency"></activity>
+        <activity
+            android:name="com.ecity.cswatersupply.emergency.activity.NewsAnnouncementDetail"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.ecity.cswatersupply.emergency.activity.DetailWebActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.ecity.cswatersupply.emergency.activity.EarthQuakeEmergencyInvestigationActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+
+        <service android:name="com.ecity.cswatersupply.emergency.service.DownloadService" />
+
+        <activity
+            android:name="com.ecity.cswatersupply.emergency.activity.QuickBulletinOverviewActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.emergency.activity.EarthQuakeInfoBaseListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.emergency.activity.EarthQuakeIncreaseReportActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.emergency.activity.NoticeDetailActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.emergency.activity.EarthquakeLocalInfoActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.emergency.activity.ImportEarthQuakeListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.emergency.activity.ReportQueryActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.emergency.activity.ReportSearchActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.emergency.activity.EmergencyConditionDetailActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            android:screenOrientation="portrait" />
+        <!-- Emergency End -->
+
+        <!-- Project Begin -->
+        <activity
+            android:name="com.ecity.cswatersupply.project.activity.ProjectSummaryListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.ecity.cswatersupply.project.activity.LogBackActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.project.activity.ProjectAllInfoActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name_cswatersupply"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.project.activity.ProjectDetailFragmentActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name_cswatersupply"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.project.activity.ProjectCommonListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name_cswatersupply"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.project.activity.ProjectSearchActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name_cswatersupply"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.project.activity.GeneralProjectListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.project.activity.ACommonListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.project.activity.SelectGroupAndUserActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.ui.activities.SelectGroupAndUserActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.project.activity.WorkLoadRecordListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.emergency.activity.TestListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.project.activity.StatisticsAllViewActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.project.activity.WaterMeterAllInfoActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.project.activity.ProjectWaterMeterSummaryListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.project.activity.WaterMeterListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.project.activity.SafeManageProjectActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.project.activity.ProjectSafeSearchActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.project.activity.SafeManageEventListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.project.activity.SafeManageDetailActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.project.activity.SafeCreatePageActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <!-- Project End -->
+
+        <!-- vpn begin -->
+        <activity
+            android:name="com.ecity.cswatersupply.utils.vpn.VpnTestViewActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecity.cswatersupply.utils.vpn.LoginForVpnActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <!-- vpn End -->
+
+        <!--RTK Module Support Start  -->
+        <activity
+            android:name="com.enrique.bluetooth4falcon.CORSStateActivity"
+            android:label="@string/app_name"></activity>
+        <activity
+            android:name="com.enrique.bluetooth4falcon.DeviceListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/str_cors_select_device"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name="com.enrique.bluetooth4falcon.CORSParamsActivity"
+            android:configChanges="orientation|keyboard"
+            android:label="@string/str_cors_set_params"></activity>
+
+        <service android:name="com.ecity.cswatersupply.service.CORSLocationService"></service>
+        <!-- RTK Module Support end -->
+
+        <!-- 信鸽 configuration begin -->
+        <!-- 【必须】 信鸽receiver广播接收 -->
+        <receiver
+            android:name="com.tencent.android.tpush.XGPushReceiver"
+            android:process=":xg_service_v2">
+            <intent-filter android:priority="0x7fffffff">
+
+                <!-- 【必须】 信鸽SDK的内部广播 -->
+                <action android:name="com.tencent.android.tpush.action.SDK" />
+                <action android:name="com.tencent.android.tpush.action.INTERNAL_PUSH_MESSAGE" />
+                <!-- 【必须】 系统广播：开屏和网络切换 -->
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+
+                <!-- 【可选】 一些常用的系统广播，增强信鸽service的复活机会，请根据需要选择。当然，你也可以添加APP自定义的一些广播让启动service -->
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 【必须】 (2.30及以上版新增)展示通知的activity -->
+        <!-- 【注意】 如果被打开的activity是启动模式为SingleTop，SingleTask或SingleInstance，请根据通知的异常自查列表第8点处理 -->
+        <activity
+            android:name="com.tencent.android.tpush.XGPushActivity"
+            android:exported="true">
+            <intent-filter>
+
+                <!-- 若使用AndroidStudio，请设置android:name="android.intent.action" -->
+                <!-- 若使用eclipse，请设置android:name="" -->
+                <action android:name="android.intent.action" />
+            </intent-filter>
+        </activity>
+
+        <!-- 【必须】 信鸽service -->
+        <service
+            android:name="com.tencent.android.tpush.service.XGPushService"
+            android:exported="true"
+            android:persistent="true"
+            android:process=":xg_service_v2" />
+
+        <!-- 【必须】 通知service，此选项有助于提高抵达率 -->
+        <service
+            android:name="com.tencent.android.tpush.rpc.XGRemoteService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.ecity.cswatersupply.PUSH_ACTION" />
+            </intent-filter>
+        </service>
+
+        <!-- 【必须】 请将YOUR_ACCESS_ID修改为APP的AccessId，“21”开头的10位数字，中间没空格 -->
+        <meta-data
+            android:name="XG_V2_ACCESS_ID"
+            android:value="2100208342" />
+        <!-- 【必须】 请将YOUR_ACCESS_KEY修改为APP的AccessKey，“A”开头的12位字符串，中间没空格 -->
+        <meta-data
+            android:name="XG_V2_ACCESS_KEY"
+            android:value="AUZ47Z31RT6W" />
+
+        <!-- 常州地震 信鸽配置 -->
+        <!--<meta-data-->
+            <!--android:name="XG_V2_ACCESS_ID"-->
+            <!--android:value="2100262592" />-->
+        <!--&lt;!&ndash; 【必须】 请将YOUR_ACCESS_KEY修改为APP的AccessKey，“A”开头的12位字符串，中间没空格 &ndash;&gt;-->
+        <!--<meta-data-->
+            <!--android:name="XG_V2_ACCESS_KEY"-->
+            <!--android:value="AJBV44X99X5M" />-->
+
+        <receiver android:name=".xg.MyXGPushReceiver">
+            <intent-filter>
+
+                <!-- 接收消息透传 -->
+                <action android:name="com.tencent.android.tpush.action.PUSH_MESSAGE" />
+                <!-- 监听注册、反注册、设置/删除标签、通知被点击等处理结果 -->
+                <action android:name="com.tencent.android.tpush.action.FEEDBACK" />
+            </intent-filter>
+        </receiver>
+        <!-- 信鸽 configuration end -->
+
+        <!-- baidu AK验证 com.ecity.cswatersupply -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="3ecea51f560650b1ed8a4b99808f52e8" />
+
+        <!-- baidu AK验证 com.ecity.cswaterproject(仅代表江门工程的包名) -->
+        <!--<meta-data-->
+            <!--android:name="com.baidu.lbsapi.API_KEY"-->
+            <!--android:value="CDMsU6HtYm1Zk5rdEW6fvvLGfCeBqqpt" />-->
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+
+        <!-- VpnService服务 -->
+        <!--<service-->
+        <!--android:name="com.sangfor.ssl.l3vpn.service.EasyappSvpnService"-->
+        <!--android:exported="false"-->
+        <!--android:permission="android.permission.BIND_VPN_SERVICE" >-->
+        <!--<intent-filter>-->
+        <!--<action android:name="com.sangfor.ssl.l3vpn.service.EasyappSvpnService" />-->
+        <!--</intent-filter>-->
+        <!--</service>-->
     </application>
 
 </manifest>

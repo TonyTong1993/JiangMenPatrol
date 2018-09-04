@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="140dp"
+    android:layout_gravity="bottom"
+    android:layout_marginBottom="2dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:background="#00000000" >
+
+    <RelativeLayout
+        android:id="@+id/rl_flexflow_address"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom"
+        android:background="@drawable/css_map_toolbar_foot" >
+
+        <LinearLayout
+            android:id="@+id/ll_flexflow_address"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/map_location_status"
+                android:contentDescription="@null" />
+
+            <TextView
+                android:id="@+id/tv_flexflow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp" 
+                android:layout_marginEnd="64dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical"
+                android:lines="2"
+                android:text="@string/planningtask_not_arrived"
+                android:textColor="@color/black"
+                android:textSize="@dimen/content_font_size_level_3" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/buttons"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/ll_flexflow_address"
+            android:orientation="horizontal" >
+
+         <Button
+            android:id="@+id/btn_flexflowreport_backup"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/css_button_col_theme"
+            android:text="@string/event_report_backup"
+            android:textColor="@color/white_theme_1"
+            android:textSize="@dimen/title_font_size_2" />
+        
+        <Button
+            android:id="@+id/btn_flexflowreport_event"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/css_button_col_theme"
+            android:text="@string/event_report_title"
+            android:textColor="@color/white_theme_1"
+            android:textSize="@dimen/title_font_size_2" />           
+        </LinearLayout>       
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/ib_flexflow_show_line"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_above="@id/rl_address"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="80dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/css_main_goto_loation"
+        android:contentDescription="@null" />
+
+</RelativeLayout>

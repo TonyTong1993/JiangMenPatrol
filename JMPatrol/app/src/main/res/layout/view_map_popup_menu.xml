@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popup_view_cont"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:orientation="vertical"
+    android:padding="8dp" >
+
+    <LinearLayout
+        android:id="@+id/tab_menu_container"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+      <TextView
+            android:id="@+id/tv_tool1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="20dp"
+            android:paddingStart="20dp"
+            android:paddingRight="0dp"
+            android:paddingEnd="0dp"
+            android:textSize="17sp"
+            android:textColor="@color/font_level_4" />
+
+        <TextView
+            android:id="@+id/tv_tool2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="17sp"
+            android:textColor="@color/font_level_4" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_blue_line_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_anim_"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="#ffdddddd"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager_tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@android:color/transparent"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="none" >
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

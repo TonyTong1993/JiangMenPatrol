@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_add_material"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_40"
+        android:paddingLeft="10dip"
+        android:paddingStart="10dip"
+        android:paddingRight="0dip"
+        android:paddingEnd="0dip"
+        android:text="@string/event_report_add_material"
+        android:textSize="17sp"
+        android:drawablePadding="10dip"
+        android:gravity="center_vertical"
+        android:drawableStart="@drawable/img_increase"
+        android:drawableLeft="@drawable/img_increase"
+        android:drawableEnd="@drawable/img_arrow"
+        android:drawableRight="@drawable/img_arrow" />
+
+</LinearLayout>

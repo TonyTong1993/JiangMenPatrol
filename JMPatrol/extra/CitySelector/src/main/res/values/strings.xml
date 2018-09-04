@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="app_name">CitySelector</string>
+    <string name="str_citysel_title">请选择城市</string>
+    <string name="str_citysel_switch">[切换城市]</string>
+    <string name="str_me_back">返回</string>
+    <string name="str_me_ok">确定</string>
+    <string name="str_me_cancel">取消</string>
+    <string name="str_me_yes">是</string>
+    <string name="str_me_no">否</string>
+</resources>

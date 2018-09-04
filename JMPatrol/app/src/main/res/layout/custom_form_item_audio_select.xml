@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_50"
+        android:layout_marginLeft="@dimen/margin_10"
+        layout="@layout/custom_form_item_title" />
+
+     <include
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        layout="@layout/item_splitline_bold" />
+
+    <com.ecity.cswatersupply.ui.widght.ListViewForScrollView
+        android:id="@+id/lv_audios"
+        style="@style/common_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_spacing_level_5"
+        android:layout_marginRight="@dimen/margin_spacing_level_5"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:visibility="visible" >
+    </com.ecity.cswatersupply.ui.widght.ListViewForScrollView>
+   
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="20dip"
+        layout="@layout/item_splitline_h" />
+
+</LinearLayout>

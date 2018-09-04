@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="45dp"
+    android:layout_gravity="bottom"
+    android:layout_marginBottom="10dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:background="@color/transparent"
+    >
+
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal"
+        android:background="@drawable/css_map_toolbar_foot" >
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:id="@+id/layout_measure_length"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@drawable/css_map_toolbar_item"
+            android:clickable="true" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="@color/transparent"
+                android:layout_centerHorizontal="true" >
+
+                <ImageView
+                    android:id="@+id/imageview_main_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@null"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/btn_mainmenu_measure_length" >
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/text_main_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/imageview_main_1"
+                    android:layout_toEndOf="@id/imageview_main_1"
+                    android:gravity="center"
+                    android:text="@string/map_measure"
+                    android:textColor="#ff000000"
+                    android:textSize="17sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="2dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:scaleType="center"
+            android:contentDescription="@null"
+            android:src="@drawable/split_v" >
+        </ImageView>
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:id="@+id/layout_query_point"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@drawable/css_map_toolbar_item"
+            android:clickable="true" >
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_centerHorizontal="true" 
+                android:background="@color/transparent">
+
+                <ImageView
+                    android:id="@+id/imageview_main_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@null"
+                    android:src="@drawable/btn_mainmenu_query_point" >
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/text_main_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageview_main_2"
+                    android:layout_toEndOf="@+id/imageview_main_2"
+                    android:gravity="center"
+                    android:text="@string/map_query"
+                    android:textColor="#ff000000"
+                    android:textSize="17sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="2dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:scaleType="center"
+            android:contentDescription="@null"
+            android:src="@drawable/split_v" >
+        </ImageView>
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:id="@+id/layout_mainmenu_clearmap"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@drawable/css_map_toolbar_item"
+            android:clickable="true" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="@color/transparent"
+                android:layout_centerHorizontal="true" >
+
+                <ImageView
+                    android:id="@+id/imageview_main_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@null"
+                    android:src="@drawable/btn_mainmenu_clean" >
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/text_main_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageview_main_3"
+                    android:layout_toEndOf="@+id/imageview_main_3"
+                    android:gravity="center"
+                    android:text="@string/map_clear"
+                    android:textColor="#ff000000"
+                    android:textSize="17sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="2dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:scaleType="center"
+            android:contentDescription="@null"
+            android:src="@drawable/split_v" >
+        </ImageView>
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:id="@+id/layout_mainmenu_more"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@drawable/css_map_toolbar_item"
+            android:clickable="true" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="@color/transparent"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" >
+
+                <ImageView
+                    android:id="@+id/imageview_main_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                     android:layout_centerVertical="true"
+                     android:contentDescription="@null"
+                    android:src="@drawable/btn_mainmenu_more" >
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/text_main_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageview_main_4"
+                    android:layout_toEndOf="@+id/imageview_main_4"
+                    android:gravity="center"
+                    android:text="@string/map_more"
+                    android:textColor="#ff000000"
+                    android:textSize="17sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout >
+
+</RelativeLayout>

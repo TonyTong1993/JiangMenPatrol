@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical" >
+
+    <com.ecity.cswatersupply.ui.widght.CustomTitleView
+        android:id="@+id/customTitleView1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_title_height" >
+    </com.ecity.cswatersupply.ui.widght.CustomTitleView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/ll_searchview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_spacing_level_10"
+            android:layout_marginLeft="@dimen/margin_spacing_level_6"
+            android:layout_marginRight="@dimen/margin_spacing_level_6"
+            android:layout_marginTop="@dimen/margin_spacing_level_10"
+            android:background="@drawable/selector_searchview"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/iv_workorder_from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/view_search"
+                android:drawablePadding="@dimen/padding_spacing_level_5"
+                android:gravity="center"
+                android:paddingBottom="@dimen/lv_item_padding_up_down_level_1"
+                android:paddingTop="@dimen/lv_item_padding_up_down_level_1"
+                android:text="@string/title_search"
+                android:textColor="@color/darkgray"
+                android:textSize="@dimen/content_font_size_level_1" />
+        </LinearLayout>
+
+        <com.ecity.cswatersupply.workorder.widght.AudioTextView
+            android:id="@+id/tv_status_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#cfffa500"
+            android:gravity="center"
+            android:padding="@dimen/lv_item_padding_up_down_level_1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_18"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+    <com.lee.pullrefresh.ui.PullToRefreshListView
+        android:id="@+id/lv_pumps"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/content_background"
+        android:childDivider="@color/gainsboro"
+        android:divider="@color/gainsboro"
+        android:groupIndicator="@null" >
+    </com.lee.pullrefresh.ui.PullToRefreshListView>
+
+</LinearLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">BDLBSLibrary</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="str_rtppf_trfficjam">躲避拥堵</string>
+    <string name="str_rtppf_dist">少走高速</string>
+    <string name="str_rtppf_time">高速优先</string>
+    <string name="str_rtppf_toll">少收费</string>
+    <string name="str_rtppf_recommend">推荐</string>
+    <string name="str_rtppf_changetohpnavi">高精度导航</string>
+    <string name="str_rtppf_notifytitle">温馨提示</string>
+    <string name="str_rtppf_notifymessage">是否切换到高精度导航模式？</string>
+    <string name="str_rtppf_notifymessage_finish">是否结束导航</string>
+    <string name="str_nav_requestroute">正在进行路径规划,请稍候\u2026</string>
+    <string name="str_nav_initializeing">正在初始化\u2026</string>
+</resources>

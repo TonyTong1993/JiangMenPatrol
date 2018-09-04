@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_earthquake_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_workorder_list_shape"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_marginLeft="2dp"
+    android:layout_marginStart="2dp"
+    android:layout_marginRight="2dp"
+    android:layout_marginEnd="2dp"
+    android:orientation="vertical" >
+    
+     <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/divider"
+        android:background="@color/gainsboro"
+        android:orientation="vertical" >
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <ImageView 
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@drawable/arrived"
+            android:layout_margin="5dp"
+            android:contentDescription="@null"
+            android:layout_gravity="center_vertical"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/ll_report_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="2dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="1dp"
+                android:orientation="horizontal" >
+                <TextView 
+                    style="@style/item_textview_earthquake_styles"
+                    android:text="@string/report_address"/>
+                <TextView 
+                    android:id="@+id/tv_report_address"  
+                    style="@style/item_textview_earthquake_text_styles"/>
+                
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/ll_earthquake_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_report_address"
+                android:layout_marginLeft="2dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="1dp"
+                android:orientation="horizontal" >
+                <TextView 
+                    style="@style/item_textview_earthquake_styles"
+                    android:text="@string/earthquake_name"/>
+                <TextView 
+                    android:id="@+id/tv_earthquake_name"
+                    style="@style/item_textview_earthquake_text_styles"/>
+                
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_earthquake_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_earthquake_name"
+                android:layout_marginLeft="2dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="1dp"
+                android:orientation="horizontal" >
+                <TextView 
+                    style="@style/item_textview_earthquake_styles"
+                    android:text="@string/earthquake_id"/>
+                <TextView 
+                    android:id="@+id/tv_earthquake_id"
+                    style="@style/item_textview_earthquake_text_styles"/>
+                
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_survey_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_earthquake_id"
+                android:layout_marginLeft="2dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="1dp"
+                android:orientation="horizontal" >
+                <TextView 
+                    style="@style/item_textview_earthquake_styles"
+                    android:text="@string/surveyt_time"/>
+                <TextView 
+                    android:id="@+id/tv_survey_time"
+                    style="@style/item_textview_earthquake_text_styles"/>
+                
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_survey_person"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_survey_time"
+                android:layout_marginLeft="2dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="1dp"
+                android:orientation="horizontal" >
+                <TextView 
+                    style="@style/item_textview_earthquake_styles"
+                    android:text="@string/survey_person"/>
+                <TextView 
+                    android:id="@+id/tv_survey_person"
+                    style="@style/item_textview_earthquake_text_styles"/>
+                
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/divider"
+        android:background="@color/gainsboro"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root"
+    android:orientation="vertical" >
+    
+    <com.ecity.cswatersupply.ui.widght.CustomTitleView
+        android:id="@+id/customTitleView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_title_height" >
+    </com.ecity.cswatersupply.ui.widght.CustomTitleView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_5"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_10"
+            android:background="@drawable/selector_searchview"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/search_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:drawableLeft="@drawable/view_search"
+                android:background="@null"
+                android:drawablePadding="@dimen/margin_5"
+                android:gravity="left|center_vertical"
+                android:paddingBottom="@dimen/margin_5"
+                android:paddingTop="@dimen/margin_5"
+                android:paddingLeft="@dimen/margin_5"
+                android:hint="@string/title_search_reminder"
+                android:singleLine="true"
+                android:imeOptions="actionSearch"
+                android:textSize="@dimen/font_16" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <GridView 
+        android:id="@+id/address_types"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginRight="@dimen/margin_10"
+        android:horizontalSpacing="@dimen/margin_5"
+        android:listSelector="@color/transparent"
+        android:numColumns="3"
+        android:scrollbars="none"
+        android:verticalSpacing="@dimen/margin_5" >
+    </GridView>
+
+    <ExpandableListView 
+        android:id ="@+id/expandableListView"
+        android:layout_width ="fill_parent"
+        android:layout_height ="wrap_content"
+        android:layout_marginTop="@dimen/margin_5"
+        android:divider="@null"
+        android:groupIndicator="@null"  >
+    </ExpandableListView>
+
+</LinearLayout>

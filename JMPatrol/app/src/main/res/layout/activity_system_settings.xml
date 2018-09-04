@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_background"
+    android:orientation="vertical" >
+
+    <com.ecity.cswatersupply.ui.widght.CustomTitleView
+        android:id="@+id/view_title_system_settings"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/activity_title_height" >
+    </com.ecity.cswatersupply.ui.widght.CustomTitleView>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:clickable="false"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/tv_out_of_area_notice_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="8dp"
+                    android:text="@string/system_settings_out_of_area_notice"
+                    android:textColor="@color/text_darkGray"
+                    android:textSize="17sp" />
+
+                <ToggleButton
+                    android:id="@+id/switch_out_of_area_notice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/switch_off"
+                    android:contentDescription="@null"
+                    android:textOff=""
+                    android:textOn="" />
+            </RelativeLayout>
+
+            <View
+		        android:layout_width="match_parent"
+		        android:layout_height="1dp"
+		        android:background="@color/divider_thick" />"
+
+            <RelativeLayout
+                android:id="@+id/rl_clear_memory"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:clickable="false"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/tv_clear_memory_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="8dp"
+                    android:text="@string/system_settings_clear_memory"
+                    android:textColor="@color/text_darkGray"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/arrow_right" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider_thick" />
+
+            <RelativeLayout
+                android:id="@+id/rl_check_update"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:clickable="false"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/tv_check_update_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="8dp"
+                    android:text="@string/system_settings_check_update"
+                    android:textColor="@color/text_darkGray"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:id="@+id/arrow_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/arrow_right" />
+
+                <TextView
+                    android:id="@+id/tv_app_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/arrow_right"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/margin_8"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:text="@string/system_settings_check_update"
+                    android:textColor="@color/text_darkGray"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider_thick" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

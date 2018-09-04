@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_col_blue"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="@dimen/margin_70"
+            android:layout_height="@dimen/margin_40"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_crossanalysis"
+            android:gravity="center"
+            android:text="@string/back"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_18" />
+
+        <Button
+            android:id="@+id/inandout"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/css_btn_fullscreen" />
+
+        <TextView
+            android:id="@+id/titlename"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_40"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/inandout"
+            android:layout_toRightOf="@+id/back"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </RelativeLayout>
+    <!-- 建立一個ImageSwitcher -->
+
+    <ImageSwitcher
+        android:id="@+id/switcher"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/title"
+        android:layout_centerInParent="true" />
+    <!-- 建立一個Gallery -->
+
+    <com.ecity.citybuildpo.ui.GalleryFlow
+        android:id="@+id/mygallery"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:gravity="center_vertical" />
+
+</RelativeLayout>

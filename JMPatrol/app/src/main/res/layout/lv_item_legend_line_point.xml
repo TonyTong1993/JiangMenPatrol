@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:clickable="false"
+    android:gravity="center_vertical" >
+    <LinearLayout
+        android:id="@+id/point_feedback_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/point_feedback"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:background="@drawable/map_location_blue"
+            android:layout_marginTop="1dp"
+            android:contentDescription="@null"
+            android:scaleType="centerInside"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/point_arrived_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:gravity="center_vertical"
+        android:layout_toEndOf="@id/point_feedback_ll"
+        android:layout_toRightOf="@id/point_feedback_ll" >
+
+        <ImageView
+            android:id="@+id/point_arrived"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:background="@drawable/map_location_hl"
+            android:layout_marginTop="1dp"
+            android:contentDescription="@null"
+            android:scaleType="centerInside" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/point_commen_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="2dp"
+        android:layout_marginStart="2dp"
+        android:gravity="center_vertical"
+        android:layout_toEndOf="@id/point_arrived_ll"
+        android:layout_toRightOf="@id/point_arrived_ll" >
+
+        <ImageView
+            android:id="@+id/point_commen"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/map_location_red"
+            android:layout_marginTop="1dp"
+            android:contentDescription="@null"
+            android:scaleType="centerInside" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/point_commen_arrived_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_toEndOf="@id/point_commen_ll"
+        android:layout_toRightOf="@id/point_commen_ll" >
+
+        <TextView
+            android:id="@+id/point_commen_arrived_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:text="0/3"
+            android:textColor="@color/red"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+    <ToggleButton
+        android:id="@+id/point_ststus_loadType"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/togglebutton_selector"
+        android:checked="true"
+        android:textOff=""
+        android:textOn=""/>
+
+</RelativeLayout>

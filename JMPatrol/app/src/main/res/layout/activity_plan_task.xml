@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.ecity.cswatersupply.ui.widght.CustomTitleView
+        android:id="@+id/view_title_map"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/activity_title_height" >
+    </com.ecity.cswatersupply.ui.widght.CustomTitleView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.esri.android.map.MapView
+            android:id="@+id/map"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+        </com.esri.android.map.MapView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <FrameLayout
+                android:id="@+id/fl_toobar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true" >
+
+                <include
+                    android:id="@+id/view_map_foot_toolbar"
+                    layout="@layout/view_map_foot_toolbar"
+                    android:visibility="visible" />
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/results_viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dip"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/css_map_toolbar_foot"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/fl_toobar"
+                layout="@layout/view_map_zoom" />
+        </RelativeLayout>
+    </FrameLayout>
+
+</LinearLayout>

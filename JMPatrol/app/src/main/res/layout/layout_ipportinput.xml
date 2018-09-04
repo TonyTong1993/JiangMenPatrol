@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="fill_parent"
-              android:layout_height="wrap_content"
-              android:orientation="vertical">
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="fill_parent"
@@ -10,7 +10,7 @@
         android:layout_marginTop="10dip"
         android:text="@string/setting_ip_address"
         android:textColor="@color/gray"
-        android:textSize="@dimen/font_18"/>
+        android:textSize="@dimen/font_18" />
 
     <EditText
         android:id="@+id/et_server"
@@ -18,11 +18,10 @@
         android:layout_height="@dimen/margin_40"
         android:background="@drawable/css_default_input_edit"
         android:hint=""
-        android:maxLines="1"
         android:singleLine="true"
-        android:textColor="@android:color/black"
+        android:maxLines="1"
         android:textSize="@dimen/font_20"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
     <TextView
         android:layout_width="fill_parent"
@@ -30,7 +29,7 @@
         android:layout_marginTop="@dimen/margin_10"
         android:text="@string/setting_server_port"
         android:textColor="@color/gray"
-        android:textSize="@dimen/font_18"/>
+        android:textSize="@dimen/font_18" />
 
     <EditText
         android:id="@+id/et_port"
@@ -38,11 +37,10 @@
         android:layout_height="@dimen/margin_40"
         android:background="@drawable/css_default_input_edit"
         android:hint=""
-        android:maxLines="1"
         android:singleLine="true"
-        android:textColor="@android:color/black"
+        android:maxLines="1"
         android:textSize="@dimen/font_20"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
     <TextView
         android:layout_width="fill_parent"
@@ -50,7 +48,7 @@
         android:layout_marginTop="@dimen/margin_10"
         android:text="@string/setting_virtual_path"
         android:textColor="@color/gray"
-        android:textSize="@dimen/font_18"/>
+        android:textSize="@dimen/font_18" />
 
     <EditText
         android:id="@+id/et_virtualPath"
@@ -58,9 +56,8 @@
         android:layout_height="@dimen/margin_40"
         android:background="@drawable/css_default_input_edit"
         android:hint=""
-        android:maxLines="1"
         android:singleLine="true"
-        android:textColor="@android:color/black"
+        android:maxLines="1"
         android:textSize="@dimen/font_20"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 </LinearLayout>

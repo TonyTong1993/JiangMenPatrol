@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="50dp"
+    android:visibility="visible" >
+
+    <FrameLayout
+        android:id="@+id/framlayout_play"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_vertical"
+        android:visibility="visible" >
+
+        <ImageView
+            android:id="@+id/iv_play"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:contentDescription="@null"
+            android:src="@drawable/recording_play"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/iv_pause"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:contentDescription="@null"
+            android:src="@drawable/recording_pause"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/pb_wait"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativelayout_audioitem"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginLeft="5dp"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:layout_toRightOf="@id/framlayout_play"
+        android:paddingRight="10dp" >
+
+            <TextView
+                android:id="@+id/tv_audioname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/text_gray"
+                android:textSize="17sp"
+                android:text="Audio_20160922170959.mp3" />
+
+            <TextView
+                android:id="@+id/tv_length"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_audioname"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/text_gray"
+                android:textSize="16sp"
+                android:text="@string/audio_length" />
+
+            <TextView
+                android:id="@+id/tv_audiolength"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_audioname"
+                android:layout_toRightOf="@id/tv_length"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/text_gray"
+                android:textSize="16sp"
+                android:text="00:03" />
+    </RelativeLayout>
+
+    <TextView
+            android:id="@+id/remove"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:textColor="@color/white_theme_1"
+            android:background="@color/red"
+            android:textSize="18sp"
+            android:text="@string/remove"
+            android:visibility="visible" />
+</RelativeLayout>

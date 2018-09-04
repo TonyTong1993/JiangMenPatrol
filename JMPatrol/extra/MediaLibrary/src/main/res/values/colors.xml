@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 通用列表背景 -->
+    <color name="list_background">#fff6f6f6</color>
+    <color name="text_gray">#585858</color>
+    <!-- 自定义录音效果颜色 -->
+    <color name="title_blue">#ff3b96ea</color>
+    <color name="green_pressed">#228B22</color>
+    <color name="text_lightGray">#ff9e9fa1</color>
+    <color name="white_theme_1">#ffffffff</color>
+    <color name="blue_normal">#288ef0</color>
+    <color name="blue_pressed">#0b5dac</color>
+    <color name="yellow">#ffff00</color>
+    <color name="transparent">#00000000</color>
+    <color name="red">#ff0000</color>
+    <color name="font_level_3">#5b5b5b</color>
+    <color name="vido_bottom_background">#7F000000</color>
+    <color name="add_audio">#b4b4b4</color>
+
+</resources>

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_back_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:src="@drawable/main_icon_back_pressed"/>
+
+        <ImageView
+            android:id="@+id/contact_image"
+            android:layout_width="@dimen/margin_100"
+            android:layout_height="@dimen/margin_100"
+            android:layout_below="@+id/iv_back_arrow"
+            android:layout_marginTop="@dimen/margin_10"
+            android:src="@drawable/ic_launcher"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contact_image"
+            android:layout_marginTop="@dimen/margin_5"
+            android:layout_marginBottom="@dimen/margin_5"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/font_18"
+            android:text="耿秀秀" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/margin_20"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/contact_name"
+                style="@style/tv_contact_name"
+                android:text="姓名"/>
+
+            <TextView
+                android:id="@+id/contact_name_value"
+                style="@style/tv_contact_value"
+                android:text="耿秀秀" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_thick" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/contact_phone"
+                style="@style/tv_contact_name"
+                android:text="电话"/>
+
+            <TextView
+                android:id="@+id/contact_phone_value"
+                style="@style/tv_contact_value"
+                android:layout_below="@id/contact_phone"
+                android:text="027-3956723" />
+
+            <ImageView
+                android:id="@+id/iv_call_phone"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/margin_40"
+                android:src="@drawable/icon_btn_call"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_thick" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/contact_mobile_phone"
+                style="@style/tv_contact_name"
+                android:text="手机号"/>
+
+            <TextView
+                android:id="@+id/contact_mobile_phone_value"
+                style="@style/tv_contact_value"
+                android:layout_below="@id/contact_mobile_phone"
+                android:text="13871571040" />
+
+            <ImageView
+                android:id="@+id/iv_message"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/margin_100"
+                android:src="@drawable/icon_btn_message"/>
+
+            <ImageView
+                android:id="@+id/iv_call_mobile_phone"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/margin_40"
+                android:src="@drawable/icon_btn_call"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_thick" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/contact_position"
+                style="@style/tv_contact_name"
+                android:text="职位"/>
+
+            <TextView
+                android:id="@+id/contact_position_value"
+                style="@style/tv_contact_value"
+                android:text="管理员" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_thick" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/contact_dept"
+                style="@style/tv_contact_name"
+                android:text="部门"/>
+
+            <TextView
+                android:id="@+id/contact_dept_value"
+                style="@style/tv_contact_value"
+                android:text="研发中心-MS" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_thick" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/contact_address"
+                style="@style/tv_contact_name"
+                android:text="地址"/>
+
+            <TextView
+                android:id="@+id/contact_address_value"
+                style="@style/tv_contact_value"
+                android:text="五大科技园航域二期B3栋" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

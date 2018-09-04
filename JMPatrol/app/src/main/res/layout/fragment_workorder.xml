@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.lee.pullrefresh.ui.PullToRefreshListView
+        android:id="@+id/lv_container"
+        style="@style/tasklist_list_common"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp" >
+    </com.lee.pullrefresh.ui.PullToRefreshListView>
+
+    <com.ecity.cswatersupply.workorder.widght.AudioTextView
+        android:id="@+id/tv_status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/status_bar"
+        android:background="@color/orangetrans"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/content_font_size_level_1"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:drawablePadding="5dp"
+        android:drawableTop="@drawable/workorder_empty"
+        android:gravity="center"
+        android:text="@string/workorder_empty"
+        android:textColor="@color/lightgray"
+        android:textSize="26sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

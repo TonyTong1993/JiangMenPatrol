@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <com.ecity.cswatersupply.ui.widght.CustomTitleView
+        android:id="@+id/customTitleView"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/activity_title_height"
+        android:visibility="gone">
+    </com.ecity.cswatersupply.ui.widght.CustomTitleView>
+
+    <com.lee.pullrefresh.ui.PullToRefreshListView
+        android:id="@+id/ltv_download"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:choiceMode="singleChoice"
+        android:background="@color/list_background"
+        android:childDivider="@color/gainsboro"
+        android:divider="@color/gainsboro"
+        android:cacheColorHint="#00000000"
+        android:dividerHeight="10dp"
+        android:fastScrollEnabled="true"
+        android:scrollbars="none" />
+
+</LinearLayout>

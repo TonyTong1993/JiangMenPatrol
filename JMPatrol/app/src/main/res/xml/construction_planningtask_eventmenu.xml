@@ -1,0 +1,43 @@
+﻿<Menus> 
+  <Category name="施工巡检任务事件">
+    <Menu>
+      <Name>维修事件</Name>
+      <IconName>null</IconName>
+      <Deleteable>0</Deleteable>
+      <Dragable>0</Dragable>
+      <Configurable>1</Configurable>
+      <SubName>维修事件</SubName>
+      <Command>com.ecity.cswatersupply.menu.RepairementEventCommandXtd</Command>
+    </Menu>
+
+    <Menu> 
+      <Name>检漏事件</Name>
+      <IconName>null</IconName>
+      <Deleteable>0</Deleteable>
+      <Dragable>0</Dragable>
+      <Configurable>1</Configurable>
+      <SubName>检漏事件</SubName>
+      <Command>com.ecity.cswatersupply.menu.LeakEventCommandXtd</Command>
+    </Menu>
+
+    <Menu> 
+      <Name>罚单跟踪</Name>  
+      <IconName>null</IconName>
+      <Deleteable>0</Deleteable>
+      <Dragable>0</Dragable>
+      <Configurable>1</Configurable>
+      <SubName>罚单跟踪</SubName>
+      <Command>com.ecity.cswatersupply.menu.PunishmentReportCommandXtd</Command>
+    </Menu>
+
+    <Menu> 
+      <Name>施工事件</Name>
+      <IconName>null</IconName>
+      <Deleteable>0</Deleteable>
+      <Dragable>0</Dragable>
+      <Configurable>1</Configurable>
+      <SubName>施工事件</SubName>
+      <Command>com.ecity.cswatersupply.menu.ConstructionEventCommandXtd</Command> 
+    </Menu>
+  </Category>
+</Menus>

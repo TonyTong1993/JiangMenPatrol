@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/ll_workorderview_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:id="@+id/tv_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="top"
+            android:maxWidth="260dp"
+            android:singleLine="false"
+            android:textColor="@color/blue_normal"
+            android:textSize="@dimen/title_font_size_1"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/iv_workorder_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/workorder_label_content_interval"
+            android:layout_marginStart="@dimen/workorder_label_content_interval"
+            android:background="@drawable/css_bg_blue_corner"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text="热线"
+            android:textColor="@color/white_text"
+            android:textSize="@dimen/title_font_size_3"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/iv_workorder_iscooperate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/workorder_label_content_interval"
+            android:layout_toLeftOf="@id/iv_workorder_from"
+            android:background="@drawable/css_bg_yellow_corner"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text="协助"
+            android:textColor="@color/white_text"
+            android:textSize="@dimen/title_font_size_3"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/iv_workorder_is_beyound_deadline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/iv_workorder_iscooperate"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:textColor="@color/white_text"
+            android:textSize="@dimen/title_font_size_3"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_lable_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_workorderview_title"
+        android:paddingTop="@dimen/lv_item_padding_up_down_level_5">
+
+        <TextView
+            android:id="@+id/label_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_workorderview_title"
+            android:text="@string/label_repair_what"
+            android:textColor="@color/txt_label"
+            android:textSize="@dimen/title_font_size_3"/>
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_workorderview_title"
+            android:layout_marginLeft="@dimen/workorder_label_content_interval"
+            android:layout_marginStart="@dimen/workorder_label_content_interval"
+            android:layout_toEndOf="@id/label_content"
+            android:layout_toRightOf="@id/label_content"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:textColor="@color/txt_label"
+            android:textSize="@dimen/title_font_size_3"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_label_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_lable_content"
+        android:paddingTop="@dimen/lv_item_padding_up_down_level_5">
+
+        <TextView
+            android:id="@+id/label_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_repair_address"
+            android:textColor="@color/txt_label"
+            android:textSize="@dimen/title_font_size_3"/>
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/workorder_label_content_interval"
+            android:layout_marginStart="@dimen/workorder_label_content_interval"
+            android:layout_toEndOf="@id/label_address"
+            android:layout_toRightOf="@id/label_address"
+            android:ellipsize="end"
+            android:singleLine="false"
+            android:textColor="@color/txt_label"
+            android:textSize="@dimen/title_font_size_3"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_label_remark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_label_address"
+        android:paddingTop="@dimen/lv_item_padding_up_down_level_5">
+
+        <TextView
+            android:id="@+id/label_remark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_remark"
+            android:textColor="@color/txt_label"
+            android:textSize="@dimen/title_font_size_3"/>
+
+        <TextView
+            android:id="@+id/tv_remark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/workorder_label_content_interval"
+            android:layout_marginStart="@dimen/workorder_label_content_interval"
+            android:layout_toEndOf="@id/label_remark"
+            android:layout_toRightOf="@id/label_remark"
+            android:ellipsize="end"
+            android:singleLine="false"
+            android:textColor="@color/txt_label"
+            android:textSize="@dimen/title_font_size_3"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_label_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_label_remark"
+        android:paddingTop="@dimen/lv_item_padding_up_down_level_5">
+
+        <TextView
+            android:id="@+id/label_phoneNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:text="@string/label_contact_number"
+            android:textColor="@color/txt_label"
+            android:textSize="@dimen/title_font_size_3"/>
+
+        <TextView
+            android:id="@+id/tv_phoneNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/workorder_label_content_interval"
+            android:layout_marginStart="@dimen/workorder_label_content_interval"
+            android:layout_toEndOf="@id/label_phoneNum"
+            android:layout_toRightOf="@id/label_phoneNum"
+            android:focusable="true"
+            android:textColor="@color/css_workorder_contact_phonenumber"
+            android:textSize="@dimen/title_font_size_3"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/label_workorder_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_label_phone"
+        android:gravity="center_vertical"
+        android:text="@string/label_workorder_state"
+        android:textColor="@color/txt_label"
+        android:paddingTop="@dimen/lv_item_padding_up_down_level_5"
+        android:textSize="@dimen/title_font_size_3" />
+
+    <TextView
+        android:id="@+id/content_workorder_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_label_phone"
+        android:layout_marginLeft="@dimen/workorder_label_content_interval"
+        android:layout_marginStart="@dimen/workorder_label_content_interval"
+        android:layout_toRightOf="@id/label_workorder_state"
+        android:paddingTop="@dimen/lv_item_padding_up_down_level_5"
+        android:textColor="@color/darkorange"
+        android:textSize="@dimen/title_font_size_3" />
+
+    <TextView
+        android:id="@+id/label_workorder_fixtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/label_workorder_state"
+        android:gravity="center_vertical"
+        android:text="@string/label_fixtime"
+        android:textColor="@color/txt_label"
+        android:paddingTop="@dimen/lv_item_padding_up_down_level_5"
+        android:textSize="@dimen/title_font_size_3" />
+
+    <TextView
+        android:id="@+id/content_workorder_fixtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/label_workorder_state"
+        android:layout_marginLeft="@dimen/workorder_label_content_interval"
+        android:layout_marginStart="@dimen/workorder_label_content_interval"
+        android:layout_toRightOf="@id/label_workorder_state"
+        android:textColor="@color/txt_label"
+        android:paddingTop="@dimen/lv_item_padding_up_down_level_5"
+        android:textSize="@dimen/title_font_size_3" />
+</RelativeLayout>

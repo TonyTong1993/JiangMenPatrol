@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <com.ecity.cswatersupply.ui.widght.CustomTitleView
+        android:id="@+id/view_tile"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_title_height" >
+    </com.ecity.cswatersupply.ui.widght.CustomTitleView>
+
+    <RelativeLayout
+        android:id="@+id/rl_quake_info"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_66"
+        android:layout_marginTop="@dimen/margin_4"
+        android:layout_marginBottom="@dimen/margin_4"
+        android:background="@drawable/css_bg_rect"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginRight="@dimen/margin_10"
+        android:paddingLeft="@dimen/margin_10">
+
+        <LinearLayout 
+            android:id="@+id/ll_region"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_6"
+            android:layout_marginBottom="@dimen/margin_2"
+            android:orientation="horizontal" >
+
+            <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:textColor="@color/txt_black_normal"
+	            android:textSize="@dimen/font_16"
+	            android:text="@string/earth_quake_region" />
+
+            <TextView
+                android:id="@+id/tv_quake_region"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/txt_black_normal"
+                android:textSize="@dimen/font_16"
+                android:text="@string/earth_quake_no_info" />
+
+        </LinearLayout>
+
+        <LinearLayout 
+            android:id="@+id/ll_time"
+            android:layout_below="@id/ll_region"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_2"
+            android:layout_marginBottom="@dimen/margin_4"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:textColor="@color/txt_black_normal"
+                android:textSize="@dimen/font_16"
+                android:text="@string/earth_quake_start_time" />
+
+            <TextView
+                android:id="@+id/tv_quake_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:textColor="@color/txt_black_normal"
+                android:textSize="@dimen/font_16"
+                android:text="@string/earth_quake_no_info" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_arrow_right"
+            android:layout_width="@dimen/margin_40"
+            android:layout_height="@dimen/margin_40"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/arrow_right" />
+    </RelativeLayout>
+
+    <GridView 
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_5"
+        android:layout_marginBottom="@dimen/margin_5"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginRight="@dimen/margin_10"
+        android:verticalSpacing="@dimen/margin_15"
+        android:numColumns = "3" >
+    </GridView>
+
+    <com.ecity.chart.charts.BarChart
+        android:id="@+id/barchart"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_240"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginBottom="@dimen/margin_5"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginRight="@dimen/margin_10" >
+    </com.ecity.chart.charts.BarChart>
+
+</LinearLayout>

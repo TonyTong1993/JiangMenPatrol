@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_item_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_50"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:background="@drawable/shape_default_input_normal"
+        android:gravity="fill_vertical"
+        android:singleLine="false"
+        android:text="@string/hello_world"
+        android:textColor="@color/txt_label"
+        android:textSize="@dimen/title_font_size_4" />
+
+    <include
+        layout="@layout/item_splitline_bold"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip" />
+
+    <EditText
+        android:id="@+id/et_item_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_default_input_normal"
+        android:gravity="start"
+        android:hint="@string/str_clickinput"
+        android:inputType="textMultiLine"
+        android:minHeight="@dimen/margin_80"
+        android:paddingBottom="10dip"
+        android:paddingLeft="15dip"
+        android:paddingRight="10dip"
+        android:paddingTop="10dip"
+        android:textColor="@color/txt_black_normal"
+        android:textColorHint="@color/txt_hint"
+        android:textSize="@dimen/font_18" />
+
+    <include
+        layout="@layout/item_splitline_h"
+        android:layout_width="match_parent"
+        android:layout_height="15dip" />
+
+</LinearLayout>

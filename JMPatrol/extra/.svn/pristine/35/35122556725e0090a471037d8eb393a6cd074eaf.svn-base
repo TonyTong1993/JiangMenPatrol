@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- CORS Module Start -->
+    <string name="str_cors_bluetooth_enabled">蓝牙功能不可用</string>
+    <string name="str_cors_search">查询</string>
+    <string name="str_cors_discoverable">可发现设备</string>
+    <string name="str_cors_title_connecting">连接中...</string>
+    <string name="str_cors_title_connected">已连接</string>
+    <string name="str_cors_title_not_connected">未连接</string>
+    <string name="str_cors_title_rightaction">差分设置</string>
+    <string name="str_cors_lat">纬度</string>
+    <string name="str_cors_lati">0.0</string>
+    <string name="str_cors_lon">经度</string>
+    <string name="str_cors_loni">0.0</string>
+    <string name="str_cors_satelite_counts">星数</string>
+    <string name="str_cors_satelite_countsi">0</string>
+    <string name="str_cors_quality">解状态</string>
+    <string name="str_cors_qualityi">未定位</string>
+    <string name="str_cors_dgps">龄期</string>
+    <string name="str_cors_dpgsi">0</string>
+    <string name="str_cors_altitude">高程</string>
+    <string name="str_cors_altitudei">0.0</string>
+    <string name="str_cors_h_error">水平误差</string>
+    <string name="str_cors_h_errori">0.0</string>
+    <string name="str_cors_v_error">高程误差</string>
+    <string name="str_cors_v_errori">0.0</string>
+    <string name="str_cors_date">时间</string>
+    <string name="str_cors_connectdevice">连接设备</string>
+    <string name="str_cors_hdop">精度因子</string>
+    <string name="str_cors_datei"></string>
+    <string name="str_cors_bluetoothDevices">查看已配对的蓝牙设备</string>
+    <string name="str_cors_corsparamSet">差分网络设置</string>
+    <string name="str_cors_select_device">点击选项连接设备</string>
+    <string name="str_cors_paired_devices">已匹配设备列表</string>
+    <string name="str_cors_other_devices">未匹配设备列表</string>
+    <string name="str_cors_scan_bluetooth">搜索设备</string>
+    <string name="str_cors_scanning">搜索附件的蓝牙设备</string>
+    <string name="str_cors_none_found">未找到设备</string>
+    <string name="str_cors_none_paired">已配对列表为空</string>
+    <string name="str_cors_set_params">参数配置</string>
+    <string name="str_cors_ipadress">地址</string>
+    <string name="str_cors_port">端口</string>
+    <string name="str_cors_userID">账号</string>
+    <string name="str_cors_pwd">密码</string>
+    <string name="str_cors_montpoint">MP</string>
+    <string name="str_cors_update">刷新</string>
+    <string name="str_cors_conbectcors">连接Cors</string>
+    <string name="str_cors_donewithforword">done with forword</string>
+    <string name="str_cors_content">请输入合法的IP和端口号来获取源节点；
+        请输入合法的账号和密码来获取差分数据；</string>
+    <string name="str_cors_dot">.</string>
+    <string name="str_cors_mountpointslist">源节点</string>
+    <string name="str_cors_get_mountpointslist_fail">获取源节点失败，请刷新重试!</string>
+    <string name="str_cors_get_mountpointslist_success">获取源节点成功!</string>
+    <string name="str_cors_select_mountpoint">请选择源节点</string>
+    
+    <string name="str_cors_saveparams">保存</string>
+    <string name="str_cors_clickmetoshowalertdialog">点击我弹出蓝牙设备列表</string>
+    <string name="str_cors_inputpassword">请输入密码</string>
+    <string name="str_cors_inputuserid">请输入用户账号</string>
+    <string name="str_cors_inputport">请输入端口号</string>
+    <string name="str_cors_inputip">255.255.255.255</string>
+    <string name="str_cors_getsourcelist_success">成功获取源列表!</string>
+    <string name="str_cors_networkerror">网络联接不可用，请设置！</string>
+    <string name="str_cors_paramsaved">参数已经保存</string>
+    <string name="str_cors_title_rightaction_GPS">GPS</string>
+    <string name="str_cors_title_rightaction_CORS">CORS</string>
+    <string name="str_cors_equlity_notposition">未定位</string>
+    <string name="str_cors_equlity_singlepoint">单点</string>
+    <string name="str_cors_equlity_pseudorange">伪距</string>
+    <string name="str_cors_equlity_floatingpoint">浮点</string>
+    <string name="str_cors_equlity_fixed">固定</string>
+	<!-- CORS Module End -->
+</resources>

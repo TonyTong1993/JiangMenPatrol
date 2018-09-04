@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_mapviewroot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.ecity.cswatersupply.ui.widght.MapFragmentTitleView
+        android:id="@+id/view_title_map"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/activity_title_height" >
+    </com.ecity.cswatersupply.ui.widght.MapFragmentTitleView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/screen_background" >
+
+        <com.esri.android.map.MapView
+            android:id="@+id/map"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+        </com.esri.android.map.MapView>
+
+        <LinearLayout 
+            android:id="@+id/location_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="horizontal"
+            android:background="@drawable/shape_default_input_normal"
+            android:visibility="gone"  >
+
+            <LinearLayout 
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:orientation="horizontal"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:background="@drawable/shape_rect_blue_stroke" >
+
+                <TextView 
+	                android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+	                android:gravity="center"
+	                android:textSize="20sp"
+	                android:text="@string/location_x" />
+
+	            <EditText 
+	                android:id="@+id/location_x"
+	                android:layout_width="match_parent"
+	                android:layout_height="match_parent"
+	                android:gravity="left|center_vertical"
+	                android:labelFor="@+id/location_x"
+	                android:background="@null"
+	                android:inputType="numberDecimal" />
+            </LinearLayout>
+
+            <LinearLayout 
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:orientation="horizontal"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:background="@drawable/shape_rect_blue_stroke" >
+
+                <TextView 
+	                android:layout_width="wrap_content"
+	                android:layout_height="match_parent"
+	                android:layout_marginLeft="5dp"
+	                android:layout_marginRight="5dp"
+	                android:gravity="center"
+	                android:textSize="20sp"
+	                android:text="@string/location_y" />
+
+	           <EditText 
+	               android:id="@+id/location_y"
+	               android:layout_width="match_parent"
+	               android:layout_height="match_parent"
+	               android:gravity="left|center_vertical"
+	               android:labelFor="@+id/location_y"
+	               android:background="@null"
+	               android:inputType="numberDecimal" />
+            </LinearLayout>
+
+           <Button 
+               android:id="@+id/ok"
+               android:layout_width="0dp"
+               android:layout_weight="2"
+               android:layout_height="match_parent"
+               android:layout_marginLeft="5dp"
+               android:gravity="center"
+               android:background="@drawable/shape_default_btn_ok"
+               android:text="@string/ok"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+             
+            <com.ecity.cswatersupply.ui.widght.MapOperatorTipsView
+                android:id="@+id/map_tips_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/status_bar"
+                android:layout_gravity="top" /> 
+
+            <ImageButton
+                android:id="@+id/control_layer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/map_tips_view"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/css_main_layer_control"
+                android:contentDescription="@null" />
+
+            <FrameLayout
+                android:id="@+id/fl_toobar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true" >
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/results_viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dip"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/css_map_toolbar_foot"
+                    android:visibility="gone" />
+                
+                <com.ecity.cswatersupply.ui.widght.MapNavigationView
+                    android:id="@+id/map_search_point"
+                    android:layout_width="fill_parent"
+                    android:layout_height="140dp"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+			<!--解决7.0的系统popwindow弹出位置不对，提供弹出popwindow的Achor-->
+			<TextView
+				android:id="@+id/pop_achor"
+				android:layout_width="match_parent"
+				android:layout_height="10dp"
+				android:layout_above="@id/fl_toobar"
+				android:layout_marginLeft="@dimen/margin_4"
+				android:layout_marginRight="@dimen/margin_4"
+				android:layout_marginBottom="@dimen/margin_60"
+				android:background="@color/transparent" >
+			</TextView>
+
+            <include
+                android:id="@+id/rl_map_zoom_control"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/fl_toobar"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="10dp"
+                layout="@layout/view_map_zoom" />
+        </RelativeLayout>
+       
+    </FrameLayout>
+
+</LinearLayout>

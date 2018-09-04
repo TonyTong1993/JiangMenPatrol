@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/ll_workorderview_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="5dp" >
+
+        <TextView
+            android:id="@+id/tv_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="top"
+            android:singleLine="false"
+            android:text="sss"
+            android:textColor="@color/blue_normal"
+            android:textSize="@dimen/title_font_size_1"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/iv_workorder_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/workorder_label_content_interval"
+            android:layout_marginStart="@dimen/workorder_label_content_interval"
+            android:background="@drawable/css_bg_blue_corner"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="热线"
+            android:textColor="@color/white_text"
+            android:textSize="@dimen/title_font_size_3"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/label_time_for_dispatching"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_workorderview_title"
+        android:text="@string/label_time_dispatching"
+        android:textSize="@dimen/title_font_size_2" />
+
+    <TextView
+        android:id="@+id/content_time_for_dispatching"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_workorderview_title"
+        android:layout_marginLeft="@dimen/workorder_label_content_interval"
+        android:layout_marginStart="@dimen/workorder_label_content_interval"
+        android:layout_toRightOf="@id/label_time_for_dispatching"
+        android:text="test"
+        android:textColor="@color/darkgray"
+        android:textSize="@dimen/title_font_size_2" />
+
+    <TextView
+        android:id="@+id/label_time_deadline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/content_time_for_dispatching"
+        android:text="@string/label_time_deadline"
+        android:textSize="@dimen/title_font_size_2" />
+
+    <TextView
+        android:id="@+id/content_time_deadline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/content_time_for_dispatching"
+        android:layout_toRightOf="@id/label_time_deadline"
+        android:text="test"
+        android:textColor="@color/darkgray"
+        android:textSize="@dimen/title_font_size_2" />
+
+    <TextView
+        android:id="@+id/label_workorder_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/content_time_deadline"
+        android:text="@string/label_workorder_state"
+        android:textSize="@dimen/title_font_size_2" />
+
+    <TextView
+        android:id="@+id/content_workorder_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/content_time_deadline"
+        android:layout_marginLeft="@dimen/workorder_label_content_interval"
+        android:layout_marginStart="@dimen/workorder_label_content_interval"
+        android:layout_toEndOf="@id/label_workorder_state"
+        android:layout_toRightOf="@id/label_workorder_state"
+        android:text="test"
+        android:textColor="@color/darkgray"
+        android:textSize="@dimen/title_font_size_2" />
+
+    <TextView
+        android:id="@+id/label_man_apply_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/content_workorder_state"
+        android:text="@string/label_man_apply_back"
+        android:textSize="@dimen/title_font_size_2" />
+
+    <TextView
+        android:id="@+id/content_man_apply_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/content_workorder_state"
+        android:layout_marginLeft="@dimen/workorder_label_content_interval"
+        android:layout_marginStart="@dimen/workorder_label_content_interval"
+        android:layout_toRightOf="@id/label_man_apply_back"
+        android:text="test"
+        android:textColor="@color/darkgray"
+        android:textSize="@dimen/title_font_size_2" />
+
+    <TextView
+        android:id="@+id/label_back_reason"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/content_man_apply_back"
+        android:text="@string/label_back_reason"
+        android:textSize="@dimen/title_font_size_2" />
+
+    <TextView
+        android:id="@+id/content_back_reason"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/content_man_apply_back"
+        android:layout_marginLeft="@dimen/workorder_label_content_interval"
+        android:layout_marginStart="@dimen/workorder_label_content_interval"
+        android:layout_toRightOf="@id/label_back_reason"
+        android:text="test"
+        android:textColor="@color/darkgray"
+        android:textSize="@dimen/title_font_size_2" />
+
+</RelativeLayout>

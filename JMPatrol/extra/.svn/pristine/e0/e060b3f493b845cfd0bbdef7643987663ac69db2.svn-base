@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+
+    <include layout="@layout/title_bar" android:id="@+id/ll_title"
+        />"
+
+    <RelativeLayout
+        android:id="@+id/csaviewLineLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/ll_title"
+        android:layout_centerHorizontal="false"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="false"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="20dp" >
+
+            <com.ecity.mobile.android.plugins.pipecross.ui.PipeCrossView
+                android:id="@+id/crossanalysisresultview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+
+            <include
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                layout="@layout/item_btn" />
+        </FrameLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black">#000000</color>
+    <color name="black_text">#ff000000</color>
+    <color name="semitransparentblack">#6f000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#00111111</color>
+    <color name="bg_col_blue">#ff3b96ea</color>
+    <color name="sel_col_blue">#6f3b96ea</color>
+    <color name="main_toolbar">#00000000</color>
+    <color name="main_toolbar_pressed">#ffcccccc</color>
+    <color name="search_button_nomal">#ff3b96ea</color>
+    <color name="text_darkGray">#ff666666</color>
+    <color name="text_lightGray">#ff9e9fa1</color>
+    <color name="solid_red">#f00</color>
+    <color name="solid_blue">#0000ff</color>
+    <color name="solid_green">#f0f0</color>
+    <color name="solid_yellow">#ffffff00</color>
+    
+     <color name="text_semitransparentGray">#6f9e9fa1</color>
+</resources>

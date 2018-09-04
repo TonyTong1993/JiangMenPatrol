@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_contact_men"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/selector_tasklisit"
+        android:baselineAligned="false"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip" >
+
+        <include
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            layout="@layout/custom_form_item_title_new" />
+
+        <TextView
+            android:id="@+id/content_choosed_main_man"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/margin_50"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="13dp"
+            android:layout_marginStart="10dip"
+            android:layout_weight="3"
+            android:drawablePadding="0dp"
+            android:drawableRight="@drawable/img_arrow"
+            android:gravity="center_vertical"
+            android:hint="@string/hint_choose"
+            android:text="@string/hint_choose"
+            android:textColor="@color/txt_black_normal"
+            android:textSize="@dimen/title_font_size_2" />
+    </LinearLayout>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        layout="@layout/item_splitline_h" />
+
+</LinearLayout>

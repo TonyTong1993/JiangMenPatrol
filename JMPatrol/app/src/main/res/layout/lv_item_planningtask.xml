@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_planningtask_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_workorder_list_shape"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/ll_name"
+            style="@style/item_ll_styles" >
+
+            <TextView
+                android:id="@+id/planningtask_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/indicator_collapsed"
+                android:paddingTop="5dp"
+                android:singleLine="true"
+                android:textColor="@color/default_text"
+                android:textSize="@dimen/title_font_size_2" />
+        </LinearLayout>
+
+        <include
+            android:id="@+id/planningtask_splite_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            layout="@layout/item_splitline_h" />
+
+        <LinearLayout
+            android:id="@+id/ll_time"
+            style="@style/item_ll_styles"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/item_textview_des_styles"
+                android:layout_width="0dp"
+                android:layout_weight="0.8"
+                android:text="@string/planningtask_time" />
+
+            <TextView
+                android:id="@+id/planningtask_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:textColor="@color/text_darkGray"
+                android:textSize="@dimen/title_font_size_2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_location"
+            style="@style/item_ll_styles"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/item_textview_des_styles"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/plantask_task_in_position" />
+
+            <ProgressBar
+                android:id="@+id/planningtask_arrvied_progressbar"
+                style="@style/StyleProgressBarMini"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2.5"
+                android:max="100"
+                android:progressDrawable="@drawable/shape_progressbar_bg_arrive" />
+
+            <TextView
+                android:id="@+id/planningtask_point_arrvied"
+                style="@style/item_textview_content_styles"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="@color/plan_task_progress_bar_arrive" />
+
+            <TextView
+                android:id="@+id/plantask_point_arrvied_rate"
+                style="@style/item_textview_rate_styles" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_feedback"
+            style="@style/item_ll_styles"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/item_textview_des_styles"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/plantask_task_feedback" />
+
+            <ProgressBar
+                android:id="@+id/planningtask_feedback_progressbar"
+                style="@style/StyleProgressBarMini"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2.5"
+                android:max="100"
+                android:progressDrawable="@drawable/shape_progressbar_bg_feedback" />
+
+            <TextView
+                android:id="@+id/plantask_point_feedback"
+                style="@style/item_textview_content_styles"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="@color/plan_task_progress_bar_feedback" />
+
+            <TextView
+                android:id="@+id/plantask_point_feedback_rate"
+                style="@style/item_textview_rate_styles" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_line"
+            style="@style/item_ll_styles"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/item_textview_des_styles"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/plantask_task_cover" />
+
+            <ProgressBar
+                android:id="@+id/planningtask_line_progressbar"
+                style="@style/StyleProgressBarMini"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2.5"
+                android:max="100"
+                android:progressDrawable="@drawable/shape_progressbar_bg_cover" />
+
+            <TextView
+                android:id="@+id/plantask_line_arrived"
+                style="@style/item_textview_content_styles" />
+
+            <TextView
+                android:id="@+id/plantask_line_rate"
+                style="@style/item_textview_rate_styles"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="@color/plan_task_progress_bar_cover" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_divider"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/divider"
+            android:background="@color/gainsboro"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

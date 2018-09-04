@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/css_bg_image"
+    android:orientation="vertical" >
+
+    <com.ecity.cswatersupply.ui.widght.CustomTitleView
+        android:id="@+id/customTitleView1"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/activity_title_height" >
+    </com.ecity.cswatersupply.ui.widght.CustomTitleView>
+
+    <LinearLayout
+        android:id="@+id/settings_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="15.0dip"
+        android:paddingRight="15.0dip" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/transparent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@color/transparent"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="8dp"
+                    android:text="@string/setting_protocol"
+                    android:textColor="@color/font_level_1"
+                    android:textSize="@dimen/font_18" />
+
+                <EditText
+                    android:id="@+id/et_protocol"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginStart="100dp"
+                    android:background="@color/transparent"
+                    android:hint="@string/str_clickinput"
+                    android:inputType="textUri"
+                    android:padding="8dp"
+                    android:singleLine="true"
+                    android:textColor="@color/font_level_2"
+                    android:textSize="@dimen/font_18" />
+            </RelativeLayout>
+
+            <include
+                layout="@layout/item_splitline_h"
+                android:visibility="invisible" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@color/transparent"
+                android:clickable="true"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="8dp"
+                    android:text="@string/setting_server_ip"
+                    android:textColor="@color/font_level_1"
+                    android:textSize="@dimen/font_18" />
+
+                <LinearLayout
+                    android:id="@+id/ll_spinner_environment"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginStart="100dp"
+                    android:background="@color/transparent"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_environment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent"
+                        android:gravity="center"
+                        android:textColor="@color/font_level_2"
+                        android:textSize="@dimen/font_18" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <include layout="@layout/item_splitline_h" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@color/transparent"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="8dp"
+                    android:text="@string/setting_server_port"
+                    android:textColor="@color/font_level_1"
+                    android:textSize="@dimen/font_18" />
+
+                <EditText
+                    android:id="@+id/et_port"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginStart="100dp"
+                    android:background="@color/transparent"
+                    android:hint="@string/str_clickinput"
+                    android:inputType="number"
+                    android:padding="8dp"
+                    android:singleLine="true"
+                    android:textColor="@color/font_level_2"
+                    android:textSize="@dimen/font_18" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_test_connection"
+            android:layout_width="fill_parent"
+            android:layout_height="45.0dip"
+            android:layout_marginTop="22.0dip"
+            android:background="@drawable/css_button_col_theme"
+            android:onClick="onTestConnectionBtnClicked"
+            android:text="@string/setting_test_connection"
+            android:textColor="@color/white_theme_1"
+            android:textSize="20.0dip" />
+    </LinearLayout>
+
+</LinearLayout>

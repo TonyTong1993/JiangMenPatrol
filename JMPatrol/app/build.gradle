@@ -1,28 +1,90 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion '26.0.2'
+    compileSdkVersion 23
+    buildToolsVersion "24.0.1"
+
     defaultConfig {
-        applicationId "com.example.zzht.jmpatrol"
+        applicationId "com.ecity.cswatersupply"
         minSdkVersion 16
-        targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
+        targetSdkVersion 21
+        multiDexEnabled true
     }
+
+    lintOptions {
+        abortOnError false
+    }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+//    productFlavors{
+//        flavors_supply{
+//            manifestPlaceholders = [str:"releaseStr",package_name:"com.ecity.cswatersupply"]
+//            applicationId "com.ecity.cswatersupply"
+//        }
+//
+//        flavors_project{
+//            manifestPlaceholders = [str:"devStr",package_name:"com.ecity.cswaterproject"]
+//            applicationId "com.ecity.cswaterproject"
+//        }
+//    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/REFACTORINGS'
+        exclude 'META-INF/REFACTORINGS.XML'
+    }
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.google.code.gson:gson:2.8.5'
-    compile project(path: ':extra:LogLib')
-    compile project(path: ':extra:HttpForAndroid')
-    compile project(path: ':extra:Z3AppLibrary')
-    compile project(path: ':extra:EventCore')
+    compile project(':extra:AFileChooser')
+    compile project(':extra:Bluetooth4Falcon')
+    compile project(':extra:DownloadLibrary')
+    compile project(':extra:ZXingProj')
+    compile project(':extra:Z3AppLibrary')
+    compile project(':extra:WeatherLibrary')
+    compile project(':extra:ViewPagerIndicator_Library')
+    compile project(':extra:ViewPagerIndicator')
+    compile project(':extra:UIResourceLibrary')
+    compile project(':extra:PullRefreshDemo')
+    compile project(':extra:LogLib')
+    compile project(':extra:Leakcanary')
+    compile project(':extra:IndexableStickyListView')
+    compile project(':extra:HttpForAndroid')
+    compile project(':extra:EventCore')
+    compile project(':extra:ECityCacheLayer')
+    compile project(':extra:EcityChartLibrary')
+    compile project(':extra:ContactManChooser')
+    compile project(':extra:CitySelector')
+    compile project(':extra:BDLBSLibrary')
+    compile project(':extra:MediaLibrary')
+    compile 'com.android.support:support-v4:23.4.0'
+    compile 'com.google.code.gson:gson:2.2.4'
+    compile files('libs/glide-3.7.0.jar')
+    compile files('libs/jg_filter_sdk_1.1.jar')
+    compile files('libs/pipegps-1.13.jar')
+    compile files('libs/universal-image-loader-1.9.2-SNAPSHOT-with-sources.jar')
+    compile files('libs/wup-1.0.0.E-SNAPSHOT.jar')
+    compile files('libs/Xg_sdk_v2.46_20160602_1638.jar')
+    compile 'com.android.support:multidex:1.+'
+    compile project(':extra:sangforlibaray')
+    compile project(':extra:maploader')
 }

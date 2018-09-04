@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_item_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/shape_textview_background"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp" >
+
+        <TextView
+            android:id="@+id/tv_item_star"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="start|center_vertical"
+            android:text="@string/star_required_mark"
+            android:textColor="#FF0000"
+            android:textSize="@dimen/title_font_size_2"/>
+
+        <TextView
+            android:id="@+id/tv_item_title"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="6"
+            android:gravity="center_vertical|right"
+            android:maxEms="11"
+            android:textColor="@color/txt_label"
+            android:textSize="@dimen/title_font_size_2"/>
+
+        <TextView
+            android:id="@+id/tv_item_value"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="3"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/margin_50"
+            android:textColor="@color/txt_label"
+            android:textColorHint="@color/txt_black_normal"
+            android:textSize="@dimen/font_18"
+            />
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_custom"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+    </RadioGroup>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        layout="@layout/item_splitline_h" />
+
+    <EditText
+        android:id="@+id/et_radio_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_default_input_normal"
+        android:gravity="start"
+        android:hint="@string/str_clickinput"
+        android:inputType="textMultiLine"
+        android:minHeight="70dp"
+        android:paddingBottom="10dip"
+        android:paddingLeft="15dip"
+        android:paddingRight="10dip"
+        android:paddingTop="10dip"
+        android:textColor="@color/txt_black_normal"
+        android:textColorHint="@color/txt_hint"
+        android:textSize="@dimen/font_18" />
+
+</LinearLayout>

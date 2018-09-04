@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_background"
+    android:orientation="vertical"
+    android:paddingRight="20dp" >
+
+    <View
+        android:id="@+id/view_1"
+        android:layout_width="1dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="40dp"
+        android:background="@color/content_background" />
+
+    <TextView
+        android:id="@+id/log_date_back_node_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_1"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/circle_text"
+        android:gravity="center"
+        android:textColor="@color/white_theme_1"
+        android:textSize="@dimen/content_font_size_level_3" />
+
+    <View
+        android:id="@+id/view_2"
+        android:layout_width="1dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/log_date_back_node_id"
+        android:layout_marginLeft="40dp"
+        android:background="@color/content_background" />
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_1"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/log_date_back_node_id"
+        android:background="@color/content_background"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/log_date_back_processtime"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+             android:textColor="@color/text_darkGray"
+            android:gravity="center"
+            android:textSize="@dimen/title_font_size_6" />
+
+        <include
+            android:id="@+id/processtime_splite"
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_below="@id/log_date_back_processtime"
+            layout="@layout/item_splitline_h" />
+
+        <ImageView
+            android:id="@+id/log_date_back_check_img"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_below="@+id/processtime_splite"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="13dp"
+            android:src="@drawable/checkbox_hl" />
+
+        <TextView
+            android:id="@+id/log_date_back_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/processtime_splite"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/log_date_back_check_img"
+            android:gravity="left|center_vertical"
+             android:textColor="@color/text_darkGray"
+            android:textSize="@dimen/title_font_size_6" />
+
+        <TextView
+            android:id="@+id/log_date_back_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/log_date_back_username"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:gravity="left|center_vertical"
+             android:textColor="@color/text_darkGray"
+            android:textSize="@dimen/title_font_size_6" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_list_btn_txt" >
+
+    <ImageView 
+        android:id="@+id/iv_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:contentDescription="@null"
+        />
+    <TextView
+        android:id="@+id/tv_menu"
+        android:layout_width="@dimen/workorder_morebtn_popmenu_item_w"
+        android:layout_height="@dimen/workorder_morebtn_popmenu_item_h"
+        android:gravity="center"
+        android:textColor="@color/selector_workorder_btn_txt"
+        android:textSize="@dimen/title_font_size_2" />
+
+</LinearLayout>

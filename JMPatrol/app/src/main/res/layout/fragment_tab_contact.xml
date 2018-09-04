@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/content_background">
+
+    <com.ecity.cswatersupply.ui.widght.MapActivityTitleView
+        android:id="@+id/titleView"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/activity_title_height" >
+    </com.ecity.cswatersupply.ui.widght.MapActivityTitleView>
+
+    <LinearLayout
+        android:id="@+id/ll_searchview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleView"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/selector_searchview"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/iv_workorder_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableLeft="@drawable/view_search"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="@string/title_search"
+            android:textColor="@color/darkgray"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/ll_searchview"
+        android:background="@color/divider_thick" />
+
+    <!--
+    <HorizontalScrollView
+        android:id="@+id/hsv_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/hsv_linear_container"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/margin_46"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+        </LinearLayout>
+    </HorizontalScrollView> -->
+
+    <com.ecity.cswatersupply.contact.widght.PathTextView
+        android:id="@+id/hsv_container"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_below="@id/view_1"
+        android:gravity="center_vertical">
+    </com.ecity.cswatersupply.contact.widght.PathTextView>
+
+    <View
+        android:id="@+id/view_2"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/hsv_container"
+        android:background="@color/divider_thick" />
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width= "match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/view_2"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="800dip"
+    android:layout_height="300dip"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/tv_ll"
+        android:layout_width="240dip"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="36dip"
+            android:gravity="center"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/tv_plantask_arrived"
+                android:layout_width="66dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textview_style_enable_false"
+                android:gravity="center"
+                android:padding="5sp"
+                android:text="@string/planningtask_not_arrived"
+                android:textColor="@color/blue"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="36dip"
+             android:gravity="center"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/tv_plantask_feedback"
+                android:layout_width="66dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/textview_style_enable_false"
+                android:gravity="center"
+                android:padding="5sp"
+                android:text="@string/planningtask_no_feedback"
+                android:textColor="@color/blue"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="36dip"
+            android:layout_weight="1"  
+            android:gravity="center"
+            android:background="@drawable/attribute_details" >
+
+            <TextView
+                android:id="@+id/tv_plantask_attr"
+                android:layout_width="66dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/css_button_col_theme"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:padding="5sp"
+                android:text="@string/planningtask_point_attr"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/white_text"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="240dip"
+        android:layout_height="38dip"
+        android:layout_marginTop="2dip"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/but_plantask_feedback"
+            android:layout_width="0dip"
+            android:layout_height="36dip"
+            android:layout_marginEnd="2dip"
+            android:layout_marginRight="2dip"
+            android:layout_weight="1"
+            android:background="@drawable/css_button_col_theme"
+            android:gravity="center"
+            android:text="@string/btn_feedback"
+            android:textColor="@color/white_text"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/but_plantask_event_up"
+            android:layout_width="0dip"
+            android:layout_height="36dip"
+            android:layout_marginLeft="2dip"
+            android:layout_marginStart="2dip"
+            android:layout_weight="1"
+            android:background="@drawable/css_button_col_theme"
+            android:gravity="center"
+            android:text="@string/event_report_title"
+            android:textColor="@color/white_text"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+</LinearLayout>

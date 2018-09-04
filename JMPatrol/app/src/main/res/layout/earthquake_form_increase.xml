@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.ecity.cswatersupply.ui.widght.CustomTitleView
+        android:id="@+id/view_title_report_event"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/activity_title_height" >
+    </com.ecity.cswatersupply.ui.widght.CustomTitleView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="@dimen/title_font_size_2"
+            android:text="@string/str_emergency_pohuai_remark" />
+
+        <EditText
+            android:id="@+id/et_remark_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_default_input_normal"
+            android:gravity="start"
+            android:hint="@string/str_clickinput"
+            android:inputType="textMultiLine"
+            android:minHeight="@dimen/margin_80"
+            android:paddingBottom="10dip"
+            android:paddingLeft="15dip"
+            android:paddingStart="15dip"
+            android:paddingRight="10dip"
+            android:paddingEnd="10dip"
+            android:paddingTop="10dip"
+            android:textColor="@color/txt_label"
+            android:textColorHint="@color/txt_hint"
+            android:textSize="@dimen/font_18" />
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="20dip"
+            layout="@layout/item_splitline_h" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_can_add_item"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1" >
+    </ListView>
+
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/group_bkcolor"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <com.ecity.cswatersupply.ui.widght.CustomTitleView
+            android:id="@+id/customTitleView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_title_height" >
+        </com.ecity.cswatersupply.ui.widght.CustomTitleView>
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/customTitleView"
+            android:scrollbarStyle="outsideOverlay">
+
+            <LinearLayout
+                android:id="@+id/ll_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical" >
+            </LinearLayout>
+        </ScrollView>
+
+        <include
+            android:id="@+id/view_detail_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/customTitleView"
+            android:visibility="gone"
+            layout="@layout/view_detail_page" />
+    </RelativeLayout>
+
+</RelativeLayout>

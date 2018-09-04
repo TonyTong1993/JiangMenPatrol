@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/gridview_fill_info_csgc_id">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/light_gray" />
+
+    <TextView
+        android:id="@+id/tv_main_grid_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingLeft="10dp"
+        android:textStyle="bold"
+        android:text="工程进度管理" />
+
+    <com.ecity.cswatersupply.cspatrol.view.MyGridView
+        android:id="@+id/main_menu_grid"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:horizontalSpacing="8dp"
+        android:numColumns="4"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="20dp" />
+</LinearLayout>

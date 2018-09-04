@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants">
+
+    <RelativeLayout
+        android:id="@+id/layout_summary_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="15dp">
+
+        <TextView
+            android:id="@+id/tv_section"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/checkbox_root"
+            android:gravity="center"
+            android:textColor="@color/blue_normal"
+            android:textSize="@dimen/title_font_size_1" />
+
+        <TextView
+            android:id="@+id/tv_title_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_spacing_level_10"
+            android:layout_marginStart="@dimen/margin_spacing_level_10"
+            android:layout_toEndOf="@id/tv_section"
+            android:layout_toRightOf="@id/tv_section"
+            android:text="工程总数"
+            android:textColor="@color/txt_label"
+            android:textSize="@dimen/title_font_size_2" />
+
+        <TextView
+            android:id="@+id/tv_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/tv_title_total"
+            android:layout_marginLeft="@dimen/margin_spacing_level_6"
+            android:layout_marginStart="@dimen/margin_spacing_level_6"
+            android:layout_toEndOf="@id/tv_title_total"
+            android:layout_toRightOf="@id/tv_title_total"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:text="0"
+            android:textColor="@color/txt_label"
+            android:textSize="@dimen/title_font_size_2"></TextView>
+
+        <TextView
+            android:id="@+id/tv_title_not_started"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_title_total"
+            android:layout_below="@id/tv_title_total"
+            android:text="施工前"
+            android:textColor="@color/txt_label"
+            android:textSize="@dimen/title_font_size_2" />
+
+        <TextView
+            android:id="@+id/tv_not_started"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_total"
+            android:layout_alignTop="@id/tv_title_not_started"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:textColor="@color/txt_label"
+            android:textSize="@dimen/title_font_size_2"></TextView>
+
+        <TextView
+            android:id="@+id/tv_title_ongoing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/tv_title_not_started"
+            android:layout_marginLeft="@dimen/margin_spacing_level_4"
+            android:layout_marginStart="@dimen/margin_spacing_level_4"
+            android:layout_toEndOf="@id/tv_not_started"
+            android:layout_toRightOf="@id/tv_not_started"
+            android:text="施工中"
+            android:textColor="@color/txt_label"
+            android:textSize="@dimen/title_font_size_2" />
+
+        <TextView
+            android:id="@+id/tv_ongoing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/tv_title_ongoing"
+            android:layout_marginLeft="@dimen/margin_spacing_level_6"
+            android:layout_marginStart="@dimen/margin_spacing_level_6"
+            android:layout_toEndOf="@id/tv_title_ongoing"
+            android:layout_toRightOf="@id/tv_title_ongoing"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:textColor="@color/txt_label"
+            android:textSize="@dimen/title_font_size_2"></TextView>
+
+        <TextView
+            android:id="@+id/tv_title_finished"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_title_total"
+            android:layout_below="@id/tv_title_ongoing"
+            android:text="已完成"
+            android:textColor="@color/txt_label"
+            android:textSize="@dimen/title_font_size_2" />
+
+        <TextView
+            android:id="@+id/tv_finished"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_total"
+            android:layout_alignTop="@id/tv_title_finished"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:textColor="@color/txt_label"
+            android:textSize="@dimen/title_font_size_2"></TextView>
+
+        <TextView
+            android:id="@+id/tv_title_delay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_title_ongoing"
+            android:layout_below="@id/tv_title_ongoing"
+            android:text="超期"
+            android:textColor="@color/txt_label"
+            android:textSize="@dimen/title_font_size_2" />
+
+        <TextView
+            android:id="@+id/tv_delay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_ongoing"
+            android:layout_alignTop="@id/tv_title_delay"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:textColor="@color/txt_label"
+            android:textSize="@dimen/title_font_size_2"></TextView>
+
+        <TextView
+            android:id="@+id/tv_title_delay1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/tv_delay"
+            android:layout_below="@id/tv_title_ongoing"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/tv_delay"
+            android:text="超期"
+            android:textColor="@color/txt_label"
+            android:textSize="@dimen/title_font_size_2" />
+
+        <TextView
+            android:id="@+id/tv_delay1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/tv_title_delay"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/tv_title_delay1"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:text="121"
+            android:textColor="@color/txt_label"
+            android:textSize="@dimen/title_font_size_2"></TextView>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/margin_spacing_level_5"
+        android:contentDescription="@string/punishment_item_arrow_right"
+        android:src="@drawable/arrow_right" />
+
+</RelativeLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_planningtask_construction_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_workorder_list_shape"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:id="@+id/ll_construction_name"
+            style="@style/item_ll_styles" >
+
+            <TextView
+                android:id="@+id/planningtask_construction_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/indicator_collapsed"
+                android:paddingTop="5dp"
+                android:singleLine="true"
+                android:textColor="@color/default_text"
+                android:textSize="@dimen/title_font_size_2" />
+        </LinearLayout>
+
+        <include
+            android:id="@+id/planningtask_splite_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            layout="@layout/item_splitline_h" />
+
+        <LinearLayout
+            android:id="@+id/ll_construction_time"
+            style="@style/item_ll_styles"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/item_textview_des_styles"
+                android:layout_width="0dp"
+                android:layout_weight="0.8"
+                android:text="@string/planningtask_time" />
+
+            <TextView
+                android:id="@+id/planningtask_construction_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:textColor="@color/text_darkGray"
+                android:textSize="@dimen/title_font_size_2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_construction_eventnumber"
+            style="@style/item_ll_styles"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/item_textview_des_styles"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/plantask_construction_eventnumber" />
+
+            <TextView
+                android:id="@+id/plantask_construction_eventnumber"
+                style="@style/item_textview_content_styles"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="@color/plan_task_progress_bar_arrive" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_divider"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/divider"
+            android:background="@color/gainsboro"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

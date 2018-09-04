@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/ll_all_chart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/ll_number_layout"
+                android:layout_width="match_parent"
+                android:background="@color/red"
+                android:layout_height="@dimen/margin_350"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/ll_number_layout_tip"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_num_tip"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="str_num_tip" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_number_layout_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <com.ecity.chart.charts.BarChart
+                        android:id="@+id/numberBarChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line_devide"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/dialog_bg" />
+
+            <LinearLayout
+                android:id="@+id/ll_money_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_350"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/ll_money_layout_tip"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                      android:background="@color/blue"
+                    android:layout_weight="5"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_money_tip"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="str_num_tip" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_money_layout_chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <com.ecity.chart.charts.BarChart
+                        android:id="@+id/moneyBarChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/dialog_bg" />
+
+            <LinearLayout
+                android:id="@+id/ll_pro_num_layout"
+                android:layout_width="match_parent"
+                  android:background="@color/yellow"
+                android:layout_height="@dimen/margin_350"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/ll_pro_num_layout_tip"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_pro_num_tip"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="str_num_tip" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_pro_num_layout_chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <com.ecity.chart.charts.BarChart
+                        android:id="@+id/proNumBarChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/dialog_bg" />
+
+            <LinearLayout
+                android:id="@+id/ll_pro_money_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_350"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/ll_pro_money_layout_tip"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_pro_money_tip"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="str_num_tip" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_pro_money_layout_chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <com.ecity.chart.charts.BarChart
+                        android:id="@+id/proMoneyBarChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

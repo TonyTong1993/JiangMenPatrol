@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:descendantFocusability="blocksDescendants">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="@dimen/margin_spacing_level_5"
+        android:layout_marginLeft="@dimen/margin_spacing_level_5"
+        android:layout_marginTop="@dimen/margin_spacing_level_5">
+
+        <RelativeLayout
+            android:id="@+id/rl_pumps_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/lv_item_padding_up_down_level_1">
+
+            <TextView
+                android:id="@+id/tv_pump_no_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pump_no_str"
+                android:textSize="@dimen/font_18"/>
+
+            <TextView
+                android:id="@+id/tv_pump_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_pump_no_text"
+                android:textSize="@dimen/font_18"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_pumps_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_pumps_no"
+            android:orientation="horizontal"
+            android:padding="@dimen/lv_item_padding_up_down_level_1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/pump_name_str"
+                android:textSize="@dimen/font_18"/>
+
+            <TextView
+                android:id="@+id/tv_pump_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/font_18"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_pump_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_pumps_name"
+            android:orientation="horizontal"
+            android:padding="@dimen/lv_item_padding_up_down_level_1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/pump_address_str"
+                android:textSize="@dimen/font_18"/>
+
+            <TextView
+                android:id="@+id/tv_pump_address"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/font_18"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_pump_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_pump_address">
+
+            <TextView
+                android:id="@+id/tv_pump_monitor"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="@dimen/margin_spacing_level_5"
+                android:layout_marginTop="@dimen/margin_spacing_level_6"
+                android:layout_weight="1"
+                android:background="@drawable/shape_punish_operation_button"
+                android:focusable="false"
+                android:gravity="center"
+                android:minWidth="100dp"
+                android:text="@string/pump_monitor_str"
+                android:textColor="@color/punish_blue"
+                android:textSize="@dimen/content_font_size_level_1"/>
+
+            <TextView
+                android:id="@+id/tv_pump_document"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="@dimen/margin_spacing_level_5"
+                android:layout_marginTop="@dimen/margin_spacing_level_6"
+                android:layout_weight="1"
+                android:background="@drawable/shape_punish_operation_button"
+                android:focusable="false"
+                android:gravity="center"
+                android:minWidth="100dp"
+                android:text="@string/pump_document_str"
+                android:textColor="@color/punish_blue"
+                android:textSize="@dimen/content_font_size_level_1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_divider"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/ll_pump_btn"
+            android:layout_marginTop="@dimen/margin_spacing_level_6"
+            android:background="@color/gainsboro"
+            android:orientation="vertical"
+            android:visibility="visible">
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+

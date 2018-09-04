@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:paddingLeft="6dp"
+    android:paddingRight="6dp" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/iv_main_zoomin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:contentDescription="@string/map_descrip_zoomin"
+            android:src="@drawable/css_main_zoomin" />
+
+        <ImageView
+            android:id="@+id/iv_main_zoomout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:contentDescription="@string/map_descrip_zoomout"
+            android:src="@drawable/css_main_zoomout" />
+
+        <ImageView
+            android:id="@+id/iv_main_zoomfull"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:contentDescription="@string/map_descrip_zoomfull"
+            android:src="@drawable/css_main_zoomfull" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_main_gps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:clickable="true"
+        android:contentDescription="@string/map_descrip_gps"
+        android:src="@drawable/css_main_gps" />
+
+    <ImageView
+        android:id="@+id/report"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/iv_main_gps"
+        android:layout_marginBottom="@dimen/margin_5"
+        android:layout_alignParentLeft="true"
+        android:clickable="true"
+        android:contentDescription="@string/map_descrip_gps"
+        android:src="@drawable/css_main_report"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_add_another_area"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/iv_main_gps"
+        android:layout_alignLeft="@+id/iv_main_gps"
+        android:layout_alignRight="@+id/iv_main_gps"
+        android:drawableTop="@drawable/btn_add_hl"
+        android:layout_marginBottom="@dimen/margin_6"
+        android:visibility="gone"
+        android:textSize="9sp"
+        android:gravity="center_horizontal"
+        android:text="添加新区域" />
+
+</RelativeLayout>

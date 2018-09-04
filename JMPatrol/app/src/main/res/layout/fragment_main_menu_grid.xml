@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/content_background" >
+
+    <com.ecity.cswatersupply.ui.widght.CustomTitleView
+        android:id="@+id/customTitleView"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/activity_title_height" >
+    </com.ecity.cswatersupply.ui.widght.CustomTitleView>
+
+    <ImageView
+        android:id="@+id/iv_title_img"
+        android:layout_width="fill_parent"
+        android:layout_height="160dp"
+        android:layout_below="@id/customTitleView"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        android:src="@drawable/main_title_img"/>
+
+    <GridView
+        android:id="@+id/main_menu_grid"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/iv_title_img"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:horizontalSpacing="8dp"
+        android:numColumns="3"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="20dp" />
+
+</RelativeLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:descendantFocusability="blocksDescendants">
+
+    <RelativeLayout
+        android:id="@+id/rl_pumps_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="@dimen/margin_spacing_level_10"
+        android:layout_marginLeft="@dimen/margin_spacing_level_5"
+        android:layout_marginRight="@dimen/margin_spacing_level_5"
+        android:layout_marginTop="@dimen/margin_spacing_level_10">
+
+        <RelativeLayout
+            android:id="@+id/rl_record_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/lv_item_padding_up_down_level_4">
+
+            <TextView
+                android:id="@+id/tv_time_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pump_maintain_record_time_title_str"
+                android:textSize="@dimen/lv_item_font_size_level_1"/>
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_time_label"
+                android:textSize="@dimen/lv_item_font_size_level_1"/>
+
+            <TextView
+                android:id="@+id/tv_record_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/css_bg_blue_corner"
+                android:paddingLeft="@dimen/lv_item_padding_up_down_level_1"
+                android:paddingRight="@dimen/lv_item_padding_up_down_level_1"
+                android:textColor="@color/white_text"
+                android:textStyle="bold"
+                android:textSize="@dimen/lv_item_font_size_level_1"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_record_man"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_record_time"
+            android:padding="@dimen/lv_item_padding_up_down_level_4">
+
+            <TextView
+                android:id="@+id/tv_record_man_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/lv_item_font_size_level_1"/>
+
+            <TextView
+                android:id="@+id/tv_record_man"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_record_man_label"
+                android:textSize="@dimen/lv_item_font_size_level_1"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_record_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_record_man"
+            android:padding="@dimen/lv_item_padding_up_down_level_4">
+
+            <TextView
+                android:id="@+id/tv_record_content_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/lv_item_font_size_level_1"/>
+
+            <TextView
+                android:id="@+id/tv_record_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_record_content_label"
+                android:textSize="@dimen/lv_item_font_size_level_1"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_divider"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/rl_record_content"
+            android:layout_marginTop="@dimen/margin_spacing_level_10"
+            android:background="@color/gainsboro"
+            android:orientation="vertical"
+            android:visibility="visible">
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="6">
+
+        <TextView
+            android:id="@+id/summary_table_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="2"
+            android:gravity="center_vertical|center_horizontal"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textSize="12dp" />
+
+        <View style="@style/vertical_layout" />
+
+        <TextView
+            android:id="@+id/summary_table_to_deal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textSize="12dp" />
+
+        <View style="@style/vertical_layout" />
+
+
+        <TextView
+            android:id="@+id/summary_table_finished"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            android:singleLine="true"
+            android:textColor="#120000"
+            android:textSize="12dp" />
+
+        <View style="@style/vertical_layout" />
+
+        <TextView
+            android:id="@+id/summary_table_postpone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textSize="12dp" />
+
+        <View style="@style/vertical_layout" />
+
+        <TextView
+            android:id="@+id/summary_table_overtime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textSize="12dp" />
+    </LinearLayout>
+
+    <View style="@style/horizontal_layout" />
+
+</LinearLayout>

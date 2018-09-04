@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/icon_as_top_normal"
+        android:gravity="center"
+        android:textColor="@color/txt_label"
+        android:textSize="@dimen/title_font_size_3" />
+
+    <GridView
+        android:id="@+id/sheetList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:horizontalSpacing="@dimen/margin_2"
+        android:numColumns="4"
+        android:background="@android:color/transparent"
+        android:divider="@null"
+        android:dividerHeight="0dp" >
+    </GridView>
+
+    <TextView
+        android:id="@+id/cancel"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/css_as_single_selector"
+        android:gravity="center"
+        android:text="@string/str_cancel_nosp"
+        android:textColor="@color/txt_label"
+        android:textSize="@dimen/title_font_size_3" />
+
+</LinearLayout>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/ll_item_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_50"
+        android:background="@color/group_bkcolor" >
+
+        <LinearLayout
+            android:id="@+id/ll_item_titles"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_50"
+            android:background="@drawable/shape_textview_background"
+            android:orientation="horizontal"
+            android:paddingLeft="10dip" >
+
+            <TextView
+                android:id="@+id/tv_item_star"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="start|center_vertical"
+                android:text="@string/star_required_mark"
+                android:textColor="#FF0000"
+                android:textSize="@dimen/title_font_size_2" />
+
+            <TextView
+                android:id="@+id/tv_item_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="0dp"
+                android:layout_marginStart="10dp"
+                android:gravity="fill_vertical"
+                android:text="@string/hello_world"
+                android:textColor="@color/txt_label"
+                android:textSize="@dimen/title_font_size_2" />
+        </LinearLayout>
+        
+
+        <TextView
+            android:id="@+id/tv_getMapLocationInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:drawableLeft="@drawable/map_loc"
+            android:drawableStart="@drawable/map_location"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/font_17"
+            android:textColor="@color/txt_label" />
+
+        <TextView
+            android:id="@+id/tv_getCurrentLocationInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_toLeftOf="@id/tv_getMapLocationInfo"
+            android:layout_toStartOf="@id/tv_getMapLocationInfo"
+            android:drawableLeft="@drawable/current_loc"
+            android:drawableStart="@drawable/current_location"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/font_17"
+            android:textColor="@color/txt_label" />
+        
+    </RelativeLayout>
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        layout="@layout/item_splitline_h" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/default_input_edit_new"
+        android:clickable="false"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dip"
+        android:paddingRight="10dip" >
+
+        <EditText
+            android:id="@+id/et_location_value"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_textview_background"
+            android:ellipsize="end"
+            android:hint="@string/event_report_hint_xy"
+            android:textColorHint="@color/txt_hint"
+            android:inputType="textMultiLine"
+            android:minHeight="40dp"
+            android:textColor="@color/txt_black_normal"
+            android:textSize="@dimen/font_18" >
+        </EditText>
+
+        <EditText
+            android:id="@+id/et_address_value"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/margin_50"
+            android:layout_below="@id/et_location_value"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/shape_textview_background"
+            android:ellipsize="end"
+            android:enabled="false"
+            android:hint="@string/event_report_hint_address"
+            android:textColorHint="@color/txt_hint"
+            android:minHeight="60dp"
+            android:textColor="@color/txt_black_normal"
+            android:textSize="@dimen/font_18" >
+        </EditText>
+    </RelativeLayout>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="15dip"
+        layout="@layout/item_splitline_h" />
+
+</LinearLayout>

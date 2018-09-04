@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_workorder_list_shape"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        <LinearLayout
+            style="@style/item_ll_styles"
+            android:orientation="horizontal" >
+            <TextView
+                android:id="@+id/tv_emergency_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:textColor="@color/text_darkGray"
+                android:textSize="@dimen/title_font_size_2" />
+        </LinearLayout>
+
+        <!-- <LinearLayout
+            style="@style/item_ll_styles"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/item_textview_des_styles"
+                android:layout_width="0dp"
+                android:layout_weight="0.8"
+                android:text="@string/str_emergency_xuhao" />
+
+            <TextView
+                android:id="@+id/tv_emergency_xuhao"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:textColor="@color/text_darkGray"
+                android:textSize="@dimen/title_font_size_2" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/item_ll_styles"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/item_textview_des_styles"
+                android:layout_width="0dp"
+                android:layout_weight="0.8"
+                android:text="@string/str_emergency_address" />
+
+            <TextView
+                android:id="@+id/tv_emergency_address"
+                style="@style/item_textview_content_styles"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:textSize="@dimen/title_font_size_2"
+                android:textColor="@color/text_darkGray" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/item_ll_styles"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/item_textview_des_styles"
+                android:layout_width="0dp"
+                android:layout_weight="0.8"
+                android:text="@string/str_emergency_pohuaichengdu" />
+
+            <TextView
+                android:id="@+id/tv_emergency_pohuaichengdu"
+                style="@style/item_textview_content_styles"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:textSize="@dimen/title_font_size_2"
+                android:textColor="@color/text_darkGray"/>
+        </LinearLayout> -->
+
+        <LinearLayout
+            android:id="@+id/ll_divider"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/divider"
+            android:background="@color/gainsboro"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

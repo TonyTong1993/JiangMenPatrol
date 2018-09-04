@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="barcode_title">扫一扫</string>
+    <string name="barcode_action_title">二维码扫描</string>
+    <string name="barcode_from_gallery">相册选择</string>
+    <string name="barcode_cancel">取消</string>
+    <string name="barcode_confirm">确定</string>
+    <string name="barcode_msg_camera_framework_bug">抱歉，Android相机出现问题。您可能需要重启设备。</string>
+    <string name="barcode_msg_default_status">请将二维码置于屏幕中间(若光线暗请按音量的增加键)。  </string>
+    <string name="barcode_memo">提示</string>
+    <string name="barcode_msg_scaning">正在扫描</string>
+    <string name="barcode_msg_fail">扫描失败！  </string>
+    <string name="barcode_tow_dimen_success">"已检测到地址:%1$s是否打开?"</string>
+    <string name="barcode_one_dimen_success">"已检测到文本内容:%1$s是否复制?"</string>
+</resources>

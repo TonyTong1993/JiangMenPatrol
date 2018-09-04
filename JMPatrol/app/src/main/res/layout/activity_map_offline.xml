@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_menu"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/list_background"
+    android:orientation="vertical" >
+
+    <com.ecity.cswatersupply.ui.widght.CustomTitleView
+        android:id="@+id/customTitleView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_title_height" >
+    </com.ecity.cswatersupply.ui.widght.CustomTitleView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+     <ListView
+        android:id="@+id/lv_container"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </ListView>
+     <Button
+            android:id="@+id/btn_download_map_offline"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/css_button_col_theme"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="200dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:singleLine="true"
+            android:text="@string/str_click_download"
+            android:textColor="@color/content_background"
+            android:textSize="@dimen/title_font_size_2" />
+
+    </FrameLayout>
+</LinearLayout>

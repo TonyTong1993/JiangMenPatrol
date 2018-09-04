@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/group_bkcolor"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fl_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <include
+            android:id="@+id/include_bottom_btns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/include_bottom_btns"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/toolbar_bottom_fix"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/blue_theme_4"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/img_tab_now"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                android:contentDescription="@null" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:baselineAligned="false" >
+
+                <LinearLayout
+                    android:id="@+id/btn_flow_report_fix"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/css_ll_flexreport"
+                    android:clickable="true"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/iv_actions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/flow_report"
+                        android:contentDescription="@null" />
+
+                    <TextView
+                        android:id="@+id/tv_actions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/event_report_submit"
+                        android:textColor="#fff"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/button_flow_sync"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/css_ll_flexreport"
+                    android:clickable="true"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/flow_sync"
+                        android:contentDescription="@null" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/event_report_sync"
+                        android:textColor="#fff"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/fl_bottom_bar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <com.ecity.cswatersupply.ui.widght.CustomTitleView
+            android:id="@+id/view_title_report_event"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/activity_title_height" >
+        </com.ecity.cswatersupply.ui.widght.CustomTitleView>
+
+        <Button
+            android:id="@+id/btn_screen"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="2dp"
+            android:visibility="gone"
+            android:background="@drawable/css_button_col_theme"
+            android:text="@string/event_report_screen_items"
+            android:textColor="@color/white_theme_1"
+            android:textSize="@dimen/title_font_size_2" />
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/btn_screen"
+            android:layout_below="@id/view_title_report_event"
+            android:scrollbarStyle="outsideOverlay">
+
+            <LinearLayout
+                android:id="@+id/ll_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical" >
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/ll_container_listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/scrollView"
+            android:layout_marginTop="@dimen/margin_15"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <include
+                android:id="@+id/item_table_unfinish_title"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_30"
+                layout="@layout/item_table_unfinish_workorder_list"
+                android:visibility="gone" >
+            </include>
+
+            <ListView
+                android:id="@+id/lv_table"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

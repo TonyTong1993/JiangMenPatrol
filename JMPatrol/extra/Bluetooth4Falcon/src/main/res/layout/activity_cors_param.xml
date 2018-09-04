@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.zzz.ecity.android.applibrary.view.TitleView
+        android:id="@+id/customTitleView"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/margin_46" >
+    </com.zzz.ecity.android.applibrary.view.TitleView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="@dimen/margin_46"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/str_cors_ipadress" />
+
+        <EditText
+            android:id="@+id/ip1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/margin_36"
+            android:layout_weight="1"
+            android:background="@drawable/css_default_input_edit"
+            android:hint="@string/str_cors_inputip"
+            android:inputType="text"
+            android:maxLength="15" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="@dimen/margin_46"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/str_cors_port" />
+
+        <EditText
+            android:id="@+id/port"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_36"
+            android:background="@drawable/css_default_input_edit"
+            android:hint="@string/str_cors_inputport"
+            android:inputType="numberSigned" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="@dimen/margin_46"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/str_cors_mountpointslist"
+            android:textSize="12sp" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/margin_42" >
+
+            <Spinner
+                android:id="@+id/mp_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="70dp"/>
+
+            <Button
+                android:id="@+id/serverlistupdate"
+                android:layout_width="65dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_margin="5dp"
+                android:background="@drawable/css_button_blue"
+                android:text="@string/str_cors_update"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="@dimen/margin_46"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/str_cors_userID" />
+
+        <EditText
+            android:id="@+id/userID"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_36"
+            android:background="@drawable/css_default_input_edit"
+            android:hint="@string/str_cors_inputuserid"
+            android:inputType="text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="@dimen/margin_46"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/str_cors_pwd" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_36"
+            android:background="@drawable/css_default_input_edit"
+            android:hint="@string/str_cors_inputpassword"
+            android:inputType="textPassword" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/connectcors"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_42"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/css_button_blue"
+        android:text="@string/str_cors_conbectcors"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/font_14" />
+
+</LinearLayout>

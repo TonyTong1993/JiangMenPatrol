@@ -1,0 +1,141 @@
+﻿<Mappings>
+    <Mapping>
+        <NotificationType name="工单处置" >
+            wo_new,
+            wo_need_receive,
+            wo_received,
+            wo_explored,
+            wo_signed,
+            wo_finish_applied,
+            wo_finish_rejected,
+            wo_finish_approved,
+            wo_progress_updated,
+            wo_delay_applied,
+            wo_delay_approved,
+            wo_delay_rejected,
+            wo_delay_cancelled,
+            wo_return_applied,
+            wo_return_approved,
+            wo_return_rejected,
+            wo_transfer_applied,
+            wo_tranfer_approved,
+            wo_transfer_rejected,
+            wo_assist_applied,
+            wo_assist_approved,
+            wo_assist_rejected,
+            wo_notify_count,
+            wo_backtransfer_applied,
+            wo_backtransfer_rejected,
+            wo_backtranfer_approved,
+            wo_back_platform,
+            wo_backworkorder_rejected
+        </NotificationType>
+        <Function>com.ecity.cswatersupply.workorder.view.WorkOrderFilterActivity</Function>
+    </Mapping>
+    <Mapping>
+        <NotificationType name="值班签到时，被他人挤掉" >
+            zb_squeezed_out,
+            zb_time_out
+        </NotificationType>
+        <Function>com.ecity.cswatersupply.workorder.OffDutyNotificationProcesser</Function>
+    </Mapping>
+    <Mapping>
+      <NotificationType name="巡检任务">
+          xj_point_arrived,
+          xj_task,
+          xj_zhuan_task,
+          yh_point_arrived,
+          yh_task
+      </NotificationType>
+      <Function>com.ecity.cswatersupply.ui.activities.planningtask.PlanningTaskActivity</Function>
+    </Mapping>
+    <Mapping>
+        <NotificationType name="事件上报">
+            sj_report_event,
+            sj_eventtoworkorder,
+            sj_close,
+            sj_eventtotask
+        </NotificationType>
+        <Function>com.ecity.cswatersupply.ui.activities.EventListActivity</Function>
+    </Mapping>
+
+    <!-- 江门工程 -->
+    <Mapping>
+        <NotificationType name="开工申请">
+            kg_check_pass,
+            kg_check_unpass,
+            kg_apply
+        </NotificationType>
+        <Function>com.ecity.cswatersupply.project.activity.ProjectDetailFragmentActivity</Function>
+    </Mapping>
+    <Mapping>
+        <NotificationType name="试压试验">
+            sy_check_pass,
+            sy_check_unpass,
+            sy_make
+        </NotificationType>
+        <Function>com.ecity.cswatersupply.project.activity.ProjectDetailFragmentActivity</Function>
+    </Mapping>
+    <Mapping>
+        <NotificationType name="接水">
+            js_gcb_check_pass,
+            js_gcb_check_unpass,
+            js_gwb_check_pass,
+            js_gwb_check_unpass,
+            js_apply
+        </NotificationType>
+        <Function>com.ecity.cswatersupply.project.activity.ProjectDetailFragmentActivity</Function>
+    </Mapping>
+    <Mapping>
+        <NotificationType name="工作量">
+            workload_apply,
+            workload_check
+        </NotificationType>
+        <Function>com.ecity.cswatersupply.project.activity.ProjectDetailFragmentActivity</Function>
+    </Mapping>
+    <Mapping>
+        <NotificationType name="资金支付">
+            pay_apply,
+            pay_check
+        </NotificationType>
+        <Function>com.ecity.cswatersupply.project.activity.ProjectDetailFragmentActivity</Function>
+    </Mapping>
+    <Mapping>
+        <NotificationType name="竣工验收">
+            jg_check_pass,
+            jg_check_unpass,
+            jg_apply
+        </NotificationType>
+        <Function>com.ecity.cswatersupply.project.activity.ProjectDetailFragmentActivity</Function>
+    </Mapping>
+    <Mapping>
+        <NotificationType name="勘察设计">
+            sj_delegate,
+            sj_back,
+            sj_delay_apply,
+            sj_delay_check,
+            sj_upload,
+            sj_design_check
+        </NotificationType>
+        <Function>com.ecity.cswatersupply.project.activity.ProjectDetailFragmentActivity</Function>
+    </Mapping>
+    
+    
+    <!-- ·······························```````````````````````````````````````````````````````````````````·························· -->
+    
+    <Mapping>
+      <NotificationType name="信息通报">
+          wuhandizhen_earthquake_msg,
+          wuhandizhen_announcement_msg,
+          wuhandizhen_expertopinion_msg,
+      </NotificationType>
+      <Function>com.ecity.cswatersupply.emergency.activity.NewsAnnounActivity</Function>
+    </Mapping> 
+    
+    
+    
+    
+    
+    
+    
+</Mappings>

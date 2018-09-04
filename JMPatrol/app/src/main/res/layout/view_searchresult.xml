@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/taskitem_bg_selector"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/str_pipename"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text="" />
+
+                <FrameLayout
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/light_gray" />
+
+                <TextView
+                    android:id="@+id/tv_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text="" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawablePadding="5dip"
+            android:drawableRight="@drawable/mm_submenu_normal"
+            android:gravity="center_vertical"
+            android:text="@string/planningtask_point_attr"
+            android:textColor="@color/blue_pressed" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/view_horizontal_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/light_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal" >
+
+        <FrameLayout
+            android:id="@+id/frame_go"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/main_toolbar_item" >
+
+            <TextView
+                android:id="@+id/tv_go"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/maplocate_small"
+                android:gravity="center_vertical"
+                android:text="@string/str_navigation" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/divider3"
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/light_gray"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/frame_edit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:background="@drawable/main_toolbar_item" >
+
+            <TextView
+                android:id="@+id/tv_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/button_reset_painter"
+                android:gravity="center_vertical"
+                android:text="@string/event_report_title" />
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_background"
+    android:orientation="vertical" >
+
+    <com.ecity.cswatersupply.ui.widght.CustomTitleView
+        android:id="@+id/view_title_device_usage"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/activity_title_height" >
+    </com.ecity.cswatersupply.ui.widght.CustomTitleView>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/css_selector_preference_first_item"
+                android:clickable="false"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/tv_cpu_usage_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="8dp"
+                    android:text="@string/gps_state_cpu_usage"
+                    android:textColor="@color/text_darkGray"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/tv_cpu_usage"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/tv_cpu_usage_title"
+                    android:layout_toRightOf="@+id/tv_cpu_usage_title"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    android:singleLine="true"
+                    android:text="@string/gps_state_25"
+                    android:textColor="#000"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/css_selector_preference_item"
+                android:clickable="false"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/tv_battery_usage_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="8dp"
+                    android:text="@string/gps_state_battery"
+                    android:textColor="@color/text_darkGray"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/tv_battery_usage"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/tv_battery_usage_title"
+                    android:layout_toRightOf="@+id/tv_battery_usage_title"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    android:singleLine="true"
+                    android:text="@string/gps_state_50"
+                    android:textColor="#000"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/css_selector_preference_last_item"
+                android:clickable="false"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/tv_memory_usage_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="8dp"
+                    android:text="@string/gps_state_battery_memory_usage"
+                    android:textColor="@color/text_darkGray"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/tv_memory_usage"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/tv_memory_usage_title"
+                    android:layout_toRightOf="@+id/tv_memory_usage_title"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    android:singleLine="true"
+                    android:text="@string/gps_state_25"
+                    android:textColor="#000"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

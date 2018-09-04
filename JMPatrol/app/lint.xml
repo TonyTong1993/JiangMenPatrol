@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lint>
+    <issue id="ResourceAsColor">
+        <ignore path="src/com/ecity/cswatersupply/ui/activities/AttributeDetailsActivity.java" />
+    </issue>
+</lint>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:paddingEnd="0dip"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingStart="0dip" >
+
+        <include
+            android:layout_width="0dip"
+            android:layout_height="@dimen/margin_50"
+            android:layout_weight="1.5"
+            layout="@layout/custom_form_item_title_new" />
+
+        <RelativeLayout
+            android:id="@+id/rl_pump_select"
+            android:layout_width="0dip"
+            android:layout_weight="3"
+            android:layout_height="@dimen/margin_50" >
+
+            <ImageView
+                android:id="@+id/iv_spn_value"
+                android:layout_width="@dimen/margin_40"
+                android:scaleType="centerInside"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@null"
+                android:src="@drawable/img_arrow" />
+
+            <TextView
+                android:id="@+id/tv_pump"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_50"
+                android:background="@drawable/shape_default_input_normal"
+                android:gravity="center_vertical"
+                android:hint="@string/hint_choose"
+                android:textColor="@color/txt_label"
+                android:textSize="@dimen/font_18" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip">
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="@dimen/margin_50"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:layout_weight="1.5"
+            android:textColor="@color/txt_label"
+            android:textSize="@dimen/font_18"
+            android:text="@string/event_management_type_pump_address" />
+
+        <TextView
+            android:id="@+id/tv_pump_road"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="3"
+            android:background="@drawable/shape_default_input_normal"
+            android:gravity="center_vertical"
+            android:inputType="textMultiLine"
+            android:minHeight="@dimen/margin_50"
+            android:textColor="@color/txt_black_normal"
+            android:textColorHint="@color/txt_hint"
+            android:textSize="@dimen/font_18" />
+    </LinearLayout>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        layout="@layout/item_splitline_h" />
+
+</LinearLayout>

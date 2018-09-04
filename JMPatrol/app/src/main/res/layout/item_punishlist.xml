@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants" >
+
+    <RelativeLayout
+        android:id="@+id/punish_text_relative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="@dimen/margin_spacing_level_5"
+        android:layout_marginLeft="@dimen/margin_spacing_level_5"
+        android:layout_marginTop="@dimen/margin_spacing_level_5" >
+
+        <RelativeLayout
+            android:id="@+id/rl_punish_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tv_event_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:textColor="@color/blue_normal"
+                android:textSize="@dimen/title_font_size_1"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/arrow_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_10"
+                android:contentDescription="@string/punishment_item_arrow_right"
+                android:src="@drawable/arrow_right" />
+
+            <TextView
+                android:id="@+id/tv_punish_state"
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/arrow_right"
+                android:layout_marginRight="@dimen/margin_10"
+                android:background="@drawable/shape_punish_state_reporting"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="12sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_punish_code"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/margin_spacing_level_6" >
+
+            <TextView
+                android:id="@+id/tv_punish_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/font_level_1"
+                android:textSize="@dimen/font_18" />
+
+            <TextView
+                android:id="@+id/tv_punish_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_punish_contact"
+                android:layout_marginLeft="@dimen/margin_15"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/font_level_3"
+                android:textSize="@dimen/font_16" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_punish_matter"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_contact"
+            android:layout_marginTop="@dimen/margin_spacing_level_6"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/font_level_1"
+            android:textSize="@dimen/font_18" />
+
+        <LinearLayout
+            android:id="@+id/lineLayout_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_punish_matter"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/margin_10" >
+
+            <ImageView
+                android:id="@+id/imge_punish_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/punishment_item_location_image"
+                android:src="@drawable/icon_location" />
+
+            <TextView
+                android:id="@+id/tv_punish_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/font_level_1"
+                android:textSize="@dimen/font_16" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lineLayout_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lineLayout_location">
+            <TextView
+                android:id="@+id/tv_bottom_left"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:minWidth="100dp"
+                android:layout_weight="1"
+                android:layout_marginRight="@dimen/margin_spacing_level_5"
+                android:layout_marginTop="@dimen/margin_spacing_level_6"
+                android:background="@drawable/shape_punish_operation_button"
+                android:focusable="false"
+                android:gravity="center"
+                android:textColor="@color/punish_blue"
+                android:textSize="@dimen/content_font_size_level_1" />
+            <TextView
+                android:id="@+id/tv_bottom_right"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:minWidth="100dp"
+                android:layout_marginRight="@dimen/margin_spacing_level_5"
+                android:layout_marginTop="@dimen/margin_spacing_level_6"
+                android:background="@drawable/shape_punish_operation_button"
+                android:focusable="false"
+                android:gravity="center"
+                android:textColor="@color/punish_blue"
+                android:textSize="@dimen/content_font_size_level_1" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

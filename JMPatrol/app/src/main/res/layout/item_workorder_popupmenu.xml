@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/tv_menu"
+        android:layout_width="@dimen/workorder_morebtn_popmenu_item_w"
+        android:layout_height="@dimen/workorder_morebtn_popmenu_item_h"
+        android:background="@drawable/selector_workorder_button_bg"
+        android:gravity="center"
+        android:textColor="@color/selector_workorder_btn_txt"
+        android:textSize="@dimen/title_font_size_2" />
+
+</RelativeLayout>

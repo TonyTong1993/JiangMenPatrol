@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_planningtask_other"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_workorder_list_shape"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_startwork_time"
+        style="@style/item_ll_styles"
+        android:layout_below="@id/listview_plan_checkinfo" >
+
+        <TextView
+            style="@style/item_textview_des_styles"
+            android:text="@string/planningtask_startwork_time" />
+
+        <TextView
+            android:id="@+id/planningtask_startwork_time"
+            style="@style/item_textview_content_styles" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_endwork_time"
+        style="@style/item_ll_styles"
+        android:layout_below="@id/ll_startwork_time" >
+
+        <TextView
+            style="@style/item_textview_des_styles"
+            android:text="@string/planningtask_endwork_time" />
+
+        <TextView
+            android:id="@+id/planningtask_endwork_time"
+            style="@style/item_textview_content_styles" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_planningtask_speed"
+        style="@style/item_ll_styles"
+        android:layout_below="@id/ll_endwork_time" >
+
+        <TextView
+            style="@style/item_textview_des_styles"
+            android:text="@string/planningtask_speed" />
+
+        <TextView
+            android:id="@+id/planningtask_speed"
+            style="@style/item_textview_content_styles" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_app_name"
+        style="@style/item_ll_styles"
+        android:layout_below="@id/ll_planningtask_speed" >
+
+        <TextView
+            style="@style/item_textview_des_styles"
+            android:text="@string/planningtask_current_user" />
+
+        <TextView
+            android:id="@+id/planningtask_app_name"
+            style="@style/item_textview_content_styles" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_40"
+        android:background="@color/title_blue"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="@dimen/margin_10"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_18"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/ll_query_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_5"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/condition_select"
+            android:layout_width="@dimen/margin_80"
+            android:layout_height="@dimen/margin_40"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_10"
+            android:background="@color/white"
+            android:gravity="left|center_vertical"
+            android:text="选择管网"
+            android:textColor="@color/txt_black_normal"
+            android:textSize="@dimen/font_18" />
+
+        <LinearLayout
+            android:id="@+id/ll_select_device"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_5"
+            android:layout_toRightOf="@id/condition_select"
+            android:background="@drawable/shape_bg_black"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/spn_value_device"
+                android:layout_width="@dimen/margin_200"
+                android:layout_height="@dimen/margin_40"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_weight="5"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:textColor="@color/txt_black_normal"
+                android:textSize="@dimen/font_18" />
+
+            <ImageView
+                android:id="@+id/arrow_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/margin_10"
+                android:src="@drawable/arrow_down"
+                android:textSize="@dimen/font_18" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_5"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/margin_80"
+                android:layout_height="@dimen/margin_40"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:text="选择字段"
+                android:textColor="@color/txt_black_normal"
+                android:textSize="@dimen/font_18" />
+
+            <LinearLayout
+                android:id="@+id/ll_select_attr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_5"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_5"
+                android:background="@drawable/shape_bg_black"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/spn_value_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_40"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:layout_weight="5"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/txt_black_normal"
+                    android:textSize="@dimen/font_18" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:src="@drawable/arrow_down"
+                    android:textSize="@dimen/font_18" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/margin_80"
+                android:layout_height="@dimen/margin_40"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_5"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:text="查询条件"
+                android:textColor="@color/txt_black_normal"
+                android:textSize="@dimen/font_18" />
+
+            <LinearLayout
+                android:id="@+id/ll_select_condition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_5"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_5"
+                android:layout_marginTop="@dimen/margin_5"
+                android:background="@drawable/shape_bg_black"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/spn_value_condition"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_40"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:layout_weight="5"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/txt_black_normal"
+                    android:textSize="@dimen/font_18" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:src="@drawable/arrow_down"
+                    android:textSize="@dimen/font_18" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/condition"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_40"
+            android:layout_margin="@dimen/margin_5"
+            android:layout_weight="3"
+            android:hint="@string/please_input_exact_condition"
+            android:background="@drawable/shape_bg_black"
+            android:textColor="@color/txt_black_normal"
+            android:textCursorDrawable="@drawable/shape_edittext_cursor"
+            android:textSize="@dimen/font_18" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dip">
+
+        <Button
+            android:id="@+id/custom_dialog_cancel"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="20dip"
+            android:layout_marginRight="20dip"
+            android:layout_weight="1"
+            android:background="@drawable/selector_bt_bg"
+            android:clickable="true"
+            android:minWidth="120dp"
+            android:text="@string/cancel"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_font_size_3"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/custom_dialog_ok"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_bt_bg"
+            android:clickable="true"
+            android:minWidth="120dp"
+            android:text="查询"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_font_size_3"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

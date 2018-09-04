@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_planningtask_checkitem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_checkinfo"
+        style="@style/item_ll_styles" >
+        <TextView
+            android:id="@+id/tv_planningtask_checkinfo"
+            style="@style/item_textview_content_styles" />
+    </LinearLayout>
+
+</LinearLayout>

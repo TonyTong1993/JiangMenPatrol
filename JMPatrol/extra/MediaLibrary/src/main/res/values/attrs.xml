@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="Gallery">
+        <attr name="android:galleryItemBackground"></attr>
+    </declare-styleable>
+    <!-- 自定义监听音量按钮 -->
+    <declare-styleable name="VolumCircleBar">
+        <attr name="recordingColor" format="color" />
+        <attr name="stoppedColor" format="color" />
+        <attr name="startcenterRes" format="reference" />
+        <attr name="blockCount" format="integer" />
+        <attr name="splitAngle" format="integer" />
+        <attr name="stopcenterRes" format="reference" />
+        <attr name="blockColor" format="color" />
+    </declare-styleable>
+    <!-- 审核通用展示界面配置项 -->
+    <declare-styleable name="AuditCommonView">
+        <attr name="auditType" format="enum">
+            <enum name="back" value="0" />
+            <enum name="delay" value="1" />
+            <enum name="help" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>

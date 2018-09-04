@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/content_background"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:paddingTop="10dp" >
+
+                <LinearLayout
+                    android:id="@+id/ll_first"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:orientation="horizontal"
+                    android:weightSum="4" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.8"
+                        android:weightSum="1.8" >
+
+                        <TextView
+                            android:id="@+id/tv_flow_type"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:textColor="@color/txt_black_normal"
+                            android:textSize="@dimen/detail_info_title_font" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="2.2"
+                        android:weightSum="2.2" >
+
+                        <TextView
+                            android:id="@+id/tv_flow_state_detail"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.2"
+                            android:gravity="center|right"
+                            android:singleLine="true"
+                            android:textColor="@color/txt_label"
+                            android:textSize="@dimen/detail_info_normal_font" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_second"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ll_first"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="4" >
+
+                    <TextView
+                        android:id="@+id/tv_flow_addman_title"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="@string/title_workorder_detail_flow_addman"
+                        android:textColor="@color/txt_label"
+                        android:textSize="@dimen/detail_info_normal_font" />
+
+                    <TextView
+                        android:id="@+id/tv_flow_addman_detail"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:textColor="@color/txt_black_normal"
+                        android:textSize="@dimen/detail_info_normal_font" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ll_second"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="4" >
+
+                    <TextView
+                        android:id="@+id/tv_flow_addtime_title"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="@string/title_workorder_detail_flow_addtime"
+                        android:textColor="@color/txt_label"
+                        android:textSize="@dimen/detail_info_normal_font" />
+
+                    <TextView
+                        android:id="@+id/tv_flow_addtime"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:textColor="@color/txt_black_normal"
+                        android:textSize="@dimen/detail_info_normal_font" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_detail_flow_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/mm_submenu_normal_right"
+            android:contentDescription="@null" />
+    </LinearLayout>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        layout="@layout/item_splitline_h" />
+
+</LinearLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/label_check_opinion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_phoneNum"
+        android:paddingTop="@dimen/lv_item_padding_up_down_level_5"
+        android:text="@string/label_check_opinion"
+        android:textColor="@color/txt_label"
+        android:textSize="@dimen/title_font_size_3"/>
+
+    <TextView
+        android:id="@+id/content_check_opinion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_phoneNum"
+        android:layout_marginLeft="@dimen/workorder_label_content_interval"
+        android:layout_marginStart="@dimen/workorder_label_content_interval"
+        android:layout_toRightOf="@id/label_check_opinion"
+        android:paddingTop="@dimen/lv_item_padding_up_down_level_5"
+        android:textColor="@color/txt_label"
+        android:textSize="@dimen/title_font_size_3"/>
+
+
+    <TextView
+        android:id="@+id/label_time_for_dispatching"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/content_check_opinion"
+        android:paddingTop="@dimen/lv_item_padding_up_down_level_5"
+        android:text="@string/label_time_dispatching"
+        android:textColor="@color/txt_label"
+        android:textSize="@dimen/title_font_size_3"/>
+
+    <TextView
+        android:id="@+id/content_time_for_dispatching"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/content_check_opinion"
+        android:layout_marginLeft="@dimen/workorder_label_content_interval"
+        android:layout_marginStart="@dimen/workorder_label_content_interval"
+        android:layout_toRightOf="@+id/label_time_for_dispatching"
+        android:paddingTop="@dimen/lv_item_padding_up_down_level_5"
+        android:textColor="@color/txt_label"
+        android:textSize="@dimen/title_font_size_3"/>
+
+
+    <TextView
+        android:id="@+id/label_time_deadline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/content_time_for_dispatching"
+        android:paddingTop="@dimen/lv_item_padding_up_down_level_5"
+        android:text="@string/label_time_deadline"
+        android:textColor="@color/txt_label"
+        android:textSize="@dimen/title_font_size_3"/>
+
+    <TextView
+        android:id="@+id/content_time_deadline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/content_time_for_dispatching"
+        android:layout_marginLeft="@dimen/workorder_label_content_interval"
+        android:layout_marginStart="@dimen/workorder_label_content_interval"
+        android:layout_toRightOf="@id/label_time_deadline"
+        android:paddingTop="@dimen/lv_item_padding_up_down_level_5"
+        android:textColor="@color/txt_label"
+        android:textSize="@dimen/title_font_size_3"/>
+</RelativeLayout>

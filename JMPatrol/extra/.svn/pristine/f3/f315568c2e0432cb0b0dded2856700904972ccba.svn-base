@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<declare-styleable name="Gallery">
+		<attr name="android:galleryItemBackground">
+		</attr>
+	</declare-styleable>
+	    <!-- 标题栏属性 -->
+    <declare-styleable name="TitleViewAttrs">
+        <attr name="rightImageSrc" format="reference" />
+        <attr name="leftImageSrc" format="reference" />
+        <attr name="centerValue" format="string" />
+        <attr name="rightValue" format="string" />
+    </declare-styleable>
+</resources> 
+
+

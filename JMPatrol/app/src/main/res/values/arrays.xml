@@ -48,21 +48,7 @@
         <item>@string/event_planningtask_title_day</item>
         <item>@string/event_planningtask_title_night</item>
     </string-array>
-
-    <string-array name="planningtask_execute_filter">
-        <item>@string/planningtask_all</item>
-        <item>@string/planningtask_arrived</item>
-        <item>@string/planningtask_not_arrived</item>
-        <item>@string/planningtask_has_feedback</item>
-    </string-array>
     <!-- Planningtask end -->
-
-    <string-array name="pump_execute_filter">
-        <item>@string/pump_all</item>
-        <item>@string/pump_sign_in</item>
-        <item>@string/pump_feedback</item>
-        <item>@string/pump_sign_out</item>
-    </string-array>
 
     <!-- Custom Report begin -->
     <string-array name="custom_action_sheet_image_menus">
@@ -71,56 +57,24 @@
     </string-array>
     <string-array name="workorder_pop_menu_finish">
         <item>@string/menu_workorder_finish_all</item>
-        <item>@string/menu_workorder_finish_wait_destroy_workorder</item>
-        <item>@string/menu_workorder_finish_finish_destroy_workorder</item>
-        <item>@string/menu_workorder_finish_return_workorder_to_system</item>
+        <item>@string/menu_workorder_finish_my_finish</item>
+        <item>@string/menu_workorder_finish_back_finish</item>
+        <item>@string/menu_workorder_finish_transfer_finish</item>
     </string-array>
     <string-array name="workorder_pop_menu_todo">
         <item>@string/menu_workorder_todo_all</item>
         <item>@string/menu_workorder_todo_my_wait_dispatch</item>
         <item>@string/menu_workorder_todo_my_wait_recieve</item>
-        <item>@string/menu_workorder_todo_my_wait_scheduling</item>
+        <item>@string/menu_workorder_todo_my_wait_check</item>
+        <item>@string/menu_workorder_todo_my_team</item>
+        <item>@string/menu_workorder_todo_not_my_team</item>
     </string-array>
     <string-array name="workorder_pop_menu_operator">
         <item>@string/menu_workorder_process_all</item>
-
-        <item>@string/menu_workorder_process_wait_explore</item>
-        <item>@string/menu_workorder_process_wait_repaire</item>
-        <item>@string/menu_workorder_process_wait_finish_work</item>
-        <item>@string/menu_workorder_process_finish_work_audit</item>
-        <item>@string/menu_workorder_process_admin_has_audit</item>
-        <item>@string/menu_workorder_process_delay_approve</item>
-        <item>@string/menu_workorder_process_delay_reject</item>
-        <item>@string/menu_workorder_process_assist_approve</item>
-        <item>@string/menu_workorder_process_assist_reject</item>
-        <item>@string/menu_workorder_process_finish_work_reject</item>
-
-        <item>@string/menu_workorder_process_finish_work_approve</item>
-        <item>@string/menu_workorder_process_delay_apply</item>
-        <item>@string/menu_workorder_process_assist_apply</item>
-        <item>@string/menu_workorder_process_transfer_appyly</item>
-        <item>@string/menu_workorder_process_return_apply</item>
-        <item>@string/menu_workorder_process_process_report</item>
-        <item>@string/menu_workorder_process_transfer_accept</item>
-        <item>@string/menu_workorder_process_transfer_reject</item>
-        <item>@string/menu_workorder_process_return_approve</item>
-        <item>@string/menu_workorder_process_return_reject</item>
-
-        <item>@string/menu_workorder_process_delay_cancel</item>
-        <item>@string/menu_workorder_process_assist_cancel</item>
-        <item>@string/menu_workorder_process_transfer_cancel</item>
-        <item>@string/menu_workorder_process_return_cancel</item>
-        <item>@string/menu_workorder_process_workoder_rebuild</item>
-        <item>@string/menu_workorder_process_return_to_hotline</item>
-        <item>@string/menu_workorder_process_return_to_transfer_apply</item>
-        <item>@string/menu_workorder_process_return_transfer_approve</item>
-        <item>@string/menu_workorder_process_return_transfer_reject</item>
-        <item>@string/menu_workorder_process_return_transfer_cancel</item>
-
-        <item>@string/menu_workorder_process_admin_not_agree</item>
-        <item>@string/menu_workorder_process_admin_agree</item>
-
-
+        <item>@string/menu_workorder_process_my_excute</item>
+        <item>@string/menu_workorder_process_my_assisgn</item>
+        <item>@string/menu_workorder_process_wait_team_reciever</item>
+        <item>@string/menu_workorder_process_wait_team_excute</item>
     </string-array>
      <string-array name="workorder_pop_menu_summary">
         <item>@string/menu_summary_static</item>
@@ -135,15 +89,28 @@
         <item>@string/select_audio_from_album</item>
     </string-array>
     <!-- Custom Report end -->
-     <!-- project  begin -->
-     <string-array name="project_type">
+    <!-- project  begin -->
+    <string-array name="project_type">
         <item>@string/project_type1</item>
         <item>@string/project_type2</item>
         <item>@string/project_type3</item>
         <item>@string/project_type4</item>
         <item>@string/project_type5</item>
     </string-array>
-      <!-- project  end -->
+    <string-array name="project_fzr_statistics">
+        <item>@string/project_stastistics1</item>
+        <item>@string/project_stastistics2</item>
+        <item>@string/project_stastistics3</item>
+    </string-array>
+    <string-array name="project_water_meter_type">
+        <item>@string/project_type1</item>
+        <item>@string/project_water_meter_type1</item>
+        <item>@string/project_water_meter_type2</item>
+        <item>@string/project_water_meter_type3</item>
+        <item>@string/project_water_meter_type4</item>
+        <item>@string/project_water_meter_type5</item>
+    </string-array>
+    <!-- project  end -->
 
 
     <!-- Main Meun Subname begin -->
@@ -151,10 +118,6 @@
         <item>@string/main_meun_subname_workorder</item>
         <item>@string/main_meun_subname_patrolPlanTask</item>
         <item>@string/main_meun_subname_flexflowPlanTask</item>
-        <item>@string/main_meun_subname_asset_flexflowPlanTask</item>
-        <item>@string/main_meun_subname_pump_flexflowPlanTask</item>
-        <item>@string/main_meun_subname_plan_management</item>
-        <item>@string/main_meun_subname_daily_plan_management</item>
     </string-array>
     <!-- Main Meun Subname end -->
 
@@ -163,16 +126,19 @@
         <item>@string/system_settings_clear_memory_maps</item>
     </string-array>
 
-    <string-array name="notification_types">
-        <item>wo_工单</item>
-        <item>xj_巡检</item>
-        <item>yh_养护</item>
-        <item>zb_值班</item>
-        <item>msg通知</item>
-        <item>sj_事件</item>
-        <item>kg_开工</item>
-        <item>sy_试压</item>
-        <item>js_接水</item>
-        <item>jg_竣工</item>
+    <string-array name="map_query_conditions">
+        <item>@string/map_query_like</item>
+        <item>@string/map_query_equal</item>
+        <item>@string/map_query_larger</item>
+        <item>@string/map_query_smaller</item>
+        <item>@string/map_query_larger_equal</item>
+        <item>@string/map_query_smaller_equal</item>
     </string-array>
+
+    <string-array name="gis_event_report_attrs">
+        <item>点号</item>
+        <item>编号</item>
+        <item>编码</item>
+    </string-array>
+
 </resources>

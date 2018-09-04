@@ -18,9 +18,11 @@
 
 package com.ecity.android.httpforandroid.httpext;
 
-import android.os.Handler;
-import android.os.Looper;
-import android.os.Message;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -28,11 +30,9 @@ import org.apache.http.StatusLine;
 import org.apache.http.client.HttpResponseException;
 import org.apache.http.entity.BufferedHttpEntity;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
+import android.os.Handler;
+import android.os.Looper;
+import android.os.Message;
 
 /**
  * Used to intercept and handle the responses from requests made using 

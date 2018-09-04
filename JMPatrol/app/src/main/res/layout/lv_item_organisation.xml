@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="2dp"
+              android:layout_marginTop="2dp"
+              android:orientation="horizontal"
+              android:paddingBottom="@dimen/lv_item_padding_up_down_level_1"
+              android:paddingTop="@dimen/lv_item_padding_up_down_level_1">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="10"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/cb_status"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:button="@drawable/checkbox"
+            android:checked="false"
+            android:gravity="center_vertical"/>
+
+        <com.zzz.ecity.android.applibrary.view.CircleTextImageView
+            android:id="@+id/iv_name"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/txt_black_normal"
+            android:textSize="@dimen/title_font_size_1.5"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="5dp"
+        android:layout_weight="1"
+        android:contentDescription="@null"
+        android:src="@drawable/arrow_right"/>
+
+</LinearLayout>

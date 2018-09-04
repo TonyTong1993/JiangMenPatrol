@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_background"
+    android:orientation="vertical" >
+
+    <com.ecity.cswatersupply.ui.widght.CustomTitleView
+        android:id="@+id/view_title_sign_in"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/activity_title_height" >
+    </com.ecity.cswatersupply.ui.widght.CustomTitleView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp" >
+
+        <!--
+        <View
+        android:id="@+id/view_1"
+        android:layout_width="1dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="40dp"
+        android:background="@color/content_background" />
+        -->
+
+        <TextView
+            android:id="@+id/log_date_back_node_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/circle_text"
+            android:gravity="center"
+            android:text="@string/user_sign_in_start_time"
+            android:textColor="@color/white_theme_1"
+            android:textSize="@dimen/title_font_size_2" />
+
+        <View
+            android:id="@+id/view_2"
+            android:layout_width="5dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/log_date_back_node_id"
+            android:layout_marginLeft="48dp"
+            android:background="@color/content_background" />
+
+        <TextView
+            android:id="@+id/log_date_back_node_id_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_2"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/circle_text"
+            android:gravity="center"
+            android:text="@string/user_sign_out_end_time"
+            android:textColor="@color/white_theme_1"
+            android:textSize="@dimen/title_font_size_2" />
+
+        <RelativeLayout
+            android:id="@+id/relative"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/view_1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/log_date_back_node_id"
+            android:background="@color/content_background"
+            android:padding="5dp" >
+
+            <Button
+                android:id="@+id/btn_sign_start_time"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_50"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginStart="10dip"
+                android:background="@color/content_background"
+                android:gravity="center_vertical"
+                android:paddingEnd="8dip"
+                android:paddingLeft="8dip"
+                android:paddingStart="8dip"
+                android:singleLine="true"
+                android:textColor="@color/txt_black_normal"
+                android:textSize="@dimen/font_20" />
+
+            <ImageView
+                android:layout_width="@dimen/margin_40"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@null"
+                android:scaleType="centerInside"
+                android:src="@drawable/img_arrow" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/view_2"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/log_date_back_node_id"
+            android:background="@color/content_background"
+            android:padding="5dp" >
+
+            <Button
+                android:id="@+id/btn_sign_end_time"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_50"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginStart="10dip"
+                android:background="@color/content_background"
+                android:gravity="center_vertical"
+                android:paddingEnd="5dip"
+                android:paddingLeft="5dip"
+                android:paddingStart="5dip"
+                android:singleLine="true"
+                android:textColor="@color/txt_black_normal"
+                android:textSize="@dimen/font_20" />
+
+            <ImageView
+                android:layout_width="@dimen/margin_40"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@null"
+                android:scaleType="centerInside"
+                android:src="@drawable/img_arrow" />
+        </RelativeLayout>
+
+        <!--
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/rl_user_sign_in_start_time"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/content_background"
+                android:clickable="false"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/tv_user_sign_in_start_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:drawableLeft="@drawable/date_icon"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="@string/user_sign_in_start_time"
+                    android:textColor="@color/text_darkGray"
+                    android:textSize="19sp" />
+
+                <Button
+                    android:id="@+id/btn_sign_start_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_50"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginStart="10dip"
+                    android:layout_toRightOf="@id/tv_user_sign_in_start_time"
+                    android:gravity="center_vertical"
+                     android:background="@color/content_background"
+                    android:paddingEnd="8dip"
+                    android:paddingLeft="8dip"
+                    android:paddingStart="8dip"
+                    android:singleLine="true"
+                    android:textColor="@color/txt_black_normal"
+                    android:textSize="@dimen/font_18" />
+
+                <ImageView
+                    android:layout_width="@dimen/margin_40"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@null"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/img_arrow" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_user_sign_out_end_time"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/content_background"
+                android:clickable="false"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/tv_user_sign_out_end_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:drawableLeft="@drawable/date_icon"
+                    android:drawablePadding="8dp"
+                    android:padding="8dp"
+                    android:gravity="center"
+                    android:text="@string/user_sign_out_end_time"
+                    android:textColor="@color/text_darkGray"
+                    android:textSize="19sp" />
+
+                <Button
+                    android:id="@+id/btn_sign_end_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_50"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                     android:background="@color/content_background"
+                    android:layout_marginStart="10dip"
+                    android:layout_toRightOf="@id/tv_user_sign_out_end_time"
+                    android:gravity="center_vertical"
+                    android:paddingEnd="5dip"
+                    android:paddingLeft="5dip"
+                    android:paddingStart="5dip"
+                    android:singleLine="true"
+                    android:textColor="@color/txt_black_normal"
+                    android:textSize="@dimen/font_18" />
+
+                <ImageView
+                    android:layout_width="@dimen/margin_40"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@null"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/img_arrow" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+        -->
+    </RelativeLayout>
+
+</LinearLayout>

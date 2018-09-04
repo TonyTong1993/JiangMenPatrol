@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:paddingLeft="10dip" >
+
+        <include
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            layout="@layout/custom_form_item_title_new"
+            android:background="@drawable/shape_default_input_normal" />
+
+        <TextView
+            android:id="@+id/tv_item_value"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/form_item_margin_left"
+            android:layout_marginStart="10dp"
+            android:layout_weight="3"
+            android:background="@drawable/shape_default_input_normal"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/margin_50"
+            android:text="点击查询附件"
+            android:textColor="@color/txt_black_normal"
+            android:textColorHint="@color/txt_hint"
+            android:textSize="@dimen/font_18" />
+    </LinearLayout>
+
+    <com.ecity.cswatersupply.ui.widght.ListViewForScrollView
+        android:id="@+id/lv_attachments"
+        style="@style/common_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:visibility="visible" >
+    </com.ecity.cswatersupply.ui.widght.ListViewForScrollView>
+
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_btns"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp" >
+
+    <TextView
+        android:id="@+id/bt_negative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/selector_bt_bg"
+        android:clickable="true"
+        android:onClick="onCancelButtonClicked"
+        android:paddingBottom="10dp"
+        android:paddingLeft="45dp"
+        android:paddingRight="45dp"
+        android:paddingTop="10dp"
+        android:text="@string/bottom_negative_btn_txt"
+        android:textColor="@color/white"
+        android:textSize="@dimen/title_font_size_1.5" />
+
+    <TextView
+        android:id="@+id/bt_positive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/selector_bt_bg"
+        android:clickable="true"
+        android:onClick="onOkButtonClicked"
+        android:paddingBottom="10dp"
+        android:paddingLeft="45dp"
+        android:paddingRight="45dp"
+        android:paddingTop="10dp"
+        android:text="@string/bottom_positive_btn_txt"
+        android:textColor="@color/white"
+        android:textSize="@dimen/title_font_size_1.5" />
+
+</RelativeLayout>

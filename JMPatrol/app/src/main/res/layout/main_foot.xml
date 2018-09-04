@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:layout_gravity="bottom"
+    android:layout_marginBottom="@dimen/margin_spacing_level_5"
+    android:layout_marginLeft="@dimen/margin_spacing_level_3"
+    android:layout_marginRight="@dimen/margin_spacing_level_3"
+    android:background="@drawable/navigation_foot" 
+    >
+
+    <TextView
+        android:id="@+id/weathercity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/margin_spacing_level_3"
+        android:layout_marginStart="@dimen/margin_spacing_level_3"
+        android:text="@string/city_name"
+        android:textColor="@color/black_theme_1"
+        android:textSize="@dimen/content_font_size_level_2" />
+
+    <ImageView
+        android:id="@+id/weahtherimg"
+        android:layout_width="24dp"
+        android:layout_height="20dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/margin_spacing_level_5"
+        android:layout_marginStart="@dimen/margin_spacing_level_5"
+        android:layout_toEndOf="@id/weathercity"
+        android:layout_toRightOf="@id/weathercity"
+        android:background="@drawable/annolist_icon"
+        android:clickable="false"
+        android:contentDescription="@null"
+        android:scaleType="centerInside" />
+
+    <TextView
+        android:id="@+id/weahthertemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/margin_spacing_level_5"
+        android:layout_marginRight="@dimen/margin_spacing_level_5"
+        android:text="@string/temp_des"
+        android:textColor="@color/black_theme_1"
+        android:textSize="@dimen/content_font_size_level_2" />
+
+    <TextView
+        android:id="@+id/weahtherwindstate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/margin_spacing_level_3"
+        android:layout_marginRight="@dimen/margin_spacing_level_3"
+        android:gravity="center"
+        android:text="@string/wind_des"
+        android:textColor="@color/black_theme_1"
+        android:textSize="@dimen/content_font_size_level_2" />
+
+</RelativeLayout>

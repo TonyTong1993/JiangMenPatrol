@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<view
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    class="com.viewpagerindicator.TabView"
+    style="?attr/vpiTabPageIndicatorStyle">
+    <TextView
+        android:id="@android:id/text1"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_alignParentBottom="true"
+        android:gravity="center" />
+</view>
