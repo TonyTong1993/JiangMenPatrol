@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/content_background"
+    android:gravity="center_vertical"
+    android:paddingBottom="15dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="15dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/my_icon_card"
+        android:gravity="center_vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:text="李永强"
+            android:textColor="@color/txt_black_normal"
+            android:textSize="@dimen/title_font_size_2"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_head"
+            android:layout_width="@dimen/margin_54"
+            android:layout_height="@dimen/margin_54"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/my_icon_head" />
+
+        <TextView
+            android:id="@+id/tv_department"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_head"
+            android:gravity="center"
+            android:text="北二集司"
+            android:textColor="@color/txt_black_normal"
+            android:textSize="@dimen/title_font_size_2" />
+
+        <!--<View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_below="@id/tv_department"
+            android:layout_marginTop="15dp"
+            android:background="@color/divider_line_color" />-->
+        <include
+            android:id="@+id/view"
+            layout="@layout/divider_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp"
+            android:layout_below="@id/tv_department"
+            android:layout_marginTop="15dp" />
+
+        <TextView
+            android:id="@+id/tv_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="工号：123456789"
+            android:textColor="@color/txt_black_normal"
+            android:textSize="@dimen/title_font_size_2" />
+    </RelativeLayout>
+
+</RelativeLayout>

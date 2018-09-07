@@ -74,4 +74,7 @@
     <color name="lv_label_orange">#f69e41</color>
     <color name="textColorHint">#BAD9F8</color>
 
+    <!-- divider_line_color -->
+    <color name="divider_line_color">#dddddd</color>
+
 </resources>

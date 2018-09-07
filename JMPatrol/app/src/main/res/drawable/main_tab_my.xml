@@ -3,15 +3,15 @@
 
   <item
     android:state_selected="true"
-    android:drawable="@drawable/main_nav_my_hl">
+    android:drawable="@drawable/icon_tab_profile_selected">
     <color android:color="@color/font_level_4" />
   </item>
   <item
     android:state_pressed="true"
-    android:drawable="@drawable/main_nav_my_hl">
+    android:drawable="@drawable/icon_tab_profile_selected">
     <color android:color="@color/font_level_4" />
   </item>
-  <item android:drawable="@drawable/main_nav_my">
+  <item android:drawable="@drawable/icon_tab_profile_normal">
     <color android:color="@color/font_level_1" />
   </item>
 

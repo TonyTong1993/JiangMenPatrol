@@ -9,6 +9,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -17,6 +18,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout.LayoutParams;
 import android.widget.TextView;
@@ -43,6 +45,7 @@ import com.ecity.cswatersupply.ui.activities.LoginActivity;
 import com.ecity.cswatersupply.ui.activities.SignInActivity;
 import com.ecity.cswatersupply.ui.activities.SystemSettingsActivity;
 import com.ecity.cswatersupply.ui.activities.UserCenterActivity;
+import com.ecity.cswatersupply.ui.widght.CustomTitleView;
 import com.ecity.cswatersupply.utils.DateUtil;
 import com.ecity.cswatersupply.utils.LoadingDialogUtil;
 import com.ecity.cswatersupply.utils.ResourceUtil;
@@ -55,39 +58,33 @@ import com.z3app.android.util.StringUtil;
 import com.zzz.ecity.android.applibrary.dialog.AlertView;
 import com.zzz.ecity.android.applibrary.dialog.AlertView.OnAlertViewListener;
 
-public class MyProfileMainTabFragment extends ABaseListViewFragment<ListViewMenuItem> {
-    private Button btnExit;
+public class MyProfileMainTabFragment extends Fragment {
+    private CustomTitleView customTitleView;
     private View userInfoView;
+    private LinearLayout mOldPwdLinarLayout;
+    private LinearLayout mNewPwdLinarLayout;
+    private Button msubmitToChangePwdBtn;
+    private Button btnExit;
+
     final String KEY_SIGN_IN = "KEY_SIGN_IN";
-    private ListViewMenuItem signItem;
-    List<ListViewMenuItem> menus = new ArrayList<ListViewMenuItem>();
     private User currentUser = HostApplication.getApplication().getCurrentUser();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = super.onCreateView(inflater, container, savedInstanceState);
+        View view = inflater.inflate(R.layout.fragment_main_profile, null);
         EventBusUtil.register(this);
         initUI(view);
-        setListeners();
+//        setListeners();
         return view;
     }
 
     @Override
     public void onResume() {
-        if (signItem != null) {
-            setSignState(false);
-        }
         super.onResume();
     }
 
     @Override
     public void setUserVisibleHint(boolean isVisibleToUser) {
-        if (signItem != null) {
-            if (isVisibleToUser) {
-                UserService.getInstance().getWatchState(currentUser);
-            }
-        }
-
         super.setUserVisibleHint(isVisibleToUser);
     }
 
@@ -109,70 +106,13 @@ public class MyProfileMainTabFragment extends ABaseListViewFragment<ListViewMenu
     }
 
     private void refreshSignItemTitle(int titleId) {
-        signItem.title = getString(titleId);
-        getAdapter().notifyDataSetChanged();
     }
 
-    @Override
-    protected int prepareLayoutResource() {
-        return R.layout.fragment_my_profile;
-    }
 
     @Override
     public void onDestroyView() {
         EventBusUtil.unregister(this);
         super.onDestroyView();
-    }
-
-    @Override
-    protected ArrayListAdapter<ListViewMenuItem> prepareListViewAdapter() {
-        return new MyProfileMainTabAdapter(getActivity());
-    }
-
-    @Override
-    protected List<ListViewMenuItem> prepareDataSource() {
-        ListViewMenuItem menu = new ListViewMenuItem(getString(R.string.my_profile_gps_state), null, R.drawable.my_icon_gpsstate);
-        menus.add(menu);
-        menu = new ListViewMenuItem(getString(R.string.my_profile_device_usage), null, R.drawable.my_icon_phone);
-        menus.add(menu);
-        menu = new ListViewMenuItem(getString(R.string.my_profile_system_settings), null, R.drawable.my_icon_setting);
-        menus.add(menu);
-        menu = new ListViewMenuItem(getString(R.string.my_profile_about_us), null, R.drawable.my_icon_aboutus);
-        menus.add(menu);
-        //如果是班长 && 正在值班 则显示值班签退
-        if (currentUser.isCanSign()) {
-            int titleId = currentUser.isWatch() ? R.string.my_profile_sign_out : R.string.my_profile_sign_in;
-            signItem = new ListViewMenuItem(getString(titleId), null, R.drawable.my_icon_aboutus);
-            menus.add(signItem);
-        } else {
-            //no logic to do
-        }
-
-        return menus;
-    }
-
-    @Override
-    protected OnItemClickListener prepareOnItemClickListener() {
-        return new OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                ListViewMenuItem item = getDataSource().get(position);
-                String title = item.getTitle();
-                if (getString(R.string.my_profile_gps_state).equals(title)) {
-                    UIHelper.startActivityWithoutExtra(GpsStateActivity.class);
-                } else if (getString(R.string.my_profile_device_usage).equals(title)) {
-                    UIHelper.startActivityWithoutExtra(DeviceUsageActivity.class);
-                } else if (getString(R.string.my_profile_system_settings).equals(title)) {
-                    UIHelper.startActivityWithoutExtra(SystemSettingsActivity.class);
-                } else if (getString(R.string.my_profile_about_us).equals(title)) {
-                    UIHelper.startActivityWithoutExtra(AboutUsActivity.class);
-                } else if (getString(R.string.my_profile_sign_in).equals(title)) {
-                    UserService.getInstance().getIsWatchState();
-                } else if (getString(R.string.my_profile_sign_out).equals(title)) {
-                    setAlertDialog(view, ResourceUtil.getStringById(R.string.admin_sign_out_confirm), false);
-                }
-            }
-        };
     }
 
     /**
@@ -190,11 +130,6 @@ public class MyProfileMainTabFragment extends ABaseListViewFragment<ListViewMenu
         tv_title = (TextView) dialog.getWindow().findViewById(R.id.dialog_title);
         tv_title.setText(info);
         setButtonClick(dialog, isLogOut);
-    }
-
-    @Override
-    protected OnRefreshListener<ListView> prepareOnRefreshListener() {
-        return null;
     }
 
     protected boolean isPullLoadEnabled() {
@@ -290,10 +225,10 @@ public class MyProfileMainTabFragment extends ABaseListViewFragment<ListViewMenu
         PatrolService.getInstance().updatePatrolManState(false);
     }
 
-    @Override
-    protected String getTitle() {
-        return getActivity().getResources().getString(R.string.fragment_Profile_title);
-    }
+//    @Override
+//    protected String getTitle() {
+//        return getActivity().getResources().getString(R.string.fragment_Profile_title);
+//    }
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {

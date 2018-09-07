@@ -124,7 +124,7 @@ public class LoginActivity extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
-//        loadLastUserInfo();
+        loadLastUserInfo();
         checkAppUpdate();
     }
 
@@ -180,23 +180,24 @@ public class LoginActivity extends Activity {
     private void loadLastUserInfo() {
         String lastUser = SettingsManager.getInstance().getLastUser();
         String lastPwd = SettingsManager.getInstance().getLastPWD();
-
         etUsername.setText(lastUser);
-        etPassword.setText(lastPwd);
+        if (doesRememberPassword) {
+            etPassword.setText(lastPwd);
+        }
     }
 
     private void initUI() {
         layoutLoginSetting = (LinearLayout) findViewById(R.id.layout_settings);
         etUsername = (EditText) findViewById(R.id.et_username);
-        etUsername.setText("admin");
         etPassword = (EditText) findViewById(R.id.et_password);
-        etPassword.setText("123456");
-//        loadLastUserInfo();
+        doesRememberPassword = SettingsManager.getInstance().getRememberPassword();
+        loadLastUserInfo();
         tvVersion = (TextView) findViewById(R.id.tv_version);
         imgClearInput = (ImageView) this.findViewById(R.id.img_clear_input);
         cbRememberPassword = (CheckBox) findViewById(R.id.cb_remember_password);
         cbRememberPassword.setOnCheckedChangeListener(rememberPasswordCheckedChangListener);
-        cbRememberPassword.setChecked(SettingsManager.getInstance().getRememberPassword());
+
+        cbRememberPassword.setChecked(doesRememberPassword);
 //        cbAutoLogin = (CheckBox) findViewById(R.id.cb_auto_login);
 //        cbAutoLogin.setOnCheckedChangeListener(autoLoginCheckedChangListener);
 //        cbAutoLogin.setChecked(SettingsManager.getInstance().getAutoLogin());
