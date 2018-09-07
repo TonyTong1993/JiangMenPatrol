@@ -33,4 +33,12 @@ public class LoginResponse extends AServerResponse {
     public List<TokenUsers> getTokenUsers() {
         return tokenUsers;
     }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public void setMenus(ArrayList<AppMenu> menus) {
+        this.menus = menus;
+    }
 }

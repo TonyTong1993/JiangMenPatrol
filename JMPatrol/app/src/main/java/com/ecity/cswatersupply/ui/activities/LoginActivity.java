@@ -10,6 +10,7 @@ import android.os.SystemClock;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnKeyListener;
@@ -81,9 +82,9 @@ public class LoginActivity extends Activity {
     private Button btnLogin;
     private ImageButton lineimg;
 
-    private CheckBox cbAutoLogin;
+//    private CheckBox cbAutoLogin;
     private CheckBox cbRememberPassword;
-    private boolean doesAutoLogin;
+//    private boolean doesAutoLogin;
     private boolean doesRememberPassword;
 
     private long mHints[];
@@ -102,6 +103,7 @@ public class LoginActivity extends Activity {
         setContentView(R.layout.activity_login);
         this.setTheme(android.R.style.Theme_Holo_Light);
         initUI();
+        initEvent();
         LoginSettingActivity.initDefaultServerSettings();
         EventBusUtil.register(this);
         new Handler(getMainLooper()).postDelayed(new Runnable() {
@@ -114,15 +116,15 @@ public class LoginActivity extends Activity {
     }
 
     private void autoLogin() {
-        if (doesAutoLogin) {
-            onLoginBtnClicked(null);
-        }
+//        if (doesAutoLogin) {
+//            onLoginBtnClicked(null);
+//        }
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        loadLastUserInfo();
+//        loadLastUserInfo();
         checkAppUpdate();
     }
 
@@ -138,14 +140,14 @@ public class LoginActivity extends Activity {
             LoadingDialogUtil.show(this, R.string.checking_new_version);
             return;
         }
-        LoadingDialogUtil.show(this, R.string.checking_new_version);
-        AppUtil.checkAppUpdate(appVersionCheckHandler);
+//        LoadingDialogUtil.show(this, R.string.checking_new_version);
+//        AppUtil.checkAppUpdate(appVersionCheckHandler);
     }
 
     public void onClearInputClicked(View view) {
         etUsername.setText("");
         etPassword.setText("");
-//        imgClearInput.setVisibility(View.GONE);
+        imgClearInput.setVisibility(View.GONE);
     }
 
     public void onLoginSettingBtnClicked(View view) {
@@ -189,9 +191,9 @@ public class LoginActivity extends Activity {
         etUsername.setText("admin");
         etPassword = (EditText) findViewById(R.id.et_password);
         etPassword.setText("123456");
-        loadLastUserInfo();
+//        loadLastUserInfo();
         tvVersion = (TextView) findViewById(R.id.tv_version);
-//        imgClearInput = (ImageView) this.findViewById(R.id.img_clear_input);
+        imgClearInput = (ImageView) this.findViewById(R.id.img_clear_input);
         cbRememberPassword = (CheckBox) findViewById(R.id.cb_remember_password);
         cbRememberPassword.setOnCheckedChangeListener(rememberPasswordCheckedChangListener);
         cbRememberPassword.setChecked(SettingsManager.getInstance().getRememberPassword());
@@ -222,12 +224,21 @@ public class LoginActivity extends Activity {
         appVersionCheckHandler = new AppVersionCheckHandler(this);
     }
 
+    private void initEvent() {
+        tvVersion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onDisplaySettingButton(view);
+            }
+        });
+    }
+
     private OnCheckedChangeListener rememberPasswordCheckedChangListener = new OnCheckedChangeListener() {
 
         @Override
         public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
             if (!isChecked) {
-                cbAutoLogin.setChecked(false);
+//                cbAutoLogin.setChecked(false);
             }
             doesRememberPassword = isChecked;
         }
@@ -240,7 +251,7 @@ public class LoginActivity extends Activity {
             if (isChecked) {
                 cbRememberPassword.setChecked(true);
             }
-            doesAutoLogin = isChecked;
+//            doesAutoLogin = isChecked;
         }
     };
 
@@ -276,7 +287,7 @@ public class LoginActivity extends Activity {
                 }
             });
             if (txtUserNameEditTextFieldIsValid()) {
-//                imgClearInput.setVisibility(View.VISIBLE);
+                imgClearInput.setVisibility(View.VISIBLE);
             }
 
             btnLogin.setEnabled(txtUserNameEditTextFieldIsValid() && txtPasswordEditTextFieldIsValid());
@@ -309,7 +320,7 @@ public class LoginActivity extends Activity {
     private void handleUserInfo(LoginResponse response) {
         currentUser = response.getUser();
         currentUser.setPassword(password);
-        checkLeaderInfo(currentUser);
+//        checkLeaderInfo(currentUser);
         HostApplication.getApplication().setCurrentUser(currentUser);
         SettingsManager.getInstance().setLastUser(currentUser, doesRememberPassword);
         RestoreManager.getInstance().saveLastUser(currentUser);
@@ -329,9 +340,8 @@ public class LoginActivity extends Activity {
     private ArrayList<AppMenu> getAvailableMenus(List<AppMenu> appMenus) {
         ArrayList<AppMenu> availableMenus = new ArrayList<AppMenu>();
         if (appMenus != null && appMenus.size() > 0) {
-            UserService.getInstance().setDynamicTabMenus(MenuFactory.getDynamicTabs(appMenus));
+            UserService.getInstance().setDynamicTabMenus(MenuFactory.getDynamicMenuTabs(appMenus));
             HashMap<String, AppMenu> xmlMenus = MenuFactory.getMenuMapByTab(ResourceUtil.getStringById(R.string.menu_main));
-
             for (int i = 0; i < appMenus.size(); i++) {
                 AppMenu serverAppMenu = appMenus.get(i);
                 Iterator<String> keyIterator = xmlMenus.keySet().iterator();
@@ -364,13 +374,16 @@ public class LoginActivity extends Activity {
         getUserInfo(response.getToken());
     }
     private void handleLogin(ResponseEvent event) {
+        LoadingDialogUtil.dismiss();
         LoadingDialogUtil.updateMessage(R.string.login_getting_init_paramters);
         LoginResponse response = event.getData();
+        if (null == response) {return;}
         handleCheckBoxStatus();
         handleUserInfo(response);
         handleUserMenus(response);
-        handleServerTime(response);
-        handleMobileConfig(response);
+        gotoMainScreen();
+//        handleServerTime(response);
+//        handleMobileConfig(response);
     }
 
     private void handleWatch(ResponseEvent event) {
@@ -387,7 +400,7 @@ public class LoginActivity extends Activity {
 
     private void handleCheckBoxStatus() {
         SettingsManager.getInstance().setRememberPassword(doesRememberPassword);
-        SettingsManager.getInstance().setAutoLogin(doesAutoLogin);
+//        SettingsManager.getInstance().setAutoLogin(doesAutoLogin);
     }
 
     private void handleGPSHistoryPosition() {
@@ -414,7 +427,7 @@ public class LoginActivity extends Activity {
         }
     }
 
-    private void handleUserMenus(LoginResponse response) {
+    private void handleUserMenus(  LoginResponse response) {
         ArrayList<AppMenu> userMenus = getAvailableMenus(response.getMenus());
         UserService.getInstance().setAvailableMenus(userMenus);
         RestoreManager.getInstance().saveAvailableMenus(userMenus);

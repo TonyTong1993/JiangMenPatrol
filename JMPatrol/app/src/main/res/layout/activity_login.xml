@@ -4,15 +4,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/new_login_bg"
-    android:paddingLeft="38dp"
-    android:paddingRight="38dp">
+    >
 
     <LinearLayout
         android:id="@+id/id_ll_title"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_marginTop="100dp"
-        android:gravity="center">
+        android:gravity="center"
+        android:layout_marginLeft="38dp"
+        android:layout_marginRight="38dp"
+        >
 
         <ImageView
             android:layout_width="wrap_content"
@@ -29,6 +31,8 @@
         android:layout_below="@id/id_ll_title"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
+        android:layout_marginRight="38dp"
+        android:layout_marginLeft="38dp"
         android:background="@null"
         android:gravity="center">
 
@@ -49,6 +53,36 @@
             android:textColorHint="@color/textColorHint"
             android:textCursorDrawable="@drawable/abc_text_cursor_material"
             android:textSize="17sp" />
+        <ImageView
+            android:id="@+id/img_clear_input"
+            android:layout_width="30.0dip"
+            android:layout_height="@dimen/width_tf_username_pwd"
+            android:layout_gravity="end|center"
+            android:layout_marginEnd="0.0dip"
+            android:layout_marginRight="0.0dip"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:contentDescription="@null"
+            android:onClick="onClearInputClicked"
+            android:scaleType="center"
+            android:src="@drawable/icon_close"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/img_arrow_down"
+            android:layout_width="40.0dip"
+            android:layout_height="@dimen/width_tf_username_pwd"
+            android:layout_gravity="end|center"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:contentDescription="@null"
+            android:paddingEnd="15.0dip"
+            android:paddingLeft="5.0dip"
+            android:paddingRight="15.0dip"
+            android:paddingStart="5.0dip"
+            android:scaleType="center"
+            android:src="@drawable/icon_navbar_drop_down"
+            android:visibility="gone" />
     </LinearLayout>
 
     <include
@@ -56,6 +90,8 @@
         layout="@layout/item_splitline_h"
         android:layout_width="match_parent"
         android:layout_height="1dip"
+        android:layout_marginLeft="38dp"
+        android:layout_marginRight="38dp"
         android:layout_below="@id/ll_user_name"
         android:layout_gravity="bottom" />
 
@@ -66,6 +102,8 @@
         android:layout_below="@id/ll_user_name"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
+        android:layout_marginRight="38dp"
+        android:layout_marginLeft="38dp"
         android:background="@null"
         android:gravity="center">
 
@@ -84,6 +122,19 @@
             android:textCursorDrawable="@drawable/abc_text_cursor_material"
             android:textColorHint="@color/textColorHint"
             android:textSize="17sp" />
+        <ImageView
+            android:id="@+id/psw_close"
+            android:layout_width="30.0dip"
+            android:layout_height="@dimen/width_tf_username_pwd"
+            android:layout_gravity="end|center"
+            android:layout_marginEnd="15.0dip"
+            android:layout_marginRight="15.0dip"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:contentDescription="@null"
+            android:scaleType="center"
+            android:src="@drawable/icon_close"
+            android:visibility="invisible" />
     </LinearLayout>
 
     <include
@@ -91,6 +142,8 @@
         layout="@layout/item_splitline_h"
         android:layout_width="match_parent"
         android:layout_height="1dip"
+        android:layout_marginLeft="38dp"
+        android:layout_marginRight="38dp"
         android:layout_below="@id/ll_pwd" />
 
     <LinearLayout
@@ -99,6 +152,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/ll_pwd"
         android:layout_marginTop="15dp"
+        android:layout_marginRight="38dp"
+        android:layout_marginLeft="38dp"
         android:gravity="center_vertical|start"
         android:orientation="horizontal">
 
@@ -127,6 +182,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/ll_pwd"
         android:layout_marginTop="15dp"
+        android:layout_marginRight="38dp"
         android:gravity="center_vertical|end"
         android:orientation="horizontal">
         <TextView
@@ -134,11 +190,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:drawableStart="@drawable/icon_forget_pwd"
+            android:drawableStart="@drawable/icon_login_modify_pwd"
             android:drawablePadding="10dp"
             android:gravity="center"
-            android:drawableLeft="@drawable/icon_forget_pwd"
-            android:text="@string/str_forgetpassword"
+            android:drawableLeft="@drawable/icon_login_modify_pwd"
+            android:text="@string/change_password"
             android:textColor="@android:color/white"
             android:textSize="17sp" />
 
@@ -151,18 +207,28 @@
         android:layout_below="@id/ll_checkbox"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="35dp"
+        android:layout_marginRight="38dp"
+        android:layout_marginLeft="38dp"
         android:background="@drawable/rectangle_login_btn_bg"
         android:text="@string/str_signin"
         android:textColor="@android:color/white"
         android:textSize="18sp"
         android:onClick="onLoginBtnClicked"
         />
+    <ImageButton
+        android:id="@+id/lineimg"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:layout_above="@+id/layout_settings"
+        android:background="#ffcfcfcf"
+        android:contentDescription="@null"
+        android:visibility="invisible" />
 
     <TextView
         android:id="@+id/tv_version"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btn_login"
+        android:layout_above="@id/lineimg"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:gravity="center"
@@ -170,6 +236,29 @@
         android:text="V1.0.0"
         android:textColor="@android:color/white"
         tools:ignore="HardcodedText" />
+
+    <LinearLayout
+        android:id="@+id/layout_settings"
+        android:layout_width="fill_parent"
+        android:layout_height="49.0dip"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal"
+        android:visibility="invisible" >
+        <Button
+            android:id="@+id/btn_login_setting"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:autoLink="all"
+            android:background="@drawable/css_selector_gray"
+            android:gravity="center"
+            android:onClick="onLoginSettingBtnClicked"
+            android:text="@string/setting_login_setting"
+            android:textColor="@color/white"
+            android:textSize="16.0dip" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/tv_test"

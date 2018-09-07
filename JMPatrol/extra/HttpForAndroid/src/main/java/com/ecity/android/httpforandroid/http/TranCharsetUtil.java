@@ -97,7 +97,7 @@ public class TranCharsetUtil {
     public static String getEncoding(String str) {
         String encode = "GB2312";
         try {
-            if (str.equals(new String(str.getBytes(encode), encode))) {
+            if (str.equals(new String(str.getBytes(), encode))) {
                 String s = encode;
                 return s;
             }
@@ -105,7 +105,7 @@ public class TranCharsetUtil {
         }
         encode = "ISO-8859-1";
         try {
-            if (str.equals(new String(str.getBytes(encode), encode))) {
+            if (str.equals(new String(str.getBytes(), encode))) {
                 String s1 = encode;
                 return s1;
             }
@@ -113,7 +113,7 @@ public class TranCharsetUtil {
         }
         encode = "UTF-8";
         try {
-            if (str.equals(new String(str.getBytes(encode), encode))) {
+            if (str.equals(new String(str.getBytes(), encode))) {
                 String s2 = encode;
                 return s2;
             }
@@ -121,7 +121,7 @@ public class TranCharsetUtil {
         }
         encode = "GBK";
         try {
-            if (str.equals(new String(str.getBytes(encode), encode))) {
+            if (str.equals(new String(str.getBytes(), encode))) {
                 String s3 = encode;
                 return s3;
             }

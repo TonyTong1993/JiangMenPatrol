@@ -2,10 +2,31 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/extra/AFileChooser" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/extra/BDLBSLibrary" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/extra/Bluetooth4Falcon" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/extra/CitySelector" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/extra/ContactManChooser" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/extra/DownloadLibrary" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/extra/ECityCacheLayer" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/extra/EcityChartLibrary" vcs="svn" />
     <mapping directory="$PROJECT_DIR$/extra/EventCore" vcs="svn" />
     <mapping directory="$PROJECT_DIR$/extra/HttpForAndroid" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/extra/IndexableStickyListView" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/extra/Leakcanary" vcs="svn" />
     <mapping directory="$PROJECT_DIR$/extra/LogLib" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/extra/MediaLibrary" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/extra/PullRefreshDemo" vcs="svn" />
     <mapping directory="$PROJECT_DIR$/extra/UIResourceLibrary" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/extra/ViewPagerIndicator" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/extra/ViewPagerIndicator_Library" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/extra/WeatherLibrary" vcs="svn" />
     <mapping directory="$PROJECT_DIR$/extra/Z3AppLibrary" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/extra/ZXingProj" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/extra/androids" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/extra/graffiti" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/extra/maploader" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/extra/sangforlibaray" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/extra/tableview" vcs="svn" />
   </component>
 </project>

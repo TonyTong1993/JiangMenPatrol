@@ -3,7 +3,10 @@ package com.ecity.cswatersupply.utils;
 import com.ecity.android.log.LogUtil;
 import com.ecity.cswatersupply.R;
 import com.ecity.cswatersupply.SessionManager;
+import com.ecity.cswatersupply.menu.AppMenu;
+import com.ecity.cswatersupply.menu.map.AMapMenu;
 import com.ecity.cswatersupply.model.AddressInfoModel;
+import com.ecity.cswatersupply.model.BaseResponse;
 import com.ecity.cswatersupply.model.FlowInfoBean;
 import com.ecity.cswatersupply.model.ImageModel;
 import com.ecity.cswatersupply.model.OrganisationSelection;
@@ -12,6 +15,7 @@ import com.ecity.cswatersupply.model.PatrolUser;
 import com.ecity.cswatersupply.model.PumpRepairAndMaintainInfoModel;
 import com.ecity.cswatersupply.model.SignInStateBean;
 import com.ecity.cswatersupply.model.SummaryDetailModel;
+import com.ecity.cswatersupply.model.User;
 import com.ecity.cswatersupply.model.WorkOrderDetailTabModel;
 import com.ecity.cswatersupply.model.WorkOrderOperationLogBean;
 import com.ecity.cswatersupply.model.checkitem.EInspectItemType;
@@ -27,6 +31,8 @@ import com.ecity.cswatersupply.model.event.PointLeakageEvent;
 import com.ecity.cswatersupply.model.event.PumpEvent;
 import com.ecity.cswatersupply.model.event.PunishmentEvent;
 import com.ecity.cswatersupply.model.event.RepairementEvent;
+import com.ecity.cswatersupply.network.response.loginresponse.LoginResponse;
+import com.ecity.cswatersupply.network.response.loginresponse.LoginTokenResponse;
 import com.ecity.cswatersupply.project.model.ProjectLogBean;
 import com.ecity.cswatersupply.workorder.WorkOrderUtil;
 import com.ecity.cswatersupply.workorder.model.UnFinishWorkOrderAddressInfo;
@@ -40,6 +46,8 @@ import com.ecity.cswatersupply.workorder.model.WorkOrderSummaryBarBean;
 import com.ecity.cswatersupply.workorder.model.WorkOrderSummaryPie;
 import com.ecity.cswatersupply.workorder.model.WorkOrderSummaryPieBean;
 import com.ecity.cswatersupply.workorder.network.WorkorderLeaderModel;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
 import com.z3app.android.util.JSONUtils;
 import com.z3app.android.util.StringUtil;
 
@@ -47,6 +55,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.net.URLDecoder;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -60,6 +69,149 @@ import java.util.Map;
 import java.util.Set;
 
 public class JsonUtil {
+
+    /**
+     * JSONObject。若出现异常，返回null。
+     *
+     * @param json
+     * @return JSONArray对象。若出现异常，返回null。
+     */
+    private static JSONObject paraseJSONToBaseResponse(JSONObject json) {
+        JSONObject data = null;
+        try {
+            data = json.getJSONObject("data");
+        } catch (Exception e) {
+            LogUtil.e("JsonUtil", e);
+        }
+
+        return data;
+    }
+    /**
+     * LoginTokenResponse。若出现异常，返回null。
+     *
+     * @param json
+     * @return LoginTokenResponse对象。若出现异常，返回null。
+     */
+    public static LoginTokenResponse paraseJSONTOLoginTokenResponse(JSONObject json) {
+        String token = null;
+        JSONObject data = paraseJSONToBaseResponse(json);
+        try {
+            if (data.has("token")) {
+                token = data.getString("token");
+            }
+        } catch (Exception e) {
+            LogUtil.e("JsonUtil", e);
+        }
+        LoginTokenResponse tokenResponse = new LoginTokenResponse(token);
+        return tokenResponse;
+    }
+
+    /*
+     * mapcfg:地图配置相关
+     * role:角色分类
+     * group:部门
+     * org:组织机构
+     * user:用户信息
+     * */
+    public static LoginResponse paraseJSONObjectToLoginResponse(JSONObject json) {
+        JSONObject data = paraseJSONToBaseResponse(json);
+        LoginResponse response = null;
+        try {
+            String mapConfig = data.getString("mapcfg");
+            JSONArray role = data.getJSONArray("role");
+            JSONArray group = data.getJSONArray("group");
+            JSONObject org = data.getJSONObject("org");
+            JSONObject userInfo = data.getJSONObject("user");
+            JSONArray menus = data.getJSONArray("menu");
+            User user = parserUserInfoToUserModel(userInfo);
+            ArrayList<AppMenu> appMenus = getAppMenusWithMenusJSONArray(menus);
+
+            response = new LoginResponse();
+            response.setMenus(appMenus);
+            response.setUser(user);
+        } catch (Exception e) {
+            System.out.print(e);
+            LogUtil.e("JsonUtil", e);
+        }
+
+        return response;
+    }
+    /**
+     * 将json字符串转换为JSONArray对象。若出现异常，返回null。
+     *
+     * @param userInfo
+     * @return User对象。若出现异常，返回null。
+     */
+    private static User parserUserInfoToUserModel(JSONObject userInfo) {
+        User user = null;
+        try {
+          String trueName =  userInfo.getString("username");
+          String loginname =  userInfo.getString("loginname");
+          String sss= URLDecoder.decode(trueName,"gbk");
+          String phone =  userInfo.getString("phone");
+          String email =  userInfo.getString("email");
+          String oid =  userInfo.getString("oid");
+          String isadmin =  userInfo.getString("isadmin");
+          user = new User();
+          user.setTrueName(trueName);
+          user.setLoginName(loginname);
+          user.setPhone(phone);
+          user.setEmail(email);
+          user.setOid(oid);
+          user.setIsadmin(isadmin);
+        }catch (Exception e) {
+            LogUtil.e("JsonUtil", e);
+        }
+
+        return user;
+    }
+
+    /**
+     * 将json字符串转换为JSONArray对象。若出现异常，返回null。
+     *
+     * @param menus
+     * @return ArrayList<AppMenu>。若出现异常，返回空的集合。
+     */
+    private static  ArrayList<AppMenu> getAppMenusWithMenusJSONArray(JSONArray menus) {
+        ArrayList<AppMenu> appMenus = new ArrayList<>();
+
+        for (int i = 0;i < menus.length();i++) {
+            try {
+                JSONObject menu = menus.getJSONObject(i);
+                String paramsJSONString = menu.getString("params");
+                String menuType = null;
+                String gid = null;
+
+                if (!StringUtil.isBlank(paramsJSONString)) {
+                    JSONObject params = new  JSONObject(paramsJSONString);
+                    if (params.has("menuType")) {
+                        menuType = params.getString("menuType");
+                    }
+                    if (params.has("identity")) {
+                        gid = params.getString("identity");
+                    }
+                }
+
+                String menuName = menu.getString("name");
+                ArrayList<AppMenu> childMenus = null;
+                if (menu.has("children")) {
+                    JSONArray children = menu.getJSONArray("children");
+                    if (children.length() > 0) {
+                        childMenus = getAppMenusWithMenusJSONArray(children);
+                    }
+                }
+                AppMenu appMenu = new AppMenu(menuName,childMenus,menuType);
+                appMenu.setGid(gid);
+                appMenu.setName(menuName);
+                appMenus.add(appMenu);
+
+            }catch (Exception e) {
+                LogUtil.e("JsonUtil", e);
+            }
+        }
+        return appMenus;
+    }
+
 
     /**
      * 将json字符串转换为JSONArray对象。若出现异常，返回null。
@@ -113,6 +265,11 @@ public class JsonUtil {
         }
 
         return map;
+    }
+
+    public static Map<String, String> paraseUserInfoToOldDataFormatter(JsonObject json) {
+
+        return null;
     }
 
     /**
@@ -433,7 +590,7 @@ public class JsonUtil {
      *
      * @param jsonObj
      * @param eventType 事件类型
-     * @return Map<String, Object>
+     * @return Map<String ,   Object>
      */
     public static Map<String, Object> parseEvents(JSONObject jsonObj, EventType eventType) {
         List<Event> events = new ArrayList<Event>();
@@ -860,7 +1017,7 @@ public class JsonUtil {
 
                 List<UnFinishWorkOrderAddressInfo> addressInfos = new ArrayList<UnFinishWorkOrderAddressInfo>();
                 JSONArray jsonArrays = object.optJSONArray("address");
-                for(int j = 0; j < jsonArrays.length(); j++) {
+                for (int j = 0; j < jsonArrays.length(); j++) {
                     UnFinishWorkOrderAddressInfo addressInfo = new UnFinishWorkOrderAddressInfo();
                     JSONObject jsonObject = jsonArrays.optJSONObject(j);
                     boolean isHost = 0 != jsonObject.optInt("isHost");
@@ -919,6 +1076,7 @@ public class JsonUtil {
 
     /**
      * 新的服务下，工单解析
+     *
      * @param jsonObj
      * @return
      */
@@ -938,7 +1096,7 @@ public class JsonUtil {
         if (jsonArrFeatures == null) {
             return workOrders;
         }
-        if(0 == featuresLength) {
+        if (0 == featuresLength) {
             return workOrders;
         }
 
@@ -980,19 +1138,19 @@ public class JsonUtil {
      */
     private static List<WorkOrderBtnModel> parseWorkOrderBtns(JSONObject attJsonObj) {
         List<WorkOrderBtnModel> workOrderBtns = new ArrayList<>();
-        if(null == attJsonObj) {
+        if (null == attJsonObj) {
             return workOrderBtns;
         }
         JSONArray btnJSONArray = attJsonObj.optJSONArray(WorkOrder.KEY_OPERATE_BTNS);
-        if(null == btnJSONArray) {
+        if (null == btnJSONArray) {
             return workOrderBtns;
         }
 
-        for(int i = 0 ; i < btnJSONArray.length(); i++) {
+        for (int i = 0; i < btnJSONArray.length(); i++) {
             WorkOrderBtnModel workOrderBtn = new WorkOrderBtnModel();
             JSONObject object = btnJSONArray.optJSONObject(i);
             workOrderBtn.setTaskName(object.optString("taskName"));
-            if(!object.has("children")) {
+            if (!object.has("children")) {
                 workOrderBtn.setTaskId(object.optString("taskId"));
                 workOrderBtn.setTaskName(object.optString("taskName"));
                 workOrderBtn.setTaskCode(object.optString("taskCode"));
@@ -1002,9 +1160,9 @@ public class JsonUtil {
             }
 
             JSONArray subBtnJSONArray = object.optJSONArray("children");
-            if(null != subBtnJSONArray) {
+            if (null != subBtnJSONArray) {
                 List<WorkOrderBtnModel> subWorkOrderBtns = new ArrayList<>();
-                for(int j = 0 ; j < subBtnJSONArray.length(); j++) {
+                for (int j = 0; j < subBtnJSONArray.length(); j++) {
                     JSONObject subObject = subBtnJSONArray.optJSONObject(j);
 
                     WorkOrderBtnModel subWorkOrderBtn = new WorkOrderBtnModel();
@@ -1021,11 +1179,12 @@ public class JsonUtil {
             }
             workOrderBtns.add(workOrderBtn);
         }
-         return workOrderBtns;
+        return workOrderBtns;
     }
 
     /**
      * 新的服务下，解析并排序工单元数据
+     *
      * @param jsonObj
      * @return
      */
@@ -1081,6 +1240,7 @@ public class JsonUtil {
 
     /**
      * 新的服务下，工单详情tab解析
+     *
      * @param jsonObj
      * @return
      */
@@ -1103,6 +1263,7 @@ public class JsonUtil {
 
     /**
      * 工单流程信息解析
+     *
      * @param jsonObj
      * @return
      */
@@ -1127,6 +1288,7 @@ public class JsonUtil {
 
     /**
      * 工单流程详细信息解析
+     *
      * @param jsonObj
      * @return
      */
@@ -1134,11 +1296,11 @@ public class JsonUtil {
         List<InspectItem> flowInfoDetailItems = new ArrayList<>();
         Map<String, String> fieldMap = new HashMap<String, String>();
         JSONArray fieldArray = jsonObj.optJSONArray("fields");
-        if(null == fieldArray) {
+        if (null == fieldArray) {
             return flowInfoDetailItems;
         }
 
-        for(int i = 0; i < fieldArray.length(); i++) {
+        for (int i = 0; i < fieldArray.length(); i++) {
             JSONObject jsonObject = fieldArray.optJSONObject(i);
             String name = jsonObject.optString("name");
             String alias = jsonObject.optString("alias");
@@ -1146,12 +1308,12 @@ public class JsonUtil {
         }
 
         JSONArray featuresArray = jsonObj.optJSONArray("features");
-        if(null == featuresArray) {
+        if (null == featuresArray) {
             return flowInfoDetailItems;
         }
 
         Set<String> keySets = fieldMap.keySet();
-        for(int i = 0; i < featuresArray.length(); i++) {
+        for (int i = 0; i < featuresArray.length(); i++) {
             JSONObject jsonObject = featuresArray.optJSONObject(i);
             JSONObject attrObject = jsonObject.optJSONObject("attributes");
             for (String key : keySets) {

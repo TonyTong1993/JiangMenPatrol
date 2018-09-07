@@ -285,6 +285,28 @@ public class MenuFactory {
         return tabMenus;
     }
     /**
+     * 江门新版获取tab menus的方法
+     * 得到配置的tab菜单，根据配置信息解析分割得到tab菜单的id
+     */
+    public static List<AppMenu> getDynamicMenuTabs(List<AppMenu> appMenus) {
+        List<AppMenu> tabMenus = new ArrayList<>();
+        for (int i = 0; i < appMenus.size(); i++) {
+            AppMenu menu = appMenus.get(i);
+            String menuType = menu.getMenuType();
+            AppMenu tabMenu = new AppMenu();
+            if (!StringUtil.isEmpty(menuType)) {
+                if (menuType.equals("tab")) {
+                    tabMenu.setGid(menu.gid);
+                    tabMenu.setDescription(menu.getDescription());
+                    tabMenus.add(tabMenu);
+                }else  {
+
+                }
+            }
+        }
+        return tabMenus;
+    }
+    /**
      * 得到去除标题类型后的配置路径
      * @param url
      * @return

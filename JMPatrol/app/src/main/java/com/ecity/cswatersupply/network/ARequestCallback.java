@@ -106,6 +106,17 @@ public abstract class ARequestCallback<T> implements IRequestCallback {
                 isOK = false;
             }
 
+            if (jsonObj.has("msgCode")) {
+                int msgCode = jsonObj.getInt("msgCode");
+                switch (msgCode) {
+                    case 0:
+                        break;
+                    default:
+                        isOK = false;
+                        break;
+                }
+            }
+
             if (jsonObj.has("isSuccess")) {
                 isOK = jsonObj.getBoolean("isSuccess");
             }

@@ -3,6 +3,8 @@ package com.ecity.cswatersupply.menu;
 import com.ecity.cswatersupply.utils.GsonUtil;
 import com.ecity.cswatersupply.workorder.model.WorkOrder;
 
+import java.util.ArrayList;
+
 public class AppMenu extends AMenu {
 
     /**
@@ -15,6 +17,14 @@ public class AppMenu extends AMenu {
     private boolean dragable;
     private boolean configurable;
 
+    /**
+     *江门新版 因服务数据变动增加的属性
+     * children 用于控制菜单的下一级页面的菜单内容
+     * menuType 用于控制菜单为tab菜单或nav或top
+     */
+    private ArrayList<AppMenu> children;
+    private String menuType;
+
     private AMenuCommand command = null;
     private String titleType;
 
@@ -26,6 +36,12 @@ public class AppMenu extends AMenu {
         deleteable = true;
         dragable = true;
         this.command = comand;
+    }
+
+    public AppMenu(String subname, ArrayList<AppMenu> children, String menuType) {
+        this.subname = subname;
+        this.children = children;
+        this.menuType = menuType;
     }
 
     public void setAMenuCommand(AMenuCommand comand) {
@@ -92,6 +108,22 @@ public class AppMenu extends AMenu {
     @Override
     public String toString() {
         return GsonUtil.toJson(this);
+    }
+
+    public ArrayList<AppMenu> getChildren() {
+        return children;
+    }
+
+    public void setChildren(ArrayList<AppMenu> children) {
+        this.children = children;
+    }
+
+    public String getMenuType() {
+        return menuType;
+    }
+
+    public void setMenuType(String menuType) {
+        this.menuType = menuType;
     }
 
     public boolean equals(Object other) {

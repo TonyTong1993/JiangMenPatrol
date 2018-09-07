@@ -151,8 +151,9 @@
     <string name="notification_register_fail">通知功能注册失败，可能不能及时收到通知</string>
     <string name="str_one_more_click_exit">再次点击 退出应用</string>
     <string name="main_tab_message">消息</string>
-    <string name="main_tab_application">外勤应用</string>
-    <!--<string name="main_tab_application">江门应用</string>-->
+    <!--<string name="main_tab_application">外勤应用</string>-->
+    <!--江门水务-->
+    <string name="main_tab_application">水表报装</string>
     <!--<string name="main_tab_application">地震应用</string>-->
     <!--<string name="main_tab_application">福州应用</string>-->
     <string name="main_tab_map">地图</string>

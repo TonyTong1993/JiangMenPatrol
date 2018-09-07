@@ -18,7 +18,7 @@ public class LoginParameter implements IRequestParameter {
         Map<String, String> map = new HashMap<String, String>();
         map.put("_type", "json");
         map.put("token", token);
-        map.put("sys", "android");
+        map.put("sys", "mobile");
         return map;
     }
 

@@ -94,34 +94,34 @@ public class MainActivity extends FragmentActivity {
         registerXG();
         initUI();
 //        updatePatrolManState();
-        try {
-            if (FuZhouPatrolModuleConfig.getConfig().isModuleUseable()) {
-                CORSLocationService.startInstance(this);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+//        try {
+//            if (FuZhouPatrolModuleConfig.getConfig().isModuleUseable()) {
+//                CORSLocationService.startInstance(this);
+//            }
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
 
-        startPositionService();
+//        startPositionService();
+//
+//        registerPatrolPositionReceiver();
+//
+//        try {
+//            if (!EQModuleConfig.getConfig().isModuleUseable()) {
+//                initPatrolData();
+//                initPatrolBusData();
+//            } else {
+//                initContactData();
+//            }
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
 
-        registerPatrolPositionReceiver();
-
-        try {
-            if (!EQModuleConfig.getConfig().isModuleUseable()) {
-                initPatrolData();
-                initPatrolBusData();
-            } else {
-                initContactData();
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        TaskArrivalService.getInstance().start(HostApplication.getApplication(), Constants.TASK_ARRIVAL_DETECTION_INTERVAL, Constants.TASK_ARRIVAL_LINE_REPORT_INTERVAL);
-        NotificationListener.start();
-
-        String url = ServiceUrlManager.getInstance().getSpacialSearchUrl();
-        MetaDownloadUtil.LoadMapMetas(url);
+//        TaskArrivalService.getInstance().start(HostApplication.getApplication(), Constants.TASK_ARRIVAL_DETECTION_INTERVAL, Constants.TASK_ARRIVAL_LINE_REPORT_INTERVAL);
+//        NotificationListener.start();
+//
+//        String url = ServiceUrlManager.getInstance().getSpacialSearchUrl();
+//        MetaDownloadUtil.LoadMapMetas(url);
     }
 
     /***

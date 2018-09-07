@@ -1,6 +1,6 @@
 package com.ecity.cswatersupply.service;
 
-import com.ecity.android.eventcore.EventBusUtil;
+import     com.ecity.android.eventcore.EventBusUtil;
 import com.ecity.android.eventcore.ResponseEvent;
 import com.ecity.android.httpforandroid.http.HttpRequestType;
 import com.ecity.cswatersupply.R;
@@ -56,7 +56,7 @@ public class UserService {
     }
 
     public void login(final String account, final String password) {
-        RequestExecutor.execute(new ARequestCallback<LoginTokenResponse>() {
+        RequestExecutor.execute(new ARequestCallback<AServerResponse>() {
             @Override
             public HttpRequestType getRequestType() {
                 return HttpRequestType.GET;
@@ -70,7 +70,7 @@ public class UserService {
             @Override
             public IRequestParameter prepareParameters() {
 
-                return new LoginTokenParameter(account,password);
+                return new LoginTokenParameter(account, password);
             }
 
             @Override
@@ -79,17 +79,26 @@ public class UserService {
             }
 
             @Override
-            public Class<LoginTokenResponse> getResponseClass() {
-                return LoginTokenResponse.class;
+            protected boolean getParseByGson() {
+                return false;
             }
+
             @Override
             protected Object customParse(JSONObject jsonObj) {
-                return JsonUtil.parseWatchStateResult(jsonObj);
+                return JsonUtil.paraseJSONTOLoginTokenResponse(jsonObj);
             }
+
+            @Override
+            public Class<AServerResponse> getResponseClass() {
+                return AServerResponse.class;
+            }
+
+
         });
     }
+
     public void getUserInfoByToken(final String token) {
-        RequestExecutor.execute(new ARequestCallback<LoginResponse>() {
+        RequestExecutor.execute(new ARequestCallback<AServerResponse>() {
             @Override
             public HttpRequestType getRequestType() {
                 return HttpRequestType.GET;
@@ -97,7 +106,7 @@ public class UserService {
 
             @Override
             public String getUrl() {
-                return ServiceUrlManager.getLoginUrl();
+                return ServiceUrlManager.getUserInfoByToken();
             }
 
             @Override
@@ -111,8 +120,19 @@ public class UserService {
             }
 
             @Override
-            public Class<LoginResponse> getResponseClass() {
-                return LoginResponse.class;
+            protected boolean getParseByGson() {
+                return false;
+            }
+
+            @Override
+            public Class<AServerResponse> getResponseClass() {
+
+                return AServerResponse.class;
+            }
+
+            @Override
+            protected Object customParse(JSONObject jsonObj) {
+                return JsonUtil.paraseJSONObjectToLoginResponse(jsonObj);
             }
         });
     }
@@ -120,7 +140,7 @@ public class UserService {
     public List<AppMenu> getAvailableMenus() {
         return availableMenus;
     }
-    
+
     public void getIsWatchState() {
         RequestExecutor.execute(new ARequestCallback<AServerResponse>() {
             @Override
@@ -147,7 +167,7 @@ public class UserService {
             public Class<AServerResponse> getResponseClass() {
                 return AServerResponse.class;
             }
-            
+
             @Override
             protected boolean getParseByGson() {
                 return false;
@@ -159,9 +179,10 @@ public class UserService {
             }
         });
     }
-    
+
     /**
      * 获取人员值班签到状态
+     *
      * @param user
      */
     public void getWatchState(final User user) {
@@ -190,7 +211,7 @@ public class UserService {
             public Class<AServerResponse> getResponseClass() {
                 return AServerResponse.class;
             }
-            
+
             @Override
             protected boolean getParseByGson() {
                 return false;
@@ -205,7 +226,7 @@ public class UserService {
 
     /**
      * Set names of menus that are available to current user.
-     * 
+     *
      * @param menus
      */
     public void setAvailableMenus(ArrayList<AppMenu> menus) {
@@ -315,7 +336,7 @@ public class UserService {
     }
 
     //值班签到
-    public void signIn(final User user, final String endTimeParameter,final String startWatchtime) {
+    public void signIn(final User user, final String endTimeParameter, final String startWatchtime) {
         RequestExecutor.execute(new ARequestCallback<AServerResponse>() {
             @Override
             public HttpRequestType getRequestType() {
@@ -329,7 +350,7 @@ public class UserService {
 
             @Override
             public IRequestParameter prepareParameters() {
-                return new SignInParameter(user, endTimeParameter,startWatchtime);
+                return new SignInParameter(user, endTimeParameter, startWatchtime);
             }
 
             @Override
@@ -495,8 +516,10 @@ public class UserService {
             }
         });
     }
+
     /**
      * 选择组织机构
+     *
      * @param user
      */
     public void getGroupsTrees(final User user) {

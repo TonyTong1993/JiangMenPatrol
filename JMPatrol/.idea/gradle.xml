@@ -10,11 +10,32 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/extra" />
+            <option value="$PROJECT_DIR$/extra/AFileChooser" />
+            <option value="$PROJECT_DIR$/extra/BDLBSLibrary" />
+            <option value="$PROJECT_DIR$/extra/Bluetooth4Falcon" />
+            <option value="$PROJECT_DIR$/extra/CitySelector" />
+            <option value="$PROJECT_DIR$/extra/ContactManChooser" />
+            <option value="$PROJECT_DIR$/extra/DownloadLibrary" />
+            <option value="$PROJECT_DIR$/extra/ECityCacheLayer" />
+            <option value="$PROJECT_DIR$/extra/EcityChartLibrary" />
             <option value="$PROJECT_DIR$/extra/EventCore" />
             <option value="$PROJECT_DIR$/extra/HttpForAndroid" />
+            <option value="$PROJECT_DIR$/extra/IndexableStickyListView" />
+            <option value="$PROJECT_DIR$/extra/Leakcanary" />
             <option value="$PROJECT_DIR$/extra/LogLib" />
+            <option value="$PROJECT_DIR$/extra/MediaLibrary" />
+            <option value="$PROJECT_DIR$/extra/PullRefreshDemo" />
             <option value="$PROJECT_DIR$/extra/UIResourceLibrary" />
+            <option value="$PROJECT_DIR$/extra/ViewPagerIndicator" />
+            <option value="$PROJECT_DIR$/extra/ViewPagerIndicator_Library" />
+            <option value="$PROJECT_DIR$/extra/WeatherLibrary" />
             <option value="$PROJECT_DIR$/extra/Z3AppLibrary" />
+            <option value="$PROJECT_DIR$/extra/ZXingProj" />
+            <option value="$PROJECT_DIR$/extra/androids" />
+            <option value="$PROJECT_DIR$/extra/graffiti" />
+            <option value="$PROJECT_DIR$/extra/maploader" />
+            <option value="$PROJECT_DIR$/extra/sangforlibaray" />
+            <option value="$PROJECT_DIR$/extra/tableview" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

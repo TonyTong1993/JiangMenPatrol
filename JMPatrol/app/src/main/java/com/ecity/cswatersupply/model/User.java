@@ -17,6 +17,10 @@ public class User extends AModel {
     private String role;
     private String roleCode;
     private String company;
+    private String phone;
+    private String email;
+    private String oid;
+    private String isadmin;
     private String leader;
     private boolean isLeader;
     private String password;
@@ -33,10 +37,10 @@ public class User extends AModel {
     //是否已经签到
     @SerializedName("iswatch")
     private boolean isWatch;
-    
+
     @SerializedName("canSign")
     private boolean canSign;
-    
+
     @SerializedName("signOutTime")
     private String signOutTime;
 
@@ -177,6 +181,38 @@ public class User extends AModel {
 
     public void setLoginName(String loginName) {
         this.loginName = loginName;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getOid() {
+        return oid;
+    }
+
+    public void setOid(String oid) {
+        this.oid = oid;
+    }
+
+    public String getIsadmin() {
+        return isadmin;
+    }
+
+    public void setIsadmin(String isadmin) {
+        this.isadmin = isadmin;
     }
 
     public String getState() {
